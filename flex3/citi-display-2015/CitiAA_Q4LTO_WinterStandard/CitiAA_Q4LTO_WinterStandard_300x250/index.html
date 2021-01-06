@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>300x250</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    
+    <script src="script.js" type="text/javascript"></script> 
+
+    <!--Local instead of CDN /because of ATLAS/ links for the latest TweenLite, CSSPlugin, and EasePack-->
+    <script src="CSSPlugin.min.js"></script>
+    <script src="EasePack.min.js"></script>
+    <script src="TweenLite.min.js"></script>
+    
+    <link rel="stylesheet" href="style.css">
+    <meta name="ad.size" content="width=300,height=250">
+
+  </head>
+
+  <body>
+
+    <div id="container">
+      <div id="content">
+
+<!--       <div id="GUIDELAYER"><img src="raw/f1_guide.png"></div>   -->
+
+        <div id="background">
+          <img src="background.jpg">
+          <div id="typeShadow"><img src="typeShadow.png"></div>
+        </div>
+
+        <div id="t1">
+          <div id="t1a">FOR A LIMITED TIME, EARN</div>
+          <div id="t1b"><b>50,000</b></div>
+          <div id="t1c"><b>AADVANTAGE<span id="rball">&reg;</span><br/>BONUS MILES</b></div>
+          <div id="t1d">AFTER QUALIFYING PURCHASES.</div>
+        </div>
+
+        <div id="t2">
+          <div id="t2a">A more rewarding way to<br/>fly the world&rsquo;s largest airline.</div>
+        </div>
+
+        <div id="t3">
+          <div id="t3a">The Citi<span id="rball2">&reg;</span>&nbsp;/ AAdvantage<span id="rball3">&reg;</span><br/>Platinum Select<span id="rball4">&reg;</span>&nbsp;card.</div>
+        </div>
+
+        <div id="americanPassportLogo"><img src="americanPassportLogo.svg"></div>
+        <div id="bottomBar"></div>
+
+        <div id="t4">
+          <div id="t4a">LIMITED-TIME OFFER: EARN</div>
+          <div id="t4b"><b>50,000 AAdvantage<span id="rball8">&reg;</span><br>bonus miles</b></div>
+          <div id="t4c">Citi<span id="rball5">&reg;</span> / AAdvantage<span id="rball6">&reg;</span> Platinum Select<span id="rball7">&reg;</span> card</div>  
+          <div id="t4d">NEW</div>
+          <div id="t4e">No Foreign Purchase Fees</div>    
+        </div> 
+
+        <div id="citiLogo"><img src="citiLogo.svg"></div>
+
+        <div id="card"><img src="card.png"></div>
+        <div id="mcLogo"><img src="mcLogo.png"></div>
+
+        <div id="cta">
+          <img id="button" src="btnLearnMore.svg" />
+          <div class = "glare"></div>
+        </div>
+
+        <!--   <div id="replayBtn"><img src="replay.svg"></div> -->
+
+      </div>
+
+       <a href="{{PUB_CLICKTHROUGH}}" target="_blank"> <div id="background_exit"></div>  </a> 
+                
+    </div>
+
+    <script>
+      window.onload = function(e) {
+        init();
+      };
+    </script>
+
+    <noscript>
+        <a href="{{PUB_CLICKTHROUGH}}" target="_blank"> <div id="background_exit"></div> 
+          <img src="backup.jpg">
+        </a>
+    </noscript>
+
+  </body>
+</html>

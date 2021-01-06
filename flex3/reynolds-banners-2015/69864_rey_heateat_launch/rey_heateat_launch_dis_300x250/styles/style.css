@@ -1,0 +1,181 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300;
+}
+
+@-moz-document url-prefix() {
+
+  #headlineBckgText {
+    font-weight: 700;
+  }
+
+  #headlineBckgText2 {
+    font-weight: 700;
+  }
+
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+/* IE10+ CSS styles go here */
+
+  #headlineBckgText {
+    font-weight: 700;
+  }
+
+  #headlineBckgText2 {
+    font-weight: 700;
+  }
+
+
+}
+
+
+@media screen and (min-width:0) and (min-resolution: .001dpcm) { 
+ // IE9 CSS
+ .ie9{property:value;}
+
+
+
+  
+  #headlineBckgText {
+    font-weight: 700;
+  }
+
+  #headlineBckgText2 {
+    font-weight: 700;
+  }
+
+}
+
+
+a {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+a:hover,
+a:active {
+}
+#clickthrough-button {
+  display: block;
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  cursor: pointer;
+}
+#ad {
+  display: block;
+  border: #000 1px solid;
+  overflow: hidden;
+  width: 298px;
+  height: 248px;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: #FFF;
+}
+#banner {
+  position: absolute;
+  display: none;
+  width: inherit;
+  height: inherit;
+  background-color: transparent;
+  background-position: right top;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+#bckg{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+#headlineBckg{
+  position: absolute;
+  top: 44px;
+  left: -6px;
+}
+#headlineBckgText{
+  position: absolute;
+  top: 11px;
+  left: 25px;
+  width: 300px;
+  color: #FFF;
+  font-size: 17px;
+  letter-spacing: .25px;
+  line-height: 21px;
+}
+#headlineBckg2{
+  position: absolute;
+  top: 44px;
+  left: -34px;
+}
+#headlineBckgText2{
+  position: absolute;
+  top: 10px;
+  left: 51px;
+  width: 300px;
+  color: #FFF;
+  font-size: 17px;
+  letter-spacing: .25px;
+  line-height: 21px;
+}
+#quickBold{
+  font-weight: 700;
+}
+#foodContainer{
+  position: absolute;
+  top: 98px;
+  right: -2px;
+}
+#product{
+  position: absolute;
+  top: 202px;
+  left: 16px;
+}
+#logo{
+  position: absolute;
+  top: 13px;
+  left: 17px;
+}
+#endframeText{
+  position: absolute;
+  top: 162px;
+  left: 20px;
+}
+#ctaText{
+  position: absolute;
+  top: 2px;
+  left: 18px;
+}
+#cta{
+  position:absolute;
+  top: 213px;
+  left: 168px;
+  width: 70px;
+  height: 7px;
+  background: #183465;
+  -webkit-border-radius: 9;
+  -moz-border-radius: 9;
+  border-radius: 11px;
+  padding: 10px 20px 10px 20px;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 4px 5px 0px rgba(50, 50, 50, 0.25);
+  -moz-box-shadow:    0px 4px 5px 0px rgba(50, 50, 50, 0.25);
+  box-shadow: 0px 4px 5px 0px rgba(50, 50, 50, 0.25);
+}
+.glare {
+  position: absolute;
+  width:81px;
+  height:28px;
+  background-image:url("../images/glare.png");
+  left:-80px;
+  top:0px;
+  background-repeat:no-repeat;
+}

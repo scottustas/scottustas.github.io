@@ -1,0 +1,150 @@
+* {
+ margin: 0px;
+ padding: 0px;
+}
+
+body {
+ font-family: Arial, sans-serif;
+}
+
+a {
+ border: none;
+ cursor: pointer;
+ outline: none;
+ user-select: none;
+}
+
+a:hover,
+a:active {
+  
+}
+
+#container {
+ display: none;
+ position: absolute;
+ width: 298px;
+ height: 248px;
+ border:1px solid #b3b3b3;
+ top: 0px;
+ left: 0px;
+ margin: auto;
+ background-color: #cdddeb;
+ overflow: hidden;
+}
+
+#content {
+ display: none;
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ top: 0px;
+ left: 0px;
+}
+
+#background_exit {
+ width: 100%;
+ height: 100%;
+ top: 0px;
+ left: 0px;
+ cursor: pointer !important;
+ opacity: 0;
+ background-color: #000000;
+ z-index: 4;
+}
+
+#content div {
+ display: block;
+ position: absolute;
+ border: none;
+}
+
+#cta{
+ overflow: hidden;
+ top: 212px;
+ left: 190px;
+ width: 93px;
+ height: 26px;
+ border-radius: 15px;
+}
+
+#cta img{
+ width: 93px;
+ height: 26px;
+}
+
+#glare{
+  top: 0px;
+  left: -120px;
+}
+
+/*USER//////////////////////////////////////// CSS*/
+#text1, #btmBar, #btmLogos, #cta, #icon1, #icon2, #icon3,#icon4,#icon5,#icon6{
+ z-index: 3;
+}
+
+
+#replayBtn{
+  top: 5px;
+  left: 5px;
+  width: 17px; 
+  height: 17px;
+  cursor: pointer;
+  z-index: 5;
+}
+
+#replayBtn img{
+   width: 17px; 
+  height: 17px;
+}
+
+img {
+ width: 300px;
+}
+
+.fruit img{
+ width: 50%;
+}
+
+#fruit1{
+ left: 80px;
+ top:40px;
+}
+
+#fruit2{
+ left: 107px;
+ top: 8px;
+}
+
+#fruit3{
+ left: 144px;
+ top: 2px;
+}
+
+#fruit4{
+ left: 183px;
+ top: 26px;
+}
+
+#text4{
+
+}
+
+#text4Mask{
+ left: 0px;
+ width: 300px;
+ height: 250px;
+ overflow: hidden;
+/* background-color: red;*/
+}
+
+#unicorn{
+ left:+95px;
+}
+
+#unicornRainbow{
+ top:20px;
+ left: -20px;
+
+}
+
+

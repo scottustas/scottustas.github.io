@@ -1,0 +1,138 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  font-family: Arial, sans-serif;
+}
+a {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+a:hover,
+a:active {
+  
+}
+
+.guideLayer{
+  position:absolute;
+  top:0px;
+  left:0px;
+}
+
+#container {
+  display: none;
+  position: absolute;
+  width: 298px;
+  height: 598px;
+  border:1px solid #000000;
+  top: 0px;
+  left: 0px;
+  margin: auto;
+  background-color: #262B87;
+  overflow: hidden;
+}
+
+#content {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+#background_exit {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  cursor: pointer !important;
+  opacity: 0;
+  background-color: #000000;
+}
+
+#content div {
+  display: block;
+  position: absolute;
+  border: none;
+}
+
+#logo{
+  top: 162px;
+  left: 96px;
+  height: 500px;
+  width: 500px;
+}
+
+#logoLine{
+  position: absolute;
+  top: 329px;
+  left: 347px;
+  width: 1339px;
+}
+
+
+#handLogo{
+  position: absolute;
+  top: -28px;
+  left: -59px;
+  height: 556px;
+  width: 274px;
+}
+
+#statueLogo{
+  position: absolute;
+  top: 101px;
+  left: 9px;
+  height: 353px;
+  width: 1722px;
+  opacity: 0; 
+}
+
+#light {
+  position: absolute;
+  top: -32px;
+  left: 3px;
+  opacity: 0;
+}
+
+#lightRay{
+  position: absolute;
+  top: -125px;
+  left: 80px;
+  opacity: 0;
+}
+
+#lightRay2{
+  position: absolute;
+  top: -130px;
+  left: 80px;
+  opacity: 0;
+}
+
+#text1{
+  top: 0px;
+  left: 0px;
+}
+
+#cta{
+  overflow: hidden;
+  top: 328px;
+  left: 151px;
+}
+
+#glare{
+  top: 0px;
+  left: -120px;
+}
+
+#replayBtn{
+  top: 5px;
+  left: 5px;
+  width: 14px;
+  height: 14px;
+  cursor: pointer; 
+}

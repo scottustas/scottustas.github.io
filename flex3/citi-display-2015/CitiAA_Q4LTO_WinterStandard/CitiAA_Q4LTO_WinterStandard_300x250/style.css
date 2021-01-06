@@ -1,0 +1,389 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+/*	font-size: 100%;
+	font: inherit;*/
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	font-family: Arial, sans-serif;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+img {
+  display: block;
+  width: inherit;
+}
+
+.guideLayer{
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+
+#container {
+	display: none;
+	position: absolute;
+	width: 298px;
+	height: 248px;
+	border:1px solid #000000;
+	top: 0px;
+	left: 0px;
+	margin: auto;
+ 	background-color: #1e1e1e;
+ 	overflow: hidden;
+}
+
+#content {
+	display: none;
+	background-color: #ffffff;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+}
+
+#background_exit {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	cursor: pointer !important;
+	opacity: 0;
+	background-color: #000;
+}
+
+#americanPassportLogo{
+	position: absolute;
+	top: 61px;
+	left: -5px;
+	width: 182px;
+	height: 75px;
+}
+
+#rball{
+	position: relative;
+	top: -9px;
+	font-size: 15px;
+}
+
+#rball2{
+	position: relative;
+  top: -5px;
+	font-size: 11px;
+}
+
+#rball3{
+	position: relative;
+  top: -5px;
+  font-size: 11px;
+}
+
+#rball4{
+	position: relative;
+  top: -5px;
+  font-size: 11px;
+}
+
+#rball5{
+	position: relative;
+  top: -2px;
+  font-size: 7px;
+}
+
+#rball6{
+	position: relative;
+  top: -2px;
+  font-size: 7px;
+}
+
+#rball7{
+	position: relative;
+  top: -2px;
+  font-size: 7px;
+}
+
+#rball8{
+	position: relative;
+	top: -7px;
+	font-size: 13px;
+}
+
+.noShadow{
+	-webkit-filter: drop-shadow( 0px 0px 0px #000 );
+    filter: drop-shadow( 0px 0px 0px #000 );  
+
+}
+
+
+
+#typeShadow{
+	position: absolute;
+	top:133px;
+
+}
+
+.dropShadow{
+	-webkit-filter: drop-shadow( 0px 0px 5px rgba(38,93,148,1) );
+    filter: drop-shadow( 0px 0px 5px rgba(38,93,148,1) );  
+
+}
+
+#citiLogo {
+	position: absolute;
+	top: 6px;
+	left: -4px;
+	width: 165px;
+/* 	height: 22px; */
+}
+
+#card{
+	position: absolute;
+	top: 178px;
+	left: 15px;
+}
+
+
+
+
+
+
+
+
+
+#cta{
+  display: block;
+  position:absolute;
+  top: 225px;
+  left: 216px;
+  width: 73px;
+  height: 18px;
+}
+
+ .glare {
+	position: absolute;
+	width:80px;
+	height:50px;
+	background-image:url("glare.png");
+	left:-80px;
+	top:0px;
+	background-repeat:no-repeat;
+}
+
+#bottomBar{
+	position: absolute;
+	top: 245px; 
+	left: 0px;
+	width: 300px;
+	height: 120px;
+	background-color: #FFF;
+	-webkit-box-shadow: inset 0px 0px 99px 25px rgba(0,0,0,0.07);
+	-moz-box-shadow: inset 0px 0px 99px 25px rgba(0,0,0,0.07);
+	box-shadow: inset 0px 0px 99px 25px rgba(0,0,0,0.07);
+	border-top: 3px solid #ed1b2e;
+}
+
+#mcLogo{
+	position: absolute;
+	top: 220px;
+	left: 127px;
+}
+
+#background {
+	position: absolute;	
+	top: 0px;	
+	left: 0px;
+}
+#t1{
+	position: absolute;
+	width: 300px;
+	height: 250px;
+	top: 0px;
+}
+
+
+#t1a{
+	position: absolute;
+	left: 14px;
+	top: 48px;
+	width: 228px;
+	height: 79px;
+	font-size: 13px;
+	letter-spacing: .25px;
+	color: #ffffff;
+}
+
+#t1b{
+	position: absolute;
+	left: 13px;
+	top: 59px;
+	width: 300px;
+	height: 100px;
+	font-size: 60px;
+	color: #FFFFFF;
+	letter-spacing: -.5px;
+}
+
+#t1c{
+	position: absolute;
+	left: 14px;
+	top: 120px;
+	width: 229px;
+	font-size: 26px;
+	line-height: 24px;
+	color: #FFFFFF;
+}
+
+#t1d{
+	position: absolute;
+	left: 14px;
+	top: 172px;
+	width: 300px;
+	height: 79px;
+	font-size: 11px;
+	color: #ffffff;
+}
+#t2{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 300px;
+	height: 250px;
+}
+#t2a{
+	position: absolute;
+	left: 14px;
+	top: 80px;
+	font-size: 18px;
+	line-height: 20px;
+	color: #ffffff;
+}
+
+#t3{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 300px;
+	height: 250px;
+}
+
+#t3a{
+	position: absolute;
+	left: 14px;
+	top: 79px;
+	font-size: 18px;
+	line-height: 20px;
+	color: #FFFFFF;
+}
+
+#t4{
+	position: absolute;
+	width: 300px;
+	height: 250px;
+	top: 0px;
+}
+
+#t4a{
+  position: absolute;
+  left: 14px;
+  top: 56px;
+  width: 228px;
+  height: 79px;
+  font-size: 12px;
+  color: #fff;
+}
+
+#t4b{
+  position: absolute;
+  left: 15px;
+  top: 70px;
+  width: 300px;
+  height: 79px;
+  font-size: 22px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+#t4c{
+  position: absolute;
+  left: 113px;
+  top: 208px;
+  width: 250px;
+  font-size: 10px;
+  letter-spacing: -.25px;
+  line-height: .85;
+  font-family: Sans-Serif;
+}
+@-moz-document url-prefix() {
+  #t4c {
+    font-size: 9px;
+    letter-spacing: 0px;
+  }
+  #ctaText {
+    font-size: 9px;
+    top: 5px;
+  }
+}
+
+#t4d{
+	position: absolute;
+	left: 15px;
+	top: 223px;
+	height: 7px;
+	font-size: 12px;
+	line-height: 9px;
+	color: #4B0606;
+	background-color: #000000;
+	color: white;
+	padding: 6px 5px;
+	line-height: 9px;
+}
+
+#t4e{
+  position: absolute;
+  left: 56px;
+  top: 228px;
+  width: 300px;
+  font-size: 12px;
+  color: #000000;
+}

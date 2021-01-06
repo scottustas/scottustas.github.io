@@ -1,0 +1,139 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  font-family: Arial, sans-serif;
+}
+a {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+a:hover,
+a:active {
+  
+}
+
+div, img {
+  position: absolute;
+}
+
+.guideLayer{
+  position:absolute;
+  top:0px;
+  left:0px;
+}
+
+#container {
+  display: none;
+  position: absolute;
+  width: 298px;
+  height: 598px;
+  border:1px solid #000;
+  top: 0px;
+  left: 0px;
+  margin: auto;
+  overflow: hidden;
+}
+
+#content {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+#background_exit {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  cursor: pointer !important;
+  opacity: 0;
+  background-color: #000000;
+}
+
+#content div {
+  display: block;
+  position: absolute;
+  border: none;
+}
+
+#footer{
+  width: 300px;
+  height: 57px;
+  background-color: #fff;
+  bottom: 0px;
+  -webkit-box-shadow: 0px -2px 5px 0px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0px -2px 5px 0px rgba(0,0,0,0.1);
+  box-shadow: 0px -2px 5px 0px rgba(0,0,0,0.1);
+}
+
+#legal{
+  width: 300px;
+  height: 44px;
+  background-color: #fff;
+  top: 541px;
+  cursor: pointer;
+}
+
+#legalBtn{
+  height: 25px;
+  width: 46px;
+  background-color: #fbfbfb;
+  right: 17px;
+  top: -14px;
+  cursor: pointer;
+}
+
+#legalRollover{
+  height: 17px;
+  width: 47px;
+  right: 15px;
+  top: 527px;
+  cursor: pointer;
+}
+
+#legalImg{
+  top: 0px;
+  left: -227px;
+}
+
+#logo{
+  top: 13px;
+  left: 116px;
+  width: 69px;
+  height: 30px;
+}
+
+#bill{
+  left: 47px;
+  top: 113px;
+  width: 204px;
+  height: 483px;
+}
+
+#cta{
+  overflow: hidden;
+  top: 557px;
+  left: 127px;
+  height: 35px;
+  width: 158px;
+}
+
+#glare{
+  top: 0px;
+  left: -120px;
+}
+
+#replayBtn{
+  top: 10px;
+  right: 10px;
+  width: 14px;
+  height: 14px;
+  cursor: pointer; 
+}

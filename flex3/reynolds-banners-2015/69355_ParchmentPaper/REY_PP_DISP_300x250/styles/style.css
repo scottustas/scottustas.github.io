@@ -1,0 +1,336 @@
+body {
+  font-family: 'Quicksand', sans-serif;
+  color: #083f88;
+  font-weight: 700;
+}
+
+body {
+    margin: 0px;
+}
+
+sup {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+}
+
+p {
+  font-size: 12px;
+  margin: 0px;
+}
+
+#bg_overlay {
+  position: absolute;
+  display: block;
+  width: 300px;
+  height: 250px;
+  background-color: black;
+  opacity: 0;
+}
+
+#t1a {
+  position: absolute;
+  left: 108px;
+  top: 79px;
+  font-size: 19px;
+  color: #ffffff;
+}
+
+#t1b {
+  position: absolute;
+  left: 29px;
+  top: 100px;
+  font-size: 33px;
+  /* width: 300px; */
+  letter-spacing: -2px;
+  color: #ffffff;
+}
+
+#t2 {
+  position: absolute;
+  left: 57px;
+  top: 141px;
+  font-size: 16px;
+  letter-spacing: -.8px;
+  color: #ffffff;
+  width: 195px;
+  height: 19px;
+  clip: rect(0px,195px,19px,0px);
+}
+
+#t3 {
+  position: absolute;
+  left: 58px;
+  top: 90px;
+  font-size: 18px;
+  text-align: center;
+  color: #ffffff;
+  /* letter-spacing: .5px; */
+}
+
+#textDeco1{
+  position: absolute;
+  top: 115px;
+  left: 12px;
+  background: url('../images/textDeco.svg') no-repeat 0 0;
+  width: 15px;
+  height: 14px;
+}
+
+#textDeco2{
+  position: absolute;
+  top: 115px;
+  left: 272px;
+  background: url('../images/textDeco.svg') no-repeat -29px 0px;
+  width: 45px;
+  height: 14px;
+}
+
+#rollingPin{
+  position: absolute;
+  top: 140px;
+  left: 122px;
+}
+
+#inPanelBanner{
+  opacity: 0;
+}
+
+#grahamCrackersBckg{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+#dish1Btn {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  width: 300px;
+  height: 250px;
+  background-color: black;
+  opacity: 0;
+}
+
+#ctaBar {
+  position: absolute;
+  top: 184px;
+}
+
+#ctaBarPanel {
+  position: absolute;
+  top:211px;
+}
+
+#container {
+    position: absolute;
+    display: none;
+    width: 600px;
+    height: 250px;
+}
+#ad {
+  position: absolute;
+  display: block;
+  right: 0px;
+  border: rgb(145, 153, 153) 1px solid;
+  overflow: hidden;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#ad.collapsed {
+    width: 298px;
+    /*2px smaller to account for border*/
+    height: 248px;
+    /*2px smaller to account for border*/
+}
+#ad.expanded {
+    width: 598px;
+    /*2px smaller to account for border*/   
+    height: 248px;
+    /*2px smaller to account for border*/
+}
+#banner {
+  position: absolute;
+  display: block;
+  width: 298px;
+  height: 248px;
+  right: 0px;
+  background-color: #FFF;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+#panel {
+  position: absolute;
+  width: 598px;
+  height: 248px;
+  background-color: #FFF;
+  background: url(../images/grahamCrackersBckg.jpg) 0 0 no-repeat;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.header{
+  position: absolute;
+  left: 10px;
+  top:10px;
+  display: inline-block;
+  font-size: 13px;
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+  background-color: #083f88;
+  padding: 5px 15px 5px 10px;
+}
+
+.header span {
+  display: inline-block;
+  font-size: 18px;
+  font-family: 'Grand Hotel', cursive;
+}
+
+.bar_text{
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 13px;
+  letter-spacing: .02em;
+  top: 17px;
+  left: 188px;
+  color: #083f88;
+
+}
+
+.ctaLogo {
+  position: absolute;
+  left: 91px;
+  top: 7px;
+  width: 142px;
+  height: 20px;
+}
+
+#introLogo{
+  position: absolute;
+  top: 217px;
+  left: 83px;
+}
+
+#blueRibbon{
+  position: absolute;
+  top: 38px;
+  left: 0px;
+}
+
+#ribbonText{
+  position: absolute;
+  top: 11px;
+  left: 16px;
+  font-size: 13px;
+  color: #FFFFFF;
+}
+
+.cta{
+  position: absolute;
+  top: 222px;
+  left: 310px;
+  background: url(../images/get_recipe_button.png) 0 0 no-repeat;
+  height: 21px;
+  width: 110px;
+  overflow: hidden;
+  display: block;
+}
+
+.cta:hover{
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  background-position: 0 -21px;
+}
+.recipe{
+overflow-y: scroll;
+  position: absolute;
+  display:inline-block; 
+  top: 47px;
+  left: 10px;
+  font-size: 12px;
+  line-height: 14px;
+  width: 285px;
+  height: 155px;
+}
+
+#recipePanel1{
+  position: absolute;
+  width: 300px;
+  height: 250px;
+  left:300px;
+  background: url(../images/recipePanel1Bckg.jpg) 0 0 no-repeat;
+
+}
+
+#close-button {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  left: 578px;
+  top: 10px;
+  width: 14px;
+  height: 15px;
+}
+.expanded #banner {
+    display: none;
+}
+.collapsed #panel {
+    display: none;
+}
+
+.button{
+  display: inline-block;
+  font-family: sans-serif;
+  text-align: center;
+  letter-spacing: .04em;
+  padding: 4px;
+  font-size: 10px;
+  color: white;
+  border: 1px solid #083f88;
+  border-radius: 5px;
+  height: auto;
+  width: 105px;
+  clear: both;
+  background:#083f88;
+}
+
+.button:hover{
+  color: #083f88;
+  border-left-color: #083f88;
+  cursor: pointer;
+  background:#ffffff;
+}
+
+.button:after {
+  content: '';
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 0.4em 0 0.4em 0.7em;
+  border-color: transparent transparent transparent #FFF;
+  margin-left: 0.5em;
+}
+
+.button:hover:after {
+  content: '';
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 0.4em 0 0.4em 0.7em;
+  border-color: transparent transparent transparent #083f88;
+  margin-left: 0.5em;
+}
+
+#clickthrough-button {
+  position: absolute;
+  top: 215px;
+  left: 310px;
+  cursor: pointer;
+}

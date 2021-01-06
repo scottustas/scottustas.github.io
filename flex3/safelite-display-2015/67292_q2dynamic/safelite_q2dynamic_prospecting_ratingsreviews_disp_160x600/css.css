@@ -1,0 +1,418 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0px;
+}
+
+#adBorder{
+	position:absolute;
+	border:1px;
+	border-color:#808080;
+	border-style:solid;
+	width:158px;
+	height:598px;
+	cursor:pointer;
+	visibility:hidden;
+	overflow:hidden;
+}
+
+.guideLayer{
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+
+#t1{
+  position: absolute;
+  left: 13px;
+  top:  410px;
+  width: 300px;
+  height: 250px;
+}
+
+#t1a{
+  position: absolute;
+  top: 6px;
+  left: 2px;
+  width: 130px;
+  font-size: 17px;
+  line-height: 24px;
+}
+
+#t1b{
+  position: absolute;
+  top: 107px;
+  left: 35px;
+  width: 300px;
+  font-size: 13px;
+}
+
+#quoteLeft{
+  position: absolute;
+  color: #ec2924;
+  left: 0px;
+  top: 0px;
+  font-size: 57px;
+
+}
+
+#quoteRight{
+  position: absolute;
+  color: #ec2924;
+  left: 75px;
+  top: 70px;
+  font-size: 57px;
+
+}
+
+#legal{
+  position: absolute;
+  left: 7px;
+  top: 235px;
+  font-size: 9.5px;
+  text-align:center;
+}
+
+
+#t2{
+  position: absolute;
+  left: 0px;
+  top:  0px;
+  width: 300px;
+  height: 250px;
+}
+
+#t2a{
+  position: absolute;
+  color: #ec2924;
+  top: 128px;
+  left: 2px;
+  width: 160px;
+  font-size: 18px;
+  text-align:center;
+}
+
+#t2b{
+  position: absolute;
+  top: 155px;
+  left: 20px;
+  width: 120px;
+  font-size: 16px;
+  text-align:center;
+}
+
+#t2c{
+  position: absolute;
+  color: #ec2924;
+  top: 103px;
+  left: 84px;
+  width: 300px;
+  font-size: 18px;
+}
+
+#t3a{
+  position: absolute;
+  top: 59px;
+  left: 84px;
+  width: 300px;
+  font-size: 17px;
+}
+
+#t3b{
+  position: absolute;
+  color: #ec2924;
+  top: 82px;
+  left: 84px;
+  width: 300px;
+  font-size: 17px;
+}
+
+#t3c{
+  position: absolute;
+  top: 104px;
+  left: 84px;
+  width: 300px;
+  font-size: 17px;
+}
+
+#t4a{
+  position: absolute;
+  top: 81px;
+  left: 101px;
+  font-size: 13px;
+}
+
+#t4b{
+  position: absolute;
+  top: 116px;
+  left: 100px;
+  font-size: 13px;
+}
+
+#t4c{
+  position: absolute;
+  top: 135px;
+  left: 101px;
+  font-size: 13px;
+}
+
+#backgroundImage{
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+
+.ctaGreen{
+	position:absolute;
+	top: 550px;
+ 	left: 35px;
+
+	-moz-box-shadow:inset 0px 1px 0px 0px #34bb73;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #34bb73;
+	box-shadow:inset 0px 1px 0px 0px #34bb73;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #00a84c), color-stop(1, #00994d) );
+	background:-moz-linear-gradient( center top, #00a84c 5%, #00994d 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#00a84c', endColorstr='#00994d');
+	background-color:#00a84c;
+	-webkit-border-top-left-radius:6px;
+	-moz-border-radius-topleft:6px;
+	border-top-left-radius:6px;
+	-webkit-border-top-right-radius:6px;
+	-moz-border-radius-topright:6px;
+	border-top-right-radius:6px;
+	-webkit-border-bottom-right-radius:6px;
+	-moz-border-radius-bottomright:6px;
+	border-bottom-right-radius:6px;
+	-webkit-border-bottom-left-radius:6px;
+	-moz-border-radius-bottomleft:6px;
+	border-bottom-left-radius:6px;
+	text-indent:0;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:14px;
+	font-weight:normal;
+	font-style:normal;
+	height:30px;
+	line-height:30px;
+	width:98px;
+	text-decoration:none;
+	text-align:center;
+}
+
+.ctaRed{
+  position:absolute;
+  top: 550px;
+  left: 35px;
+
+
+  -moz-box-shadow:inset 0px 1px 0px 0px #fb0000;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #fb0000;
+  box-shadow:inset 0px 1px 0px 0px #fb0000;
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fb0000), color-stop(1, #de0000) );
+  background:-moz-linear-gradient( center top, #fb0000 5%, #de0000 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb0000', endColorstr='#de0000');
+  background-color:#fb0000;
+  -webkit-border-top-left-radius:6px;
+  -moz-border-radius-topleft:6px;
+  border-top-left-radius:6px;
+  -webkit-border-top-right-radius:6px;
+  -moz-border-radius-topright:6px;
+  border-top-right-radius:6px;
+  -webkit-border-bottom-right-radius:6px;
+  -moz-border-radius-bottomright:6px;
+  border-bottom-right-radius:6px;
+  -webkit-border-bottom-left-radius:6px;
+  -moz-border-radius-bottomleft:6px;
+  border-bottom-left-radius:6px;
+  text-indent:0;
+  display:inline-block;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:14px;
+  font-weight:normal;
+  font-style:normal;
+  height:30px;
+  line-height:30px;
+  width:98px;
+  text-decoration:none;
+  text-align:center;
+}
+
+#bottomBar{
+  position: absolute;
+  left: 0;
+  top: 200px;
+  width: 300px;
+}
+
+#logoWhite{
+  position: absolute;
+  left: 32px;
+  top: 210px;
+  width: 87px 
+}
+
+#ctaColor{
+  display: none;
+}
+
+#guyCar{
+  position: absolute;
+  left: 154px;
+  top: 29px;
+}
+
+#safeliteLogo{
+  position: absolute;
+  top: 20px;
+  left: 32px;
+  width: 100px;
+}
+
+#safeliteAdvantage{
+  position: absolute;
+  top: 46px;
+  left: 85px;
+  width: 177px;
+}
+
+#crackTransparent{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+#checkMark1{
+  position: absolute;
+  top: 81px;
+  left: 86px;
+}
+
+#checkMark2{
+  position: absolute;
+  top: 116px;
+  left: 86px;
+}
+
+#checkMark3{
+  position: absolute;
+  top: 136px;
+  left: 86px;
+}
+
+#barsMask{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  width: 300px;
+  height: 5px;
+}
+
+#barsWipe{
+  position: absolute;
+}
+
+#barsMask2{
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  overflow: hidden;
+  width: 300px;
+  height: 5px;
+}
+
+#barsWipe2{
+  position: absolute;
+}
+
+#lifetimeguaranteeIcon{
+  position: absolute;
+  top: 59px;
+  left: 18px;
+  width: 52px;
+}
+
+#crack1{
+  position: absolute;
+  left: 120px;
+  top: 188px;
+}
+#crackMask2{
+  position: absolute;
+  left: 103px;
+  top: 160px;
+  width: 60px;
+  height: 56px;
+  overflow: hidden;
+}
+
+#crackMask3{
+  position: absolute;
+  left: 78px;
+  top: 160px;
+  width: 99px;
+  height: 60px;
+  overflow: hidden;
+}
+
+#crack2{
+  left: 0px;
+  top: 0px;
+}
+
+#crack3{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+#star1{
+  position: absolute;
+  left: 9px;
+  top: 85px;
+  width: 24px;
+}
+
+#star2{
+  position: absolute;
+  left: 38px;
+  top: 85px;
+  width: 24px;
+}
+
+#star3{
+  position: absolute;
+  left: 67px;
+  top: 85px;
+  width: 24px;
+}
+
+#star4{
+  position: absolute;
+  left: 96px;
+  top: 85px;
+  width: 24px;
+}
+
+#star5{
+  position: absolute;
+  left: 125px;
+  top: 85px;
+  width: 24px;
+}
+
+#star6{
+  position: absolute;
+  left: 125px;
+  top: 85px;
+  width: 24px;
+}
+#bottomRed{
+  position: absolute;
+  top: 593px;
+  left: 0px;
+}

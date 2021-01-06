@@ -1,0 +1,155 @@
+* {
+ margin: 0px;
+ padding: 0px;
+}
+
+body {
+ font-family: Arial, sans-serif;
+}
+
+a {
+ border: none;
+ cursor: pointer;
+ outline: none;
+ user-select: none;
+}
+
+a:hover,
+a:active {
+  
+}
+
+#container {
+ display: none;
+ position: absolute;
+ width: 298px;
+ height: 248px;
+ border:1px solid #b3b3b3;
+ top: 0px;
+ left: 0px;
+ margin: auto;
+ background-color: #c4d4de;
+ overflow: hidden;
+}
+
+#content {
+ display: none;
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ top: 0px;
+ left: 0px;
+}
+
+#background_exit {
+ width: 100%;
+ height: 100%;
+ top: 0px;
+ left: 0px;
+ cursor: pointer !important;
+ opacity: 0;
+ background-color: #000000;
+}
+
+#content div {
+ display: block;
+ position: absolute;
+ border: none;
+}
+
+#cta{
+ overflow: hidden;
+ top: 212px;
+ left: 190px;
+ width: 93px;
+ height: 26px;
+ border-radius: 15px;
+}
+
+#cta img{
+ width: 93px;
+ height: 26px;
+}
+
+#glare{
+  top: 0px;
+  left: -120px;
+}
+
+/*USER//////////////////////////////////////// CSS*/
+#heart1 img, #heart2 img, #heart3 img, #heart4 img, #heart5 img, #heart6 img{
+width: 50%;
+}
+
+#heart1{
+ top: 70px;
+ left: 35px;
+}
+
+#heart2{
+ top: 175px;
+ left: 43px;
+}
+
+#heart3{
+ top: 119px;
+ left: 91px;
+}
+
+#heart4{
+ top: 28px;
+ left: 106px;
+}
+
+#heart5{
+ top: 102px;
+ left: 218px;
+}
+
+#heart6{
+ top: 62px;
+ left: 276px;
+}
+
+#replayBtn{
+  top: 5px;
+  left: 5px;
+  width: 17px; 
+  height: 17px;
+  cursor: pointer;
+}
+
+#replayBtn img{
+   width: 17px; 
+  height: 17px;
+}
+
+img {
+ width: 300px;
+}
+
+#cat3{
+ top: -5px;
+}
+
+#penguin{
+ left:95px;
+}
+
+#text4{
+
+}
+
+#text4Mask{
+ left: 0px;
+ width: 300px;
+ height: 250px;
+ overflow: hidden;
+/* background-color: red;*/
+}
+
+#penguinMask{
+
+ left: 330px;
+}
+

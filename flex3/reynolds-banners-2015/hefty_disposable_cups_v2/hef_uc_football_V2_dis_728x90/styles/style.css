@@ -1,0 +1,114 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  font-family: Arial, sans-serif;
+}
+a {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+a:hover,
+a:active {
+  
+}
+#clickthrough-button {
+  display: block;
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  cursor: pointer;
+}
+
+
+#ad {
+  display: block;
+  border: #000 1px solid;
+  overflow: hidden;
+  width: 726px;
+  height: 89px;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#banner {
+  position: absolute;
+  display: block;
+  width: inherit;
+  height: inherit;
+  background-color: transparent;
+  background-image: url("../images/bg.jpg");
+  background-position: right top;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+#banner div,
+#banner img {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border: none;
+}
+
+#banner #left-block {
+  width: 104px;
+  height: inherit;
+  background: url("../images/bg-pattern.png") left top repeat-x transparent;
+}
+
+#banner #left-block-stroke {
+  left: 104px;
+  width: 7px;
+  height: inherit;
+  background: url("../images/bg-pattern-stroke.png") left top repeat-y transparent;
+}
+
+#banner img[src*="text1"] {
+  left: 280px;
+  top: 24px;
+  width: 297px;
+  height: 41px;
+  clip: rect(0px, 297px, 41px, 297px);
+}
+
+#banner img[src*="cta"] {
+  left: 592px;
+  top: 28px;
+  transform: scale(0, 0);
+}
+#banner img[src*="cup"] {
+  left: 132px;
+  top: 5px;
+}
+#banner img[src*="football."] {
+  left: 906px;
+  top: 23px;
+}
+#banner img[src*="football_blurred"] {
+  left: 906px;
+  top: 23px;
+}
+#banner img[src*="logo-crack_resistant"] {
+  left: 124px;
+  top: 40px;
+  transform: scale(0,0);
+}
+#banner img[src*="logo-hefty"] {
+  left: 10px;
+  top: 31px;
+}
+
+
+
+
+
+
+
+
+

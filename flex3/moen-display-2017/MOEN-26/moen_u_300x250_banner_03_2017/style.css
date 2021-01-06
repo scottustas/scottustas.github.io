@@ -1,0 +1,123 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+a {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+
+a:hover,
+a:active {
+}
+
+#container {
+  display: none;
+  position: absolute;
+  width: 298px;
+  height: 248px;
+  border:1px solid #000000;
+  top: 0px;
+  left: 0px;
+  margin: auto;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+#content {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+#background_exit {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  cursor: pointer !important;
+  opacity: 0;
+  background-color: #000000;
+}
+
+#content div {
+  display: block;
+  position: absolute;
+  border: none;
+}
+
+#cta{
+  overflow: hidden;
+  top: 202px;
+  left: 47px;
+  width: 87px;
+  height: 27px;
+}
+
+#ctaImage{
+
+}
+
+#glare{
+  top: 0px;
+  left: -120px;
+}
+
+/*USER//////////////////////////////////////// CSS*/
+
+@font-face {
+  font-family: 'proximanova-regular';
+  src: url('proximanova-regular.woff');
+  font-style: normal;
+}
+
+#numbers{
+  font-family: 'proximanova-regular', sans-serif;
+  font-size: 43px;
+  color: #FFF;
+  top: 118px;
+  left: 57px;
+  text-align: right;
+}
+
+#logo{
+  top: 219px;
+  left: 20px;
+  width: 68px;
+  height: 16px;
+}
+
+#logo2{
+  top: 150px;
+  left: 150px;
+  width: 121px;
+  height: 34px;
+}
+
+#phone img{
+  width: 107px;
+  height: 218px;
+}
+
+#phone{
+  top: 16px;
+  left: 20px;
+}
+
+#replayBtn{
+  width: 14px;
+  height: 14px;
+  top: 7px;
+  left: 278px;
+  cursor: pointer;
+}

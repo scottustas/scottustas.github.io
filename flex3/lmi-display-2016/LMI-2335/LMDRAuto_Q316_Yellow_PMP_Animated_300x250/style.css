@@ -1,0 +1,135 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  font-family: Arial, sans-serif;
+}
+a {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+a:hover,
+a:active {
+  
+}
+
+div, img {
+  position: absolute;
+}
+
+.guideLayer{
+  position:absolute;
+  top:0px;
+  left:0px;
+}
+
+#container {
+  display: none;
+  position: absolute;
+  width: 298px;
+  height: 248px;
+  border:1px solid #000;
+  top: 0px;
+  left: 0px;
+  margin: auto;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+#content {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+#background_exit {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  cursor: pointer !important;
+  opacity: 0;
+  background-color: #000000;
+}
+
+#content div {
+  display: block;
+  border: none;
+}
+
+#logo{
+  top: 10px;
+  left: 16px;
+  width: 269px;
+  height: 67px;
+}
+
+#car{
+  top: 28px;
+  width: 100%;
+  height: 100%;
+  left: -300px;}
+
+#carBody{
+  top: 87px;
+  width: 256px;
+  height: 118px;
+}
+
+#leftWheel, #rightWheel{
+  width: 46px;
+  height: 46px;
+}
+
+#leftWheel {
+  top: 168px;
+  left: 21px;
+}
+
+#rightWheel {
+  top: 168px;
+  left: 189px;
+}
+
+#cta{
+  overflow: hidden;
+  top: 184px;
+  left: 95px;
+  width: 110px;
+  height: 35px;
+}
+
+#textMask{
+  width: 0px;
+  height: 250px;
+  overflow: hidden;
+/*  background-color: pink;*/
+}
+
+#textShine, #textShineMask, #text1b{
+  opacity: 0;
+}
+
+#textShine{
+  left: -255px;
+}
+
+#glare{
+  top: 2px;
+  left: -120px;
+  opacity: .5;
+}
+
+#replayBtn{
+  top: 5px;
+  left: 5px;
+  width: 14px;
+  height: 14px;
+  cursor: pointer; 
+}

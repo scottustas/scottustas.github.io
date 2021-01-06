@@ -1,0 +1,304 @@
+
+body {
+	line-height: 1;
+	font-family: arial black, arial bold, sans-serif;
+	color: #ffffff;
+}
+
+a img {
+    border: 0;
+}
+
+.guideLayer{
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+
+#container {
+	display: none;
+	position: absolute;
+	width: 298px;
+	height: 248px;
+	border:1px solid #000000;
+	top: 0px;
+	left: 0px;
+	margin: auto;
+ 	background-color: #1e1e1e;
+ 	overflow: hidden;
+}
+
+#content {
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+}
+
+#background_exit {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	cursor: pointer !important;
+	opacity: .5;
+}
+
+#endframeCorner1{
+	position: absolute;
+	top: 6px;
+	left: 5px;
+	background: url('spriteSheet.png') no-repeat -13px -384px;
+	width: 34px;
+	height: 31px;
+}
+
+#endframeCorner2{
+	position: absolute;
+	top: 207px;
+	left: 5px;
+	background: url('spriteSheet.png') no-repeat -13px -384px;
+	width: 34px;
+	height: 31px;
+}
+
+#endframeCorner3{
+	position: absolute;
+	top: 207px;
+	left: 259px;
+	background: url('spriteSheet.png') no-repeat -13px -384px;
+	width: 34px;
+	height: 31px;
+}
+
+#endframeCorner4{
+	position: absolute;
+	top: 7px;
+	left: 257px;
+	background: url('spriteSheet.png') no-repeat -13px -384px;
+	width: 34px;
+	height: 31px;
+}
+
+#background{
+	position: absolute;
+	top: 0px;
+}
+
+#backgroundEnd{
+	position: absolute;
+	top: 0px;
+}
+
+#background2{
+	position: absolute;
+	top: 0px;
+}
+
+#borders{
+	position: absolute;
+	top: 6px;
+	left: 5px;
+	background: url('spriteSheet.png') no-repeat -337px -202px;
+	width: 288px;
+	height: 235px;
+}
+
+#bookHolder{
+	position: absolute;
+	top: 0px;
+}
+
+#bookLeft{
+	position: absolute;
+	background: url('spriteSheet.png') no-repeat 0 0;
+	width: 141px;
+	height: 202px;
+	top: 48px;
+	left: 13px;
+}
+
+#bookLeft2{
+	position: absolute;
+	top: 71px;
+	left: 38px;
+	background: url('spriteSheet.png') no-repeat 0 -214px;
+	width: 116px;
+	height: 155px;
+}
+
+#bookLeft3{
+	position: absolute;
+	top: 69px;
+	left: 38px;
+	background: url('spriteSheet.png') no-repeat -274px -20px;
+	width: 116px;
+	height: 157px;
+}
+
+#bookRight{
+	position: absolute;
+	top: 70px;
+	left: 154px;
+	background: url('spriteSheet.png') no-repeat -151px -22px;
+	width: 113px;
+	height: 157px;
+}
+
+#bookRight2{
+	position: absolute;
+	top: 49px;
+	left: 154px;
+	background: url('spriteSheet.png') no-repeat -171px -214px;
+	width: 146px;
+	height: 201px;
+}
+
+#pastaBowl{
+	position: absolute;
+	top: 153px;
+	left: 83px;
+	background: url('spriteSheet.png') no-repeat 0 -613px;
+	width: 146px;
+	height: 95px;
+}
+
+#raguLogo {
+	position: absolute;
+	top: 13px;
+	left: 107px;
+}
+
+#btmBar{
+	position: absolute;
+	width: 300px;
+	height: 31px;
+	background-color: #ffffff;
+	top: 219px;
+	left:0px;
+}
+
+#cta{
+  position:absolute;
+  top: 82px;
+  left: 105px;
+  width: 51px;
+  height: 5px;
+  background: #e30613;
+  -webkit-border-radius: 9;
+  -moz-border-radius: 9;
+  border-radius: 3px;
+  padding: 10px 20px 10px 20px;
+}
+
+#ctaText{
+	position: absolute;
+	top: 9px;
+	left: 13px;
+	color: #FFFFFF;
+	font-family: arial;
+	font-size: 10px;
+}
+
+#t1{
+	position: absolute;
+	left: 45px;
+	top: 68px;
+	background: url('spriteSheet.png') no-repeat -36px -429px;
+	width: 211px;
+	height: 90px;
+}
+
+#t2{
+	position: absolute;
+	left: 36px;
+	top: 158px;
+	font-size: 20px;
+	/* letter-spacing: -.25px; */
+	width: 300px;
+	text-shadow: 1px 1px 8px #000000;
+}
+
+#t3{
+	position: absolute;
+	top: 158px;
+	left: 28px;
+	font-size: 20px;
+	/* letter-spacing: -.4px; */
+	width: 300px;
+	text-shadow: 1px 1px 8px #000000;
+}
+
+#t4{
+	position: absolute;
+	left: 33px;
+	top: 158px;
+	font-size: 20px;
+	/* letter-spacing: -.4px; */
+	width: 300px;
+	text-shadow: 1px 1px 8px #000000;
+}
+
+#t5{
+	position: absolute;
+	left: 0px;
+	top: 78px;
+	font-size: 28px;
+	letter-spacing: -.4px;
+	text-align: center;
+	width: 300px;
+	text-shadow: 1px 1px 4px #000000;
+
+}
+
+#simmeredText{
+	position: absolute;
+	top: 37px;
+	left: 28px;
+	background: url('spriteSheet.png') no-repeat -13px -534px;
+	width: 244px;
+	height: 32px;
+}
+
+#garlic{
+	position: absolute;
+	top: 184px;
+	left: 42px;
+}
+
+#crushedPepper{
+	position: absolute;
+	top: 178px;
+	left: 94px;
+}
+
+#tomato{
+	position: absolute;
+	top: 173px;
+	left: 148px;
+}
+
+#basil{
+	position: absolute;
+	top: 170px;
+	left: 199px;
+}
+#raguBottle{
+	position: absolute;
+	top: 122px;
+	left: 105px;
+	background: url('spriteSheet.png') no-repeat -151px -581px;
+	width: 88px;
+	height: 127px;
+}
+#replayBtn{
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 14px;
+	height: 14px;
+	cursor: pointer; 
+}

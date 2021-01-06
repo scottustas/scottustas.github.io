@@ -1,0 +1,321 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0px;
+}
+
+#adBorder{
+	position:absolute;
+	border:1px;
+	border-color:#808080;
+	border-style:solid;
+	width:726px;
+	height:88px;
+	cursor:pointer;
+	visibility:hidden;
+	overflow:hidden;
+}
+
+.guideLayer{
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+
+#t1{
+  position: absolute;
+  left: 375px;
+  top:  0px;
+  width: 350px;
+  height: 90px;
+
+}
+
+#t1a{
+  position: absolute;
+  color: #000;
+  top: 25px;
+  left: 40px;
+  font-size: 15px;
+}
+
+#t1b{
+  position: absolute;
+  color: #ec2924;
+  top: 45px;
+  left: 79px;
+  font-size: 24px;
+}
+
+#t2{
+  position: absolute;
+  left: 375px;
+  top: 0px;
+  width: 320px;
+  height: 90px;
+}
+
+#t2a{
+  position: absolute;
+  top: 25px;
+  left: 39px;
+  font-size: 15px;
+}
+
+#t2b{
+  position: absolute;
+  color: #ec2924;
+  top: 44px;
+  left: 70px;
+  font-size: 25px;
+}
+
+#t2c{
+  position: absolute;
+  color: #ec2924;
+  top: 96px;
+  left: 21px;
+  font-size: 15px;
+}
+
+#t3a{
+  position: absolute;
+  top: 18px;
+  left: 407px;
+  font-size: 15px;
+}
+
+#t3b{
+  position: absolute;
+  color: #ec2924;
+  top: 38px;
+  left: 406px;
+  font-size: 15px;
+}
+
+#t3c{
+  position: absolute;
+  top: 58px;
+  left: 406px;
+  font-size: 15px;
+}
+
+#t4a{
+  position: absolute;
+  top: 37px;
+  left: 412px;
+  font-size: 11px;
+}
+
+#t4b{
+  position: absolute;
+  top: 53px;
+  left: 412px;
+  font-size: 11px;
+}
+
+#t4c{
+  position: absolute;
+  top: 66px;
+  left: 412px;
+  font-size: 11px;
+  line-height: 16px;
+}
+
+#backgroundImage{
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+
+#blackBar{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.ctaGreen{
+	position:absolute;
+  top: 31px;
+  left: 617px;
+
+	-moz-box-shadow:inset 0px 1px 0px 0px #34bb73;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #34bb73;
+	box-shadow:inset 0px 1px 0px 0px #34bb73;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #00a84c), color-stop(1, #00994d) );
+	background:-moz-linear-gradient( center top, #00a84c 5%, #00994d 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#00a84c', endColorstr='#00994d');
+	background-color:#00a84c;
+	-webkit-border-top-left-radius:6px;
+	-moz-border-radius-topleft:6px;
+	border-top-left-radius:6px;
+	-webkit-border-top-right-radius:6px;
+	-moz-border-radius-topright:6px;
+	border-top-right-radius:6px;
+	-webkit-border-bottom-right-radius:6px;
+	-moz-border-radius-bottomright:6px;
+	border-bottom-right-radius:6px;
+	-webkit-border-bottom-left-radius:6px;
+	-moz-border-radius-bottomleft:6px;
+	border-bottom-left-radius:6px;
+	text-indent:0;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:14px;
+	font-weight:normal;
+	font-style:normal;
+	height:30px;
+	line-height:30px;
+	width:98px;
+	text-decoration:none;
+	text-align:center;
+}
+
+.ctaRed{
+  position:absolute;
+  top: 31px;
+  left: 617px;
+
+  -moz-box-shadow:inset 0px 1px 0px 0px #fb0000;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #fb0000;
+  box-shadow:inset 0px 1px 0px 0px #fb0000;
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fb0000), color-stop(1, #de0000) );
+  background:-moz-linear-gradient( center top, #fb0000 5%, #de0000 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb0000', endColorstr='#de0000');
+  background-color:#fb0000;
+  -webkit-border-top-left-radius:6px;
+  -moz-border-radius-topleft:6px;
+  border-top-left-radius:6px;
+  -webkit-border-top-right-radius:6px;
+  -moz-border-radius-topright:6px;
+  border-top-right-radius:6px;
+  -webkit-border-bottom-right-radius:6px;
+  -moz-border-radius-bottomright:6px;
+  border-bottom-right-radius:6px;
+  -webkit-border-bottom-left-radius:6px;
+  -moz-border-radius-bottomleft:6px;
+  border-bottom-left-radius:6px;
+  text-indent:0;
+  display:inline-block;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:14px;
+  font-weight:normal;
+  font-style:normal;
+  height:30px;
+  line-height:30px;
+  width:98px;
+  text-decoration:none;
+  text-align:center;
+}
+
+#car{
+	position: absolute;
+	left: 0px;
+	top:158px;
+}
+
+#phoneHand{
+  position: absolute;
+  left: 231px;
+  top: 1px;
+}
+
+#bottomBar{
+  position: absolute;
+  left: 0;
+  top: 200px;
+  width: 300px;
+}
+
+#logoWhite{
+  position: absolute;
+  left: 32px;
+  top: 210px;
+  width: 87px
+  
+}
+
+#ctaColor{
+  display: none;
+}
+
+#guyCar{
+  position: absolute;
+  left: 242px;
+  top: -3px;
+}
+
+#safeliteLogo{
+  position: absolute;
+  top: 29px;
+  left: 15px;
+  width: 93px;
+}
+
+#safeliteAdvantage{
+  position: absolute;
+  top: 6px;
+  left: 398px;
+  width: 168px;
+}
+
+#crackTransparent{
+  position: absolute;
+  top: -5px;
+  left: 156px;
+}
+
+#checkMark1{
+  position: absolute;
+  top: 36px;
+  left: 398px;
+}
+
+#checkMark2{
+  position: absolute;
+  top: 52px;
+  left: 398px;
+}
+
+#checkMark3{
+  position: absolute;
+  top: 69px;
+  left: 398px;
+}
+
+#barsMask{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  width: 300px;
+  height: 5px;
+
+}
+
+#barsWipe{
+  position: absolute;
+}
+
+#bottomBckg{
+  position: absolute;
+  left: 324px;
+  top: 0px;
+}
+
+#blackBar{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+
+#redBar{
+  position: absolute;
+  left: -300px;
+  top: 0px;
+}

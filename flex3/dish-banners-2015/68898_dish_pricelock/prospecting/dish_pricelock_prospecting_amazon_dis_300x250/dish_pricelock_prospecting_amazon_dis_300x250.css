@@ -1,0 +1,492 @@
+
+body {
+	line-height: 1;
+	font-family: MuseoSans-900, Arial, sans-serif;
+}
+
+.guideLayer{
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+
+#container {
+	display: none;
+	position: absolute;
+	width: 298px;
+	height: 248px;
+	border:1px solid #000000;
+	top: 0px;
+	left: 0px;
+	margin: auto;
+ 	background-color: #1e1e1e;
+ 	overflow: hidden;
+}
+
+#content {
+	display: none;
+	background-color: #ffffff;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+}
+
+#background_exit {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	cursor: pointer !important;
+	opacity: .5;
+}
+
+#text1Group{
+	position: absolute;
+	top:0px;
+
+}
+
+#t1_t{
+	position: absolute;
+	left: 22px;
+	top: 84px;
+	background: url('tvBillText.svg') no-repeat 0 0;
+	width: 43px;
+	height: 51px;
+}
+
+#t1_v{
+	position: absolute;
+	left: 66px;
+	top: 84px;
+	background: url('tvBillText.svg') no-repeat -45px 0;
+	width: 49px;
+	height: 51px;
+}
+
+#t1_b{
+	position: absolute;
+	left: 136px;
+	top: 84px;
+	background: url('tvBillText.svg') no-repeat -115px 0;
+	width: 38px;
+	height: 51px;
+}
+
+#t1_largeLetter{
+	position: absolute;
+	left: 136px;
+	top: 84px;
+	background: url('tvBillText.svg') no-repeat -115px 0;
+	width: 38px;
+	height: 51px;
+}
+
+#t1_i{
+	position: absolute;
+	left: 182px;
+	top: 83px;
+	background: url('tvBillText.svg') no-repeat -161px 0;
+	width: 13px;
+	height: 51px;
+}
+
+#t1_l{
+	position: absolute;
+	left: 206px;
+	top: 83px;
+	background: url('tvBillText.svg') no-repeat -185px 0;
+	width: 33px;
+	height: 51px;
+}
+
+#t1_l2{
+	position: absolute;
+	left: 244px;
+	top: 83px;
+	background: url('tvBillText.svg') no-repeat -224px 0;
+	width: 33px;
+	height: 51px;
+}
+
+#t1_g{
+	position: absolute;
+	left: 22px;
+	top: 141px;
+	background: url('tvBillText.svg') no-repeat -2px -57px;
+	width: 32px;
+	height: 35px;
+}
+
+#t1_o{
+	position: absolute;
+	left: 58px;
+	top: 141px;
+	background: url('tvBillText.svg') no-repeat -37px -57px;
+	width: 35px;
+	height: 35px;
+}
+
+#t1_i2{
+	position: absolute;
+	left: 98px;
+	top: 142px;
+	background: url('tvBillText.svg') no-repeat -77px -58px;
+	width: 9px;
+	height: 33px;
+}
+
+#t1_n{
+	position: absolute;
+	left: 114px;
+	top: 142px;
+	background: url('tvBillText.svg') no-repeat -93px -58px;
+	width: 28px;
+	height: 33px;
+}
+
+#t1_g2{
+	position: absolute;
+	left: 147px;
+	top: 141px;
+	background: url('tvBillText.svg') no-repeat -126px -57px;
+	width: 32px;
+	height: 35px;
+}
+
+#t1_u{
+	position: absolute;
+	left: 194px;
+	top: 142px;
+	background: url('tvBillText.svg') no-repeat -174px -58px;
+	width: 28px;
+	height: 34px;
+}
+
+#t1_p{
+	position: absolute;
+	left: 230px;
+	top: 142px;
+	background: url('tvBillText.svg') no-repeat -209px -58px;
+	width: 25px;
+	height: 33px;
+}
+
+#t1_question{
+	position: absolute;
+	left: 255px;
+	top: 141px;
+	width: 21px;
+	background: url('tvBillText.svg') no-repeat -235px -57px;
+	width: 21px;
+	height: 34px;
+}
+
+#logo{
+	position: absolute;
+
+	top: -46px;
+	left: 107px;
+	width: 85px;
+	height: 85px;
+}
+
+#wreckingBall{
+	position: absolute;
+	top: -411px;
+	left: -151px;
+}
+
+#ballShadow{
+	position: absolute;
+	left: -33px;
+	top: 379px;
+}
+
+#shadow{
+	position: absolute;
+	top: 5px;
+	left: 45px;
+}
+
+#t2{
+	position: absolute;
+	left: -3px;
+	top: 78px;
+	color: #FFFFFF;
+	font-size: 31px;
+	letter-spacing: -.25px;
+	width: 300px;
+	text-align: center;
+}
+
+#t2a{
+	position: absolute;
+	left: -2px;
+	top: 132px;
+	color: #FFFFFF;
+	font-size: 38px;
+	letter-spacing: -.25px;
+	width: 300px;
+	text-align: center;
+}
+
+#rball{
+	position: absolute;
+	top: 16px;
+	left: 124px;
+	font-size: 13px;
+
+}
+
+#t2b{
+	position: absolute;
+	left: -2px;
+	top: 134px;
+	color: #FFFFFF;
+	font-size: 23px;
+	letter-spacing: -.25px;
+	width: 300px;
+	text-align: center;
+	line-height: 20px;
+}
+
+
+#t2c{
+	position: absolute;
+	left: 79px;
+	top: 113px;
+	color: #FFFFFF;
+	background: url('logosBtmBar.png') no-repeat -165px -41px;
+	width: 142px;
+	height: 60px;
+}
+
+
+#t2d{
+	font-family: MuseoSans-300, Arial, sans-serif;
+	position: absolute;
+	left: -3px;
+	top: 172px;
+	color: #FFFFFF;
+	font-size: 12px;
+	letter-spacing: -0.25px;
+	width: 300px;
+	text-align: center;
+	line-height: 20px;
+}
+
+#t2e{
+	font-family: MuseoSans-300, Arial, sans-serif;
+	position: absolute;
+	left: 1px;
+	top: 180px;
+	color: #FFFFFF;
+	font-size: 11px;
+	letter-spacing: -0.35px;
+	width: 300px;
+	text-align: center;
+	line-height: 20px;
+}
+
+#t2f{
+	position: absolute;
+	left: 0px;
+	top: 130px;
+	color: #FFFFFF;
+	font-size: 37px;
+	letter-spacing: -0.5px;
+	width: 300px;
+	text-align: center;
+	line-height: 20px;
+}
+
+#t2g{
+	position: absolute;
+	left: -3px;
+	top: 153px;
+	color: #FFFFFF;
+	font-size: 16px;
+	letter-spacing: -0.25px;
+	width: 300px;
+	text-align: center;
+	line-height: 20px;
+}
+
+#t2h{
+	font-family: MuseoSans-300, Arial, sans-serif;
+	position: absolute;
+	left: 0px;
+	top: 166px;
+	color: #FFFFFF;
+	font-size: 10.5px;
+	letter-spacing: -0.35px;
+	width: 300px;
+	text-align: center;
+	line-height: 20px;
+}
+
+#offerGroup{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+#gradient1{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+
+	background: rgba(230,29,69,1);
+	background: -moz-linear-gradient(top, rgba(230,29,69,1) 0%, rgba(230,29,69,1) 57%, rgba(236,101,38,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(230,29,69,1)), color-stop(57%, rgba(230,29,69,1)), color-stop(100%, rgba(236,101,38,1)));
+	background: -webkit-linear-gradient(top, rgba(230,29,69,1) 0%, rgba(230,29,69,1) 57%, rgba(236,101,38,1) 100%);
+	background: -o-linear-gradient(top, rgba(230,29,69,1) 0%, rgba(230,29,69,1) 57%, rgba(236,101,38,1) 100%);
+	background: -ms-linear-gradient(top, rgba(230,29,69,1) 0%, rgba(230,29,69,1) 57%, rgba(236,101,38,1) 100%);
+	background: linear-gradient(to bottom, rgba(230,29,69,1) 0%, rgba(230,29,69,1) 57%, rgba(236,101,38,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e61d45', endColorstr='#ec6526', GradientType=0 );
+
+}
+
+#gradient2{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background: rgba(229,27,67,1);
+	background: -moz-linear-gradient(top, rgba(229,27,67,1) 0%, rgba(229,27,67,1) 50%, rgba(204,8,96,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(229,27,67,1)), color-stop(50%, rgba(229,27,67,1)), color-stop(100%, rgba(204,8,96,1)));
+	background: -webkit-linear-gradient(top, rgba(229,27,67,1) 0%, rgba(229,27,67,1) 50%, rgba(204,8,96,1) 100%);
+	background: -o-linear-gradient(top, rgba(229,27,67,1) 0%, rgba(229,27,67,1) 50%, rgba(204,8,96,1) 100%);
+	background: -ms-linear-gradient(top, rgba(229,27,67,1) 0%, rgba(229,27,67,1) 50%, rgba(204,8,96,1) 100%);
+	background: linear-gradient(to bottom, rgba(229,27,67,1) 0%, rgba(229,27,67,1) 50%, rgba(204,8,96,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e51b43', endColorstr='#cc0860', GradientType=0 );
+}
+
+#yearPriceLock{
+	position: absolute;
+	top: 72px;
+	left: 15px;
+	width: 270px;
+}
+
+#yearPriceLock2{
+	position: absolute;
+	top: 58px;
+	left: 39px;
+	width: 220px;
+	height: 119px;
+}
+
+#gradient3{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background: rgba(202,10,97,1);
+	background: -moz-linear-gradient(top, rgba(202,10,97,1) 0%, rgba(202,10,97,1) 50%, rgba(136,38,131,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(202,10,97,1)), color-stop(50%, rgba(202,10,97,1)), color-stop(100%, rgba(136,38,131,1)));
+	background: -webkit-linear-gradient(top, rgba(202,10,97,1) 0%, rgba(202,10,97,1) 50%, rgba(136,38,131,1) 100%);
+	background: -o-linear-gradient(top, rgba(202,10,97,1) 0%, rgba(202,10,97,1) 50%, rgba(136,38,131,1) 100%);
+	background: -ms-linear-gradient(top, rgba(202,10,97,1) 0%, rgba(202,10,97,1) 50%, rgba(136,38,131,1) 100%);
+	background: linear-gradient(to bottom, rgba(202,10,97,1) 0%, rgba(202,10,97,1) 50%, rgba(136,38,131,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ca0a61', endColorstr='#882683', GradientType=0 );
+}
+
+#bottomBar{
+	position: absolute;
+	bottom: 0px;
+	left:0px;
+	background: url('logosBtmBar.png') no-repeat 0 0;
+	width: 300px;
+	height: 40px;
+
+}
+
+#netflixLogo{
+	position: absolute;
+	top: 153px;
+	left: 55px;
+	background: url('logosBtmBar.png') no-repeat -83px -41px;
+	width: 81px;
+	height: 34px;
+}
+
+#redZoneLogo{
+	position: absolute;
+	top: 153px;
+	left: 161px;
+	background: url('logosBtmBar.png') no-repeat 0 -41px;
+	width: 82px;
+	height: 35px;
+}
+
+#orText{
+	font-family: MuseoSans-300, Arial, sans-serif;
+	position: absolute;
+	left: -2px;
+	top: 162px;
+	color: #FFFFFF;
+	font-size: 9px;
+	letter-spacing: -0.25px;
+	width: 300px;
+	text-align: center;
+	line-height: 20px;
+}
+
+#t3{
+	font-family: MuseoSans-500, Arial, sans-serif;
+	position: absolute;
+	left: -1px;
+	top: 187px;
+	color: #FFFFFF;
+	font-size: 10.5px;
+	letter-spacing: -0.45px;
+	width: 300px;
+	text-align: center;
+	line-height: 20px;
+}
+
+#legal{
+	position: absolute;
+	top: 208px;
+	width: 300px;
+	height: 36px;
+	background-color: #ffffff;
+ 	cursor: pointer;
+}
+
+#legalTab{
+	position: absolute;
+	top: -17px;
+	width: 40px;
+	left: 252px;
+	height: 17px;
+	font-family: MuseoSans-100, Arial, sans-serif;
+ 	background-color: #ffffff;
+	font-size: 9px;
+	line-height: 19px;
+	text-align: center;
+}
+
+#legalText{
+	position: absolute;
+	left: 6px;
+	top: 12px;
+	color: #404040;
+	font-size: 9px;
+	width: 290px;
+	font-family: Arial, sans-serif;
+}
+
+#replayBtn{
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 14px;
+	height: 14px;
+	cursor: pointer; 
+}
+
+

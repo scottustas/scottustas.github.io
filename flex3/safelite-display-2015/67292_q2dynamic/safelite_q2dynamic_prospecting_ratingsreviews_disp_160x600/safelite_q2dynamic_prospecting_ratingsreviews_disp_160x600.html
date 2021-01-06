@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="https://secure-ds.serving-sys.com/BurstingScript/adKit/adkit.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/plugins/CSSPlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/easing/EasePack.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenLite.min.js"></script>
+
+<script language="javascript">
+
+	adkit.onReady(startAd);
+	adkit.onReady(handleSVData);
+
+	var imgLoadCount = 0;
+	
+	function startAd(){
+		console.log(">> Start Ad...");
+		var adBorder = document.getElementById("adBorder");
+			adBorder.addEventListener("click", clickthrough);
+	}
+	
+	function handleSVData(data) {
+
+		console.log(">> SVData Start")
+	
+		var BackgroundImage = adkit.getSVData("BackgroundImage");
+		var ctaText = adkit.getSVData("ctaText");	
+		var ctaColor = adkit.getSVData("ctaColor");	
+		
+		var BackgroundElement = document.getElementById("backgroundImage");
+			BackgroundElement.addEventListener("load", imgLoaded);
+			BackgroundElement.src = "images/" + BackgroundImage;
+
+		var	ctaColorElement = document.getElementById("cta").className = ctaColor;
+
+		console.log("BackgroundImage = " + BackgroundImage);
+
+	}
+	
+	function imgLoaded(){
+
+		console.log(">> imgLoaded Start");
+
+		imgLoadCount++;
+		console.log(imgLoadCount + " image(s) loaded");
+		if(imgLoadCount == 1){
+			document.getElementById("adBorder").style.visibility = "visible";
+			console.log("Images are loaded...display the assets!");
+			
+			console.log(">> imgLoaded Complete ");
+
+			startAnimation();
+		}
+	}
+
+	function clickthrough(){
+		console.log("clickthrough()");
+		EB.clickthrough();
+	}
+
+	function ctaOverHandler() {
+ 		TweenLite.set("#cta",  {scale:1.05, overwrite:true, ease:Expo.easeOut});
+	}
+
+	function ctaOutHandler() {
+ 		TweenLite.set("#cta",  {scale:1,  overwrite:false, ease:Expo.easeOut});
+	}
+
+	function ctaListener(){
+
+		adBorder.addEventListener('mouseover', ctaOverHandler, false);
+		adBorder.addEventListener('mouseout', ctaOutHandler, false);
+	}
+
+	function startAnimation(){
+
+		console.log(">> Start Animation " );
+
+		TweenLite.to("#barsMask", .5, {height:5,  delay:0, ease:Expo.easeIn});
+		
+		TweenLite.to("#safeliteLogo", {delay:0, ease:Expo.easeOut});
+
+		TweenLite.from("#star1", .5, {scale:5, alpha:0, delay:.25, ease:Back.easeOut});
+		TweenLite.from("#star2", .5, {scale:5, alpha:0, delay:.35, ease:Back.easeOut});
+		TweenLite.from("#star3", .5, {scale:5, alpha:0, delay:.45, ease:Back.easeOut});
+		TweenLite.from("#star4", .5, {scale:5, alpha:0, delay:.55, ease:Back.easeOut});
+		TweenLite.from("#star6", .5, {scale:5, alpha:0, delay:.65, ease:Back.easeOut});
+
+		TweenLite.from("#cta", .25, {scale:0, alpha:0, delay:1, ease:Back.easeOut, onComplete:ctaListener});
+
+		TweenLite.from("#t2", .5, {scale:0, delay:1, transformOrigin:"30% 60%", ease:Expo.easeOut});
+		TweenLite.from("#legal", .5, {alpha:0, delay:1.25, ease:Expo.easeOut});
+		
+		TweenLite.from("#t1", .5, {scale:0, delay:2, transformOrigin:"25% 25%", ease:Expo.easeOut});
+
+		TweenLite.from("#crackMask2", 2.25, {width:0, height:0, transformOrigin:"50% 50%", delay:2.25, ease:Expo.easeOut});
+
+		TweenLite.set("#crackTransparent", {alpha:0, delay:7.5});
+
+		TweenLite.from("#crackMask3", 2.25, {width:0, height:0, transformOrigin:"50% 50%", delay:8.75, ease:Expo.easeOut});
+
+	}
+
+</script>
+
+<title>safelite_q2dynamic_prospecting_alwaysbethere_disp_300x250</title>
+<link href="css.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<div id="adBorder">
+	<img id="backgroundImage" src="images/bckg.jpg"/>
+    <img id="crack1" src="images/crack1.png"/>
+    <img id="safeliteLogo" src="images/safeliteLogo_vert.svg"/>
+    
+    <div id="crackMask2">
+    	<img id="crack2" src="images/crack2.png"/>
+    </div>
+
+    <div id="crackMask3">
+    	<img id="crack3" src="images/crack3.png"/>
+    </div>
+
+    <img id="star1" src="images/star.svg"/>
+    <img id="star2" src="images/star.svg"/>
+    <img id="star3" src="images/star.svg"/>
+    <img id="star4" src="images/star.svg"/>
+    <!--img id="star5" src="images/star.svg"/-->
+    <img id="star6" src="images/starGrey.svg"/>
+
+    <div id ="t1">
+    	<div id ="quoteLeft"> <b>“</b> </div>
+    	<div id="t1a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The speed <br>and quality of the<br> service was <br>amazing! </div>
+    	<div id ="quoteRight"> <b>”</b> </div>
+    	<div id="t1b"> – JaredJ </div>
+    </div>
+
+    <div id="legal">source: customer reviews on Safelite.com</div>
+
+    <div id="t2">
+	    <div id="t2a"> <b>20,000+ reviews</b> </div>
+	    <div id="t2b"> a 4.6 star average rating </div>
+	</div>
+
+	<div id="barsMask">
+	    <img id="barsWipe" src="images/barsWipe.png"/>
+	</div>
+
+	<div id="cta" class="xxx"> <span id="ctaText">xxxxxx</span> </div>
+    
+	<img id="bottomRed" src="images/bottomRed.png"/>
+</div>
+
+</body>
+</html>

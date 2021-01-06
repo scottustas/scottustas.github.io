@@ -1,0 +1,203 @@
+* {
+ margin: 0px;
+ padding: 0px;
+}
+
+body {
+ font-family: Arial, sans-serif;
+}
+
+a {
+ border: none;
+ cursor: pointer;
+ outline: none;
+ user-select: none;
+}
+
+a:hover,
+a:active {
+  
+}
+
+#container {
+ display: none;
+ position: absolute;
+ width: 298px;
+ height: 248px;
+ border:1px solid #b3b3b3;
+ top: 0px;
+ left: 0px;
+ margin: auto;
+ background-color: #c4d4de;
+ overflow: hidden;
+}
+
+#content {
+ display: none;
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ top: 0px;
+ left: 0px;
+}
+
+#background_exit {
+ width: 100%;
+ height: 100%;
+ top: 0px;
+ left: 0px;
+ cursor: pointer !important;
+ opacity: 0;
+ background-color: #000000;
+}
+
+#content div {
+ display: block;
+ position: absolute;
+ border: none;
+}
+
+#cta{
+ overflow: hidden;
+ top: 212px;
+ left: 190px;
+ width: 93px;
+ height: 26px;
+ border-radius: 15px;
+}
+
+#cta img{
+ width: 93px;
+ height: 26px;
+}
+
+#glare{
+  top: 0px;
+  left: -120px;
+}
+
+/*USER//////////////////////////////////////// CSS*/
+
+#replayBtn{
+  top: 5px;
+  left: 5px;
+  width: 17px; 
+  height: 17px;
+  cursor: pointer;
+}
+
+#replayBtn img{
+   width: 17px; 
+  height: 17px;
+}
+
+
+img {
+ width: 300px;
+}
+
+#parachuteFridge1 img{
+width: 57px;
+height: 121px;
+}
+
+#parachuteFridge2 img{
+width: 44px;
+height: 92px;
+}
+
+#parachuteCube1 img{
+width: 31px;
+height: 37px;
+}
+
+#parachuteCube2 img{
+width: 20px;
+height: 23px;
+}
+
+#parachuteCube3 img{
+width: 20px;
+height: 23px;
+}
+
+#parachutePenguin1 img{
+width: 68px;
+height: 93px;
+}
+
+#parachutePenguin2 img{
+width: 45px;
+height: 61px;
+}
+
+#parachutePenguin3 img{
+width: 37px;
+height: 50px;
+}
+
+#parachuteFridge1{
+top: 23px;
+left: 226px;
+}
+
+#parachuteFridge2{
+top:-20px;
+left: 50px;
+}
+
+#parachutePenguin1{
+top:56px;
+left: 2px;
+}
+
+#parachutePenguin2{
+top:-10px;
+left: 101px;
+}
+
+#parachutePenguin3{
+top:74px;
+left: 210px;
+}
+
+#parachuteCube1{
+top: 17px;
+left: 183px;
+}
+
+#parachuteCube2{
+top: 3px;
+left: 269px;
+}
+
+#parachuteCube3{
+top: 97px;
+left: 73px;
+}
+
+#penguin{
+ left:-100px;
+}
+
+#text4{
+
+}
+
+#text4Mask{
+ left: 0px;
+ width: 460px;
+ height: 250px;
+ overflow: hidden;
+/* background-color: red;*/
+}
+
+#penguinMask{
+
+ left: 330px;
+}
+
+
+
+
+

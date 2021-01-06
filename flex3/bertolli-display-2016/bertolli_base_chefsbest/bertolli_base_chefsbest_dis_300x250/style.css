@@ -1,0 +1,129 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+a {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+
+a:hover,
+a:active {
+  
+}
+
+.guideLayer{
+  position:absolute;
+  top:0px;
+  left:0px;
+}
+
+#container {
+  display: none;
+  position: absolute;
+  width: 298px;
+  height: 248px;
+  border:1px solid #000000;
+  top: 0px;
+  left: 0px;
+  margin: auto;
+  background-color: #1e1e1e;
+  overflow: hidden;
+}
+
+#content {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+#background_exit {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  cursor: pointer !important;
+  opacity: 0;
+  background-color: #000000;
+}
+
+#content div {
+  display: block;
+  position: absolute;
+  border: none;
+}
+
+#logo{
+  top: 9px;
+  left: 101px;
+}
+
+#text1{
+  top: 60px;
+  left: 34px;
+}
+
+#text2{
+  top: 80px;
+  left: 84px;
+}
+
+#text3{
+  top: 31px;
+  left: 102px;
+}
+
+#text3{
+  top: 98px;
+  left: 131px;
+}
+
+#text4{
+  top: 98px;
+  left: 127px;
+}
+
+#cheeseSauce{
+  top: 129px;
+  left: 99px;
+}
+
+#alfredoSauce{
+  top: 129px;
+  left: 37px;
+  opacity: 0;
+}
+
+#jarLockup{
+  top: 89px;
+  left: 0px;
+}
+
+#cta{
+  overflow: hidden;
+  top: 204px;
+  left: 99px;
+}
+
+#glare{
+  top: 0px;
+  left: -120px;
+}
+
+#replayBtn{
+  top: 5px;
+  right: 5px;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}

@@ -1,0 +1,164 @@
+<!-- HTML 5 Ad Template from DoubleClick by Google -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<script src="https://s0.2mdn.net/ads/studio/Enabler.js" type="text/javascript"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<link rel=StyleSheet href="style.css" type="text/css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js"></script>
+<script src="script.js" type="text/javascript"></script>
+
+<style type="text/css">
+#container_dc{display:none;z-index:20}
+</style>
+
+</head>
+
+<body>
+
+    <div id="container_dc">
+        <div id="collapsed">
+        	<button id="expand_btn">   <div class = "glare"></div> </button>
+
+            <div id="background"><img src="background.jpg"></div>
+
+            <div id="t1"><img src="t1.png"></div>
+            <div id="t2"><img src="t2.png"></div>
+            <div id="t3"><img src="t3.png"></div>
+            <div id="t4"><img src="t4.png"></div>
+            <div id="t5"><img src="t5.png"></div>
+
+            <div id="t6a"><img src="t6a.png"></div>
+            <div id="t6b"><img src="t6b.png"></div>
+            <div id="t6c"><img src="t6c.png"></div>
+            <div id="t6d"><img src="t6d.png"></div>
+
+            <!--<div id="cta">
+              <div id="arrow"><img src="arrow.svg"></div>
+              <div id="ctaText"><img src="ctaText.svg"></div>
+              <div class = "glare"></div>
+            </div> -->
+
+    </div> 
+
+        <div id="expanded">
+
+            <!--<img class="guideLayer" src="raw/f1_guide.png"/>-->
+            <!-- <button id="exit_btn"></button> -->
+
+            <button id="close_btn"></button>
+
+            <div id="expandedBackground"><img src="expandedBackground.jpg"></div>
+            <div id="expandYourWorldText"><img src="expandYourWorldText.svg"></div>
+
+            <div id="card">
+                <img src="card.png">
+                <div class = "cardGlare"></div>
+            </div>
+            <div id="cardText"><img src="cardText.png"></div>
+
+            <div id="mcLogo"><img src="mcLogo.png"></div>
+
+            <div id="cta"> 
+                <div class = "glare"></div>
+                <img src="cta.png">
+            </div>
+
+            <div id="boxBar1"></div>
+            <div id="boxBar2"></div>
+            <div id="boxBar3"></div>
+            <div id="boxBar4"></div>
+
+            <div id="benefitBox">
+
+                <div id="b1t1"> 
+                     <img src="b1t1.png">
+                    <div id="t1a"></div>
+                    <div id="t1b"></div>
+                    <div id="t1c"></div>
+
+                </div>
+
+                <div id="b2t1">
+                    <img src="b2t1.png">
+                    <div id="t2a"></div>
+                    <div id="t2b"></div>
+                    <div id="t2c"></div>
+                </div>
+
+                <div id="b3t1">
+                    <img src="b3t1.png">
+                    <div id="t3a"></div>
+                    <div id="t3b"></div>
+                    <div id="t3c"></div>
+                    <div id="t3d"></div>     
+                </div>
+
+                <div id="b4t1">
+                    <img src="b4t1.png">
+                    <div id="t4a"></div>
+                    
+                </div>
+
+            </div>
+
+            <div id="box1">
+                <div id="icon1"></div>
+                <div id="boxCloseBtn1"></div>
+            </div>
+
+            <div id="box2">
+                <div id="icon2"></div>
+                <div id="boxCloseBtn2"></div>
+            </div>
+
+            <div id="box3">
+                <div id="icon3"></div>
+                <div id="boxCloseBtn3"></div>
+            </div>
+
+            <div id="box4">
+                <div id="icon4"></div>
+                <div id="boxCloseBtn4"></div>
+            </div>
+
+            <div id="box1Btn"></div>
+            <div id="box2Btn"></div>
+            <div id="box3Btn"></div>
+            <div id="box4Btn"></div>
+
+
+        </div>
+    </div>
+
+<script language="javascript">
+    //Initialize Enabler
+    if (Enabler.isInitialized()) {
+        Enabler.setExpandingPixelOffsets(
+          0, // left offset of expanded ad
+          0, // top offset of expanded ad
+          970, // expanded width of ad
+          600); // expanded height of ad
+        init();
+    } else {
+        Enabler.addEventListener(studio.events.StudioEvent.INIT, init);
+    }
+
+    function init(){
+        if(Enabler.isPageLoaded()){
+            politeInit();
+        }else{
+            Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED, politeInit());
+        }
+    }
+
+    function politeInit(){
+        initAd();
+    }
+</script>
+
+</body>
+</html>
