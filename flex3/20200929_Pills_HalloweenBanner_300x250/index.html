@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<style type="text/css">
+
+*{margin:0px;padding:0px;}
+body{font-family:Arial, sans-serif;background-color:#333639;}
+a{border:none;cursor:pointer;outline:none;user-select:none;}
+a:hover,a:active{}
+#container{display:none;position:absolute;width:298px;height:248px;border:1px solid #000000;top:0px;left:0px;margin:auto;background-color:#000000;overflow:hidden;}
+#content{display:none;position:absolute;width:100%;height:100%;top:0px;left:0px;}
+#background_exit{width:100%;height:100%;top:0px;left:0px;cursor:pointer !important;opacity:0;background-color:#000000;}
+#content div{display:block;position:absolute;border:none;}
+.x2 img{width: 300px;}
+
+.bits1, .bits2, .bits3, .bits4{opacity: 0;}
+</style>
+
+<!--Developer Scott Ustas-->
+<!--Google CDN link for TweenMax-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+
+<!--Google Click Tag Code  -->
+<meta name="ad.size" content="width=300,height=250">
+<script type="text/javascript">
+var clickTag = "https://www.pillsburybaking.com";
+</script>
+
+</head>
+
+<body>
+
+<div id="container">
+<div id="content">
+
+
+	<div class="x2" id="background"><img src="background.jpg"></div>
+
+	<div class="x2" id="girl"><img src="girl.png"></div>
+	<div class="x2" id="girl2"><img src="girl2.png"></div>
+
+	<div class="bits1" id="fb1" style="top: 144px;left: 222px;}"><img src="fb1.png"></div>
+	<div class="bits1" id="fb2" style="top: 144px;left: 222px;"><img src="fb2.png"></div>
+	<div class="bits1" id="fb3" style="top: 144px;left: 222px;"><img src="fb3.png"></div>
+	<div class="bits1" id="fb4" style="top: 144px;left: 222px;"><img src="fb4.png"></div>
+	<div class="bits1" id="fb5" style="top: 144px;left: 222px;"><img src="fb5.png"></div>
+	<div class="bits1" id="fb6" style="top: 144px;left: 222px;"><img src="fb6.png"></div>
+	<div class="bits1" id="fb7" style="top: 144px;left: 222px;"><img src="fb7.png"></div>
+	<div class="bits1" id="fb8" style="top: 144px;left: 222px;"><img src="fb8.png"></div>
+	<div class="bits1" id="fb9" style="top: 144px;left: 222px;"><img src="fb9.png"></div>
+	<div class="bits1" id="fb10" style="top: 144px;left: 222px;"><img src="fb10.png"></div>
+	<div class="bits1" id="fb11" style="top: 144px;left: 222px;"><img src="fb11.png"></div>
+
+	<div class="bits2" id="gb1" style="top: 120px;left: 235px;}"><img src="gb1.png"></div>
+	<div class="bits2" id="gb2" style="top: 120px;left: 235px;"><img src="gb2.png"></div>
+	<div class="bits2" id="gb3" style="top: 120px;left: 235px;"><img src="gb3.png"></div>
+	<div class="bits2" id="gb4" style="top: 120px;left: 235px;"><img src="gb4.png"></div>
+	<div class="bits2" id="gb5" style="top: 120px;left: 235px;"><img src="gb5.png"></div>
+	<div class="bits2" id="gb6" style="top: 120px;left: 235px;"><img src="gb6.png"></div>
+	<div class="bits2" id="gb7" style="top: 120px;left: 235px;"><img src="gb7.png"></div>
+	<div class="bits2" id="gb8" style="top: 120px;left: 235px;"><img src="gb8.png"></div>
+	<div class="bits2" id="gb9" style="top: 120px;left: 235px;"><img src="gb9.png"></div>
+	<div class="bits2" id="gb10" style="top: 120px;left: 235px;"><img src="gb10.png"></div>
+	<div class="bits2" id="gb11" style="top: 120px;left: 235px;"><img src="gb11.png"></div>
+
+	<div class="bits3" id="hb1" style="top: 50px;left: 145px;}"><img src="hb1.png"></div>
+	<div class="bits3" id="hb2" style="top: 50px;left: 145px;"><img src="hb2.png"></div>
+	<div class="bits3" id="hb3" style="top: 50px;left: 145px;"><img src="hb3.png"></div>
+	<div class="bits3" id="hb4" style="top: 50px;left: 145px;"><img src="hb4.png"></div>
+	<div class="bits3" id="hb5" style="top: 50px;left: 145px;"><img src="hb5.png"></div>
+	<div class="bits3" id="hb6" style="top: 50px;left: 145px;"><img src="hb6.png"></div>
+	<div class="bits3" id="hb7" style="top: 50px;left: 145px;"><img src="hb7.png"></div>
+	<div class="bits3" id="hb8" style="top: 50px;left: 145px;"><img src="hb8.png"></div>
+	<div class="bits3" id="hb9" style="top: 50px;left: 145px;"><img src="hb9.png"></div>
+	<div class="bits3" id="hb10" style="top: 50px;left: 145px;"><img src="hb10.png"></div>
+	<div class="bits3" id="hb11" style="top: 50px;left: 145px;"><img src="hb11.png"></div>
+
+	<div class="bits4" id="ib1" style="top: 50px;left: 145px;}"><img src="ib1.png"></div>
+	<div class="bits4" id="ib2" style="top: 50px;left: 145px;"><img src="ib2.png"></div>
+	<div class="bits4" id="ib3" style="top: 50px;left: 145px;"><img src="ib3.png"></div>
+	<div class="bits4" id="ib4" style="top: 50px;left: 145px;"><img src="ib4.png"></div>
+	<div class="bits4" id="ib5" style="top: 50px;left: 145px;"><img src="ib5.png"></div>
+	<div class="bits4" id="ib6" style="top: 50px;left: 145px;"><img src="ib6.png"></div>
+	<div class="bits4" id="ib7" style="top: 50px;left: 145px;"><img src="ib7.png"></div>
+	<div class="bits4" id="ib8" style="top: 50px;left: 145px;"><img src="ib8.png"></div>
+	<div class="bits4" id="ib9" style="top: 50px;left: 145px;"><img src="ib9.png"></div>
+	<div class="bits4" id="ib10" style="top: 50px;left: 145px;"><img src="ib10.png"></div>
+	<div class="bits4" id="ib11" style="top: 50px;left: 145px;"><img src="ib11.png"></div>
+
+	<div class="x2" id="text1"><img src="text1.png"></div>
+	<div class="x2" id="text2"><img src="text2.png"></div>
+	<div class="x2" id="text3"><img src="text3.png"></div>
+
+	<div class="x2" id="text4a"><img src="text4a.png"></div>
+	<div class="x2" id="text4b"><img src="text4b.png"></div>
+	<div class="x2" id="text4c"><img src="text4c.png"></div>
+	<div class="x2" id="cta"><img src="cta.png"></div>
+	<div class="x2" id="ctaArrow"><img src="ctaArrow.png"></div>
+
+	<div class="x2" id="box"><img src="box.png"></div>
+	<div class="x2" id="can"><img src="can.png"></div>
+	<div class="x2" id="doughboy"><img src="doughboy2.png"></div>
+
+</a>
+
+<a href="javascript:void(0);" onclick="window.open(clickTag);"> <div id="background_exit"></div>  </a>       
+
+</div>
+</div>
+
+<script>
+
+var container;
+var content;
+tl = new TimelineMax();
+
+//tl.pause();
+
+function init(){
+ container = document.getElementById('container');
+ content = document.getElementById('content');
+ container.style.display = "block";
+ content.style.display = "block";  
+ startAnimation();
+ //addListeners();
+}
+
+function addListeners() {
+ container.addEventListener('mouseover', ctaRollOverHandler, false);
+ container.addEventListener('mouseout', ctaRollOutHandler, false);
+}
+
+function startAnimation(){
+
+TweenMax.delayedCall(1.25,confetti1);
+TweenMax.delayedCall(1.25, bits1Shot);
+
+TweenMax.delayedCall(4.2,confetti2);
+TweenMax.delayedCall(4.2, bits2Shot);
+
+TweenMax.delayedCall(6.5,confetti3);
+TweenMax.delayedCall(6.5, bits3Shot);
+
+TweenMax.delayedCall(9.2,confetti4);
+TweenMax.delayedCall(9.2, bits4Shot);
+
+tl.from("#box", 1.2, {delay:.25, x:400,  ease: "back.out(1.7)" });
+tl.from("#text1", 1.8, {delay:.25, scale:0, y:25, x:-70, rotation:39, ease: "elastic.out(1.2, 0.4)", transformOrigin: '80% 60%' },'-=.5',);
+tl.to("#text1", .6, {delay:0, scale:0,  x:-70, rotation:0,  ease: "back.in(2)", transformOrigin: '80% 60%' },'-=.2');
+tl.from("#can", 1.2, {delay:.25, x:400,  ease: "back.out(.25)" },'-=.5');
+tl.from("#text2", 1.5, {delay:.25, y:15, scale:0,  rotation:39, ease: "elastic.out(1.5, 0.75)", transformOrigin: '80% 60%' },'-=.5');
+tl.to("#text2", .6, {delay:0, scale:0, x:-80, y:-10, rotation:0,  ease: "back.in(2)", transformOrigin: '80% 60%' },'-=.2');
+
+tl.to("#girl", .125, {opacity:0 });
+tl.from("#girl2", .125, {x:0, y:0, opacity:0 },'-=.125');
+tl.from("#doughboy", 1, {x:300, y:0,  ease: "expo.out" },'-=.25');
+
+tl.from("#text3", .5, {delay:0, y:120, scale:0,  ease: "back.out(1)", transformOrigin: '50% 10%' },'-=.5');
+tl.to("#text3", .5, {delay:1.25, y:120, scale:0,  ease: "back.in(1.5)", transformOrigin: '50% 10%' });
+
+tl.from("#text4a", .6, {delay:.25, scale:0, ease: "back.out(2)" });
+tl.from("#text4b", .6, { scale:0, ease: "back.out(2)" },'-=.4');
+tl.from("#text4c", .6, { scale:0, ease: "back.out(2)" },'-=.4');
+
+tl.from("#cta", .5, { scale:0, ease: "expo.out"});
+tl.from("#ctaArrow", .5, { scale:0, ease: "expo.out",transformOrigin: '75% 90%'});
+
+tl.to("#doughboy", .125, { delay:.25, rotation:.8, yoyo:true, repeat:3,  ease: "none", transformOrigin: '85% 90%'},'-=.5');
+
+tl.to("#ctaArrow", .125, { scale:1.2, yoyo:true, repeat:3,  ease: "none", transformOrigin: '75% 90%', onComplete:addListeners},'-=.125');
+
+}
+
+window.onload = function(e) {
+ init();
+};
+
+function ctaRollOverHandler(){
+	TweenMax.to("#ctaArrow", .125, { scale:1.2, yoyo:true, repeat:3,  ease: "none", transformOrigin: '75% 90%', overwrite:true});
+	TweenMax.to("#doughboy", .125, { rotation:.8, yoyo:true, repeat:3,  ease: "none", transformOrigin: '85% 90%', overwrite:true});
+}
+
+function ctaRollOutHandler(){
+}
+
+function confetti1(){
+	TweenMax.set(".bits1", {opacity:1});
+}
+
+function bits1Shot(){
+
+	TweenMax.delayedCall(.75, fadeBits1)
+
+	gsap.to(".bits1", 3,  {
+ x:"random(-150, 150, 5)", //chooses a random number between -100 and 100 for each target, rounding to the closest 5
+	y:"random(-200, 200, 5)", 
+	rotation:"random(-200, 200, 5)",
+	ease: "expo.out"}); 
+}
+
+function fadeBits1(){
+	TweenMax.to(".bits1", {scale:0, ease: "sine.out"});
+}
+
+
+function confetti2(){
+	TweenMax.set(".bits2", {opacity:1});
+}
+
+function bits2Shot(){
+
+	TweenMax.delayedCall(.75, fadeBits2)
+
+	gsap.to(".bits2", 3,  {
+ x:"random(-150, 150, 5)", //chooses a random number between -100 and 100 for each target, rounding to the closest 5
+	y:"random(-200, 200, 5)", 
+	rotation:"random(-200, 200, 5)",
+	ease: "expo.out"}); 
+}
+
+function fadeBits2(){
+	TweenMax.to(".bits2", {scale:0, ease: "sine.out"});
+}
+
+
+function confetti3(){
+	TweenMax.set(".bits3", {opacity:1});
+}
+
+function bits3Shot(){
+
+	TweenMax.delayedCall(.75, fadeBits3)
+
+	gsap.to(".bits3", 3,  {
+ x:"random(-150, 150, 5)", //chooses a random number between -100 and 100 for each target, rounding to the closest 5
+	y:"random(-200, 200, 5)", 
+	rotation:"random(-200, 200, 5)",
+	ease: "expo.out"}); 
+}
+
+function fadeBits3(){
+	TweenMax.to(".bits3", {scale:0, ease: "sine.out"});
+}
+
+
+function confetti4(){
+	TweenMax.set(".bits4", {opacity:1});
+}
+
+function bits4Shot(){
+
+	TweenMax.delayedCall(.75, fadeBits4)
+
+	gsap.to(".bits4", 3,  {
+ x:"random(-150, 150, 5)", //chooses a random number between -100 and 100 for each target, rounding to the closest 5
+	y:"random(-200, 200, 5)", 
+	rotation:"random(-200, 200, 5)",
+	ease: "expo.out"}); 
+}
+
+function fadeBits4(){
+	TweenMax.to(".bits4", {scale:0, ease: "sine.out"});
+}
+
+
+</script>
+
+</body>
+</html>
