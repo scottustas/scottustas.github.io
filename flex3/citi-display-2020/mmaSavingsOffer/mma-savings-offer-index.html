@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=.35, maximum-scale=1, user-scalable=yes" />
+<!--CMS
+<script src="/mediasrv2/filecache/libraries/gsap.min.js"></script>
+<script src="/mediasrv2/players/mwall2/mw2api.js" ></script>
+<script> window.mwCreativePlay = function() { tl.play(); } </script>
+-->
+<link rel="stylesheet" href="https://use.typekit.net/dab8gfj.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+<style>
+html { width:1080px; height:1920px; }
+#container{display:block;position:absolute;width:1080px;height:1920px;top:0px;left:0px;margin:auto;background-color:#ffffff;overflow:hidden;}
+#content{display:block;position:absolute;width:100%;height:100%;top:0px;left:0px;}
+#content div{display:block;position:absolute;border:none;}
+body{font-family:interstate,sans-serif;font-weight:400;font-style:normal;background-color:#333639;}
+.bold{font-weight:700;font-style:normal;}
+.boldItalic{font-weight:700;font-style:italic;}
+.light{font-weight:400;font-style:normal;}
+.lightItalic{font-weight:400;font-style:italic;}
+#text1a{top:106px;left:81px;width:924px;height:200px;text-align:left;font:normal normal 300 100px/100px Interstate;letter-spacing:0px;color:#005992;}
+#text2a{top:304px;left:113px;width:824px;height:60px;text-align:left;font:normal normal 300 60px/102px Interstate;letter-spacing:0px;color:#FFFFFF;}
+#text2b{top:384px;left:114px;width:855px;height:255px;text-align:left;font-size:255px;color:#FFFFFF;}
+#text2c{top:672px;left:202px;width:735px;height:105px;text-align:left;font:normal normal bold 105px Interstate;letter-spacing:0px;color:#005992;}
+#text2d{top:787px;left:202px;width:735px;height:205px;text-align:left;letter-spacing:0px;color:#005992;font-size:80px;}
+#text2e{top:982px;left:202px;width:735px;height:40px;text-align:left;font-size:80px;letter-spacing:0px;color:#005992;line-height:95px;}
+#text2f{top:1097px;left:202px;width:735px;height:40px;text-align:left;font:normal normal normal 40px/52px Interstate;letter-spacing:.6px;color:#B2B2B2;}
+#whiteBox{width:1080px;height:1920px;background-color:#ffffff;}
+#background{top:-10px;}
+#backgroundEnd{top:-1105px;}
+#backgroundText{top:294px;left:-123px;}
+#mask1{width: 100%; top:294px; height: 150px; overflow: hidden;left:-123px;}
+#legal{padding:18px 28px 24px;  font: normal normal 300 40px/40px interstate-condensed;letter-spacing: 0px;color: #4D4D4F;  }
+#legal2{padding:34px 28px 50px;  font: normal normal 300 40px/40px interstate-condensed;letter-spacing: 0px;color: #4D4D4F;  }
+
+#legalBox{height: 172px; width: 1080px; background-color: #EFEFF0; bottom: 0px;}
+#logo{top: -172px; width: 1080px; height: 301px;}
+</style>
+</head>
+
+<body>
+
+<div id="container">
+  <div id="content">
+    <div id="text1a" class="light">Extra savings that give you more to</div>
+    <div id="text2c" class="bold">CASH BONUS</div>
+    <div id="text2d" class="">when you open an<br> eligible<span class="bold"> Citi<sup style="font-size: 44px;">®</sup></span></div>
+    <div id="text2e" class="bold">Savings Account</div>
+    <div id="text2f" class="light">and complete required activities.</div>
+
+    <div id="mask1">
+      <div id="maskImg"><img id="" src="backgroundText.png" /></div>
+    </div>
+
+    <div id="background"><img id="" src="background.png" /></div>
+    <div id="backgroundBottom"><img id="" src="backgroundBottom.png" /></div>
+    <div id="text2a" class="light">Earn up to a</div>
+    <div id="text2b" class="bold"><sup style="font-size: 141px; vertical-align: 85px;">$</sup>3,000</div>
+    <div id="talent"><img id="savingsTalent" src="savingsTalent.png" /></div>
+
+    <div id="logo">
+      <div id="pltC"><img src="pltC.png"/></div>
+      <div id="pltB"><img src="pltB.png"/></div>
+      <div id="pltA"><img src="pltA.png"/></div>
+      <div id="pltD"><img src="pltD.png"/></div>
+    </div>
+
+    <div id="legalBox">
+      <div id="legal" class="">©2021 Citibank, N.A. Member FDIC. Citi, Citi and Arc Design and other marks used herein are service marks of Citigroup Inc. or its affiliates, used and registered throughout the world</div>
+      <div id="legal2" class="">Terms and conditions apply.<br>Come inside for details.</div>
+    </div>
+
+    <div id="whiteBox"></div>
+  </div>
+</div>
+
+<script>
+/*CMS
+// Ensure all non-placeholder images have loaded and any other "ready" steps are done.
+var imageList = document.images;
+var stepTotal = imageList.length + 1; // 1 extra ready step (see below)
+var stepCount = 0;
+
+for (var i=0; i<imageList.length; i++) {
+  if (!imageList[i].src) { // Skip placeholder'd images
+    countStep();
+  }
+  else if (imageList[i].complete) {
+    countStep();
+  } else {
+    imageList[i]['onload'] = function() { 
+      countStep(); 
+    }
+  }
+}
+
+function countStep() {
+  if (++stepCount === stepTotal) {
+    // This should not be called until all assets NOT listed
+    // as Placeholders have been confirmed to have loaded, and all
+    // video/animation preparation code has been defined and paused.
+    mwCreativeAPI.Ready();
+  }
+}
+
+mwCreativeAPI.Placeholders({
+     images: ['talentA','backgroundA'],
+     text:   ['text1a', 'text1c', 'text1d', 'frame1WhiteText', 'frame2WhiteText']
+});
+
+*/
+
+//---------------- Animation code ----------------//
+
+var tl = new TimelineMax({  });
+
+/*CMS
+var tl = new TimelineMax({ onStart: onStartAnimation, onComplete: mwCreativeAPI.Ended });
+
+*/
+
+// tl.pause();
+
+tl.from("#pltD", 1, { delay:0, top:350,ease:Expo.easeOut})
+.from("#pltC", 1, {top:350,ease:Expo.easeOut},'-=.95')
+.from("#pltB", 1, {top:350,ease:Expo.easeOut},'-=.9')
+.from("#pltA", 1, {top:350,ease:Expo.easeOut},'-=.85')
+.from("#text1a", 1, { alpha:0,ease:Expo.easeOut},'-=1')
+.from("#background", 1, {y:1700,ease:Expo.easeOut},'-=.8')
+.from("#talent", 1, {y:1400,ease:Expo.easeOut},'-=.75')
+.from(["#text2c","#text2d","#text2e","#text2f"], .1, {alpha:0})
+.from(["#maskImg","#mask1"], 1, {y:200,opacity:0,ease:Expo.easeOut},'-=.9')
+
+.to(["#background","#text1a"], 1.25, {delay:1.75, top:-1154, ease:Expo.easeInOut})
+.to("#mask1", 1.25, {delay:0, top:-1600, ease:Expo.easeInOut},'-=1.2')
+
+.from(["#text2a","#text2b"], 1.2, {y:1600,ease:Expo.easeInOut},'-=1.25')
+.to("#talent", 1.25, { top:1853, ease:Expo.easeInOut},'-=1.25')
+.to("#legal", .5, {alpha:0,ease:Expo.easeOut},'-=1')
+.from("#legal2", .5, {alpha:0,ease:Expo.easeOut},'-=1')
+
+.to("#pltA", 1, {top:350,ease:Expo.easeOut},'-=.9')
+.to("#pltB", 1, {top:350,ease:Expo.easeOut},'-=.85')
+.to("#pltC", 1, {top:350,ease:Expo.easeOut},'-=.825')
+.to("#pltD", 1, {top:350,ease:Expo.easeOut},'-=.9')
+.to(["#text1a","#backgroundText"], .1, {alpha:0})
+
+.to("#background", 1, {delay:1.5, y:-550,ease:Expo.easeInOut},'-=.25')
+
+.from("#backgroundBottom", 1, {y:550,ease:Expo.easeInOut},'-=1')
+.to("#background", .1, {alpha:0, ease:Expo.easeInOut},'-=.5')
+.to("#text2a", .3, {css:{color:"#005992"}, ease:Expo.easeOut},'-=.6')
+.to("#text2b", .3, {css:{color:"#43BDEB"}, ease:Expo.easeOut},'-=.6')
+//.to("#legal", .25, {css:{color:"#FFFFFF"}, ease:Expo.easeOut},'-=.5')
+.to(["#backgroundBottom","#legal"], 1.5, {delay:2.5, y:400,ease:Expo.easeInOut})
+.from("#whiteBox", 2, {delay:0, y:-1920,ease:Expo.easeInOut},'-=1.5')
+
+// Important: mark this last step done.
+/*CMS
+countStep();
+*/
+
+</script>
+
+</body>
+</html>

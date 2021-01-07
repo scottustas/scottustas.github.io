@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script> 
+
+<!-- CMS: -->
+<!--   <script src="/mediasrv2/filecache/libraries/gsap.min.js"></script>
+  <script src="/mediasrv2/players/mwall2/mw2api.js"></script> -->
+
+<script> 
+  // IF RUNING OUTSIDE CMS, set to false:
+  var isCMS = false;
+
+  var fontCSS = document.createElement("link");
+  if (!isCMS) {
+
+    // IF RUNNING OUTSIDE CMS, set this:
+    fontCSS.setAttribute("href", "https://use.typekit.net/dab8gfj.css");
+
+    mwCreativeAPI = { Placeholders:function(){}, Ready:function(){}, Ended:function(){}, GetVar:function(){} };
+  } else {
+    fontCSS.setAttribute("href", "/mediasrv2/filecache/fonts/Interstate/Interstate.css");
+    window.mwCreativePlay = function() { tl.play(); }
+  }
+  fontCSS.setAttribute("rel", "stylesheet");
+  document.head.appendChild(fontCSS);
+</script>
+
+<style>
+html { width:1080px; height:1920px; }
+#container{display:block;position:absolute;width:1080px;height:1920px;top:0px;left:0px;margin:auto;background-color:#ffffff;overflow:hidden;}
+#content{display:block;position:absolute;width:100%;height:100%;top:0px;left:0px;}
+#content div{display:block;position:absolute;border:none;}
+body{font-family:interstate,sans-serif;font-weight:400;font-style:normal;background-color:#333639;}
+.bold{font-weight:700;font-style:normal;}
+.boldItalic{font-weight:700;font-style:italic;}
+.light{font-weight:400;font-style:normal;}
+.lightItalic{font-weight:400;font-style:italic;}
+#text1a{top:106px;left:81px;width:924px;height:200px;text-align:left;font:normal normal 300 100px/100px Interstate;letter-spacing:0px;color:#005992;line-height:100px;}
+#text2a{top:304px;left:113px;width:824px;height:60px;text-align:left;font:normal normal 300 60px/102px Interstate;letter-spacing:0px;color:#FFFFFF;}
+#text2b{top:386px;left:113px;text-align:left;font-size:130px;color:#ffffff;line-height:125px;letter-spacing:0px;}
+#text2c{top:724px;left:240px;width:666px;height:175px;text-align:left;font:normal normal normal 85px/90px Interstate;letter-spacing:0px;color:#005992;}
+#text2d{top:1038px;left:240px;width:666px;height:265px;text-align:left;font:normal normal normal 85px/90px Interstate;text-align:left;letter-spacing:0px;color:#005992;font-size:80px;}
+#text2e{top:1267px;left:240px;width:666px;height:85px;text-align:left;font:normal normal normal 85px/90px Interstate;text-align:left;font-size:80px;letter-spacing:0px;color:#005992;line-height:95px;}
+#text3a{top:372px;left:113px;width:855px;height:105px;text-align:left;font:normal normal 300 105px/102px Interstate;letter-spacing:0px;color:#005992;}
+#text3b{top:576px;left:113px;width:844px;height:105px;text-align:left;font:normal normal bold 105px/102px Interstate;letter-spacing:0px;color:#43BDEB;}
+#whiteBox{width:1080px;height:1920px;background-color:#ffffff;}
+#background{top:0px;}
+#backgroundText{top:294px;left:-123px;}
+#mask1{width: 100%; top:294px; height: 150px; overflow: hidden;left:-123px;}
+#legalBox{height: 392px; width: 1080px; background-color: #EFEFF0; bottom: 0px;}
+#legalBox2{top: 1552px;left: 22px;width: 1036px;height: 55px;background: #FFFFFF 0% 0% no-repeat padding-box;border: 1px solid #9B9B9B !Important;}
+#logo{top: -392px; width: 1080px; height: 301px;}
+#legal2{padding: 265px 28px 0px 44px; text-align: left;font: normal normal 300 40px/40px interstate-condensed;letter-spacing: 0px;color: #4D4D4F;}
+#legal3{padding: 10px 14px; width: 1008px;height: 39px;text-align: center;font: normal normal normal 32px/35px interstate-condensed;letter-spacing: 0px;color: #000000;}
+#legal{padding: 105px 28px 131px 44px; text-align: left;font: normal normal 300 40px/40px interstate-condensed;letter-spacing: 0px;color: #4D4D4F;}
+#frame2Text{top: 717px;left: 113px;width: 824px;height: 275px;text-align: left;font: normal normal 300 85px/95px Interstate;letter-spacing: 0px;color: #005992;}
+</style>
+</head>
+
+<body>
+
+<div id="container">
+  <div id="content">
+    <div id="text1a" class="light">Investing to help give your goals</div>
+
+    <div id="frame2Text">Find new ways to grow with our digital investing platform</div>
+
+    <div id="frame3Text">
+      <div id="textBullets" class=""><img id="" src="wealthTextBullets.png" /></div>
+      <div id="text2c" class="">Professionally managed portfolios</div>
+      <div id="text2d" class="">0% advisory fee if eligible</div>
+      <div id="text2e" class="">24/7 support</div>
+    </div>
+
+    <div id="maskImg"><img id="" src="wealthBackground2.png" /></div>
+    <div id="background"><img id="" src="wealthBackground1.png" /></div>
+
+    <div id="backgroundBottom"><img id="" src="wealthBackgroundBottom.png" /></div>
+    <div id="text2b" class="bold">Citi<sup style="font-size: 34px; vertical-align: 72px;">®</sup><br>Wealth Builder</div>
+    <div id="talent"><img id="wealthTalent" src="wealthTalent.png" /></div>
+
+    <div id="logo">
+      <div id="pltC"><img src="pltC.png"/></div>
+      <div id="pltB"><img src="pltB.png"/></div>
+      <div id="pltA"><img src="pltA.png"/></div>
+      <div id="pltD"><img src="pltD.png"/></div>
+    </div>
+
+    <div id="endframeText">
+      <div id="text3a" class="">Learn more<br>inside or visit </div>
+      <div id="text3b" class="">citi.com/<br>citiwealthbuilder</div>
+    </div>
+
+    <div id="legalBox">
+      <div id="legal" class="">Citi Personal Wealth Management is a business of Citigroup Inc., which offers investment products through Citigroup Global Markets Inc. (“CGMI”), member SIPC. Citibank and CGMI are affiliated companies under the common control of Citigroup Inc.</div>
+      <div id="legal2" class="">Terms and conditions apply.<br>Come inside for details.</div>
+    </div>
+
+    <div id="legalBox2">
+      <div id="legal3">INVESTMENT PRODUCTS: NOT FDIC INSURED • NO BANK GUARANTEE • MAY LOSE VALUE</div>
+    </div>
+
+    <div id="whiteBox"></div>
+  </div>
+</div>
+
+<script>
+if (isCMS) {
+
+  // Ensure all non-placeholder images have loaded and any other "ready" steps are done.
+  var imageList = document.images;
+  var stepTotal = imageList.length + 1; // 1 extra ready step (see below)
+  var stepCount = 0;
+
+  for (var i=0; i<imageList.length; i++) {
+    if (!imageList[i].src) { // Skip placeholder'd images
+      countStep();
+    }
+    else if (imageList[i].complete) {
+      countStep();
+    } else {
+      imageList[i]['onload'] = function() { 
+	countStep(); 
+      }
+    }
+  }
+
+  function countStep() {
+    if (++stepCount === stepTotal) {
+      // This should not be called until all assets NOT listed
+      // as Placeholders have been confirmed to have loaded, and all
+      // video/animation preparation code has been defined and paused.
+      mwCreativeAPI.Ready();
+    }
+  }
+
+  mwCreativeAPI.Placeholders({
+  });
+
+} // if isCMS
+
+//---------------- Animation code ----------------//
+
+var tl = new TimelineMax({ onComplete: mwCreativeAPI.Ended });
+tl.pause();
+
+tl.from("#pltD", 1, { delay:0, top:350,ease:Expo.easeOut})
+.from("#pltC", 1, {top:350,ease:Expo.easeOut},'-=.95')
+.from("#pltB", 1, {top:350,ease:Expo.easeOut},'-=.9')
+.from("#pltA", 1, {top:350,ease:Expo.easeOut},'-=.85')
+.from("#text1a", 1, { alpha:0,ease:Expo.easeOut},'-=1')
+.from(["#background","#frame2Text"], 1, {y:1700,ease:Expo.easeOut},'-=.8')
+.from("#talent", 1, {y:1500,ease:Expo.easeOut},'-=.75')
+.from(["#text2c","#text2d","#text2e","#textBullets"], .1, {alpha:0})
+.from("#maskImg", 1, {y:200,opacity:0,ease:Expo.easeOut},'-=.9')
+
+.to(["#background","#maskImg","#text1a"], 1.25, {delay:1.75, top:-1262, ease:Expo.easeInOut})
+.to("#talent", 1.25, { top:1853, ease:Expo.easeInOut},'-=1.25')
+.from("#text2b", 1.25, {y:1600,ease:Expo.easeInOut},'-=1.25')
+
+.from("#legal2", .5, {alpha:0,ease:Expo.easeOut},'-=1')
+.to("#pltA", 1, { delay:0, top:350,ease:Expo.easeOut},'-=.9')
+.to("#pltB", 1, {top:350,ease:Expo.easeOut},'-=.85')
+.to("#pltC", 1, {top:350,ease:Expo.easeOut},'-=.825')
+.to("#pltD", 1, {top:350,ease:Expo.easeOut, onComplete:logoOut},'-=.9')
+
+.to(["#text1a","#backgroundText"], .1, {alpha:0})
+
+.to("#frame2Text", 1.25, { delay:2.25, top:-800,ease:Expo.easeInOut})
+.from("#frame3Text", 1.25, { delay:0, top:800,ease:Expo.easeInOut},'-=1.25')
+
+.to(["#background","#background3"], 1, {delay:.75, y:-750,ease:Expo.easeInOut},'-=.25')
+
+.to("#background", .1, {alpha:0, ease:Expo.easeInOut},'-=.5')
+.to("#text2b", .3, {css:{color:"#43BDEB"}, ease:Expo.easeOut},'-=.6')
+
+.to(["#text2b","#text2c","#text2d","#text2e","#textBullets"], 1, {delay:3.5, y:-1600,ease:Expo.easeInOut},)
+.from("#endframeText", 1, {delay:0, y:+1600,ease:Expo.easeInOut},'-=1')
+
+.from("#backgroundBottom", 1, {y:550,ease:Expo.easeInOut},'-=1')
+
+.from("#whiteBox", 2, {delay:4, y:-1920,ease:Expo.easeInOut},'-=1.5')
+
+function logoOut(){TweenMax.set("#logo", {alpha:0, overwrite:false});}
+
+if (isCMS) {
+  // Indicate that animation setup is complete.
+  countStep();
+} else {
+  tl.play();
+}
+
+</script>
+
+</body>
+</html>

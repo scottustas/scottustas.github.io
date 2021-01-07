@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+<!--   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>  -->
+
+<!-- CMS: -->
+  <script src="/mediasrv2/filecache/libraries/gsap.min.js"></script>
+  <script src="/mediasrv2/players/mwall2/mw2api.js"></script>
+
+
+<script> 
+  // IF RUNING OUTSIDE CMS, set to false:
+  var isCMS = true;
+
+  var fontCSS = document.createElement("link");
+  if (!isCMS) {
+
+    // IF RUNNING OUTSIDE CMS, set this:
+    fontCSS.setAttribute("href", "https://use.typekit.net/dab8gfj.css");
+
+    mwCreativeAPI = { Placeholders:function(){}, Ready:function(){}, Ended:function(){}, GetVar:function(){} };
+  } else {
+    fontCSS.setAttribute("href", "/mediasrv2/filecache/fonts/Interstate/Interstate.css");
+    window.mwCreativePlay = function() { tl.play(); }
+  }
+  fontCSS.setAttribute("rel", "stylesheet");
+  document.head.appendChild(fontCSS);
+</script>
+
+<style>
+html { width:1080px; height:1920px; }
+#container{display:block;position:absolute;width:1080px;height:1920px;top:0px;left:0px;margin:auto;background-color:#ffffff;overflow:hidden;}
+#content{display:block;position:absolute;width:100%;height:100%;top:0px;left:0px;}
+#content div{display:block;position:absolute;border:none;}
+body{font-family:Interstate,sans-serif;font-weight:400;font-style:normal;background-color:#333639;}
+.bold{font-weight:700;font-style:normal;}
+.boldItalic{font-weight:700;font-style:italic;}
+.light{font-weight:400;font-style:normal;}
+.lightItalic{font-weight:400;font-style:italic;}
+#text1a{top: 342px;left: 81px;width: 923px;height: 96px;text-align: left;font: normal normal 300 96px/100px Interstate;letter-spacing: 0px;color: #005992;}
+#text2a{top:304px;left:113px;width:824px;height:60px;text-align:left;font:normal normal 300 60px/102px Interstate;letter-spacing:0px;color:#FFFFFF;}
+#text2b{top:384px;left:114px;width:855px;height:255px;text-align:left;font-size:255px;color:#FFFFFF;}
+#text2c{top: 691px;left: 202px;width: 766px;height: 115px;text-align: left;font: normal normal bold 115px/102px Interstate;letter-spacing: 0px;color: #005992;}
+#text2d{top:821px;left:202px;width:735px;height:205px;text-align:left;letter-spacing:0px;color:#005992;font-size:55px;}
+#text2e{top:921px;left:202px;width:735px;height:205px;text-align:left;letter-spacing:0px;color:#005992;font-size:55px;}
+#text2f{top:1178px;left:202px;width:735px;height:40px;text-align:left;font:normal normal normal 40px/52px Interstate;letter-spacing:.6px;color:#B2B2B2;}
+#whiteBox{width:1080px;height:1920px;background-color:#ffffff;}
+#maskImg{top: 236px;}
+#background{top:234px;}
+#backgroundEnd{top:-1105px;}
+#backgroundText{top:294px;left:-123px;}
+#mask1{width: 100%; top:294px; height: 150px; overflow: hidden;left:-123px;}
+#text3a{top:4757px;left:88px;width:824px;height:60px;text-align:left;font:normal normal 300 60px/102px Interstate;letter-spacing:0px;color:#005992;}
+#text3b{top:869px;left:78px;width:164px;height:255px;text-align:left;font:normal normal bold 255px/72px Interstate;letter-spacing:0px;color:#43BDEB;}
+#text3c{top:898px;left:418px;width:566px;height:147px;text-align:left;font:normal normal bold 70px/77px Interstate;letter-spacing:0px;color:#005992;}
+#text3d{line-height:70px;top:495px;left: 88px;width: 896px;height: 280px;font-size: 55px;text-align: left;letter-spacing: 0px;color: #005992;opacity: 1;}
+#text3e{top:1097px;left:83px;width:883px;height:145px;text-align:left;font:normal normal 300 70px/75px Interstate;letter-spacing:0px;color:#005992;}
+#text3f{top:1299px;left:83px;width:883px;height:145px;text-align:left;font:normal normal 300 70px/75px Interstate;letter-spacing:0px;color:#005992;}
+#text3g{top: 1505px;left: 83px;width: 901px;height: 156px;text-align: left;font: normal normal normal 40px/50px Interstate;letter-spacing: 0px;color: #B2B2B2;}
+#legal{padding:18px 28px 24px;  font: normal normal 300 40px/40px interstate-condensed;letter-spacing: 0px;color: #4D4D4F;  }
+#legal2{padding:34px 28px 50px;  font: normal normal 300 40px/40px interstate-condensed;letter-spacing: 0px;color: #4D4D4F;  }
+#legal3{padding:115px 28px 50px;width: 1008px;height: 48px;font: normal normal bold 40px/40px interstate-condensed;letter-spacing: 0px;color: #4D4D4F;  }
+#logo{top: -172px; width: 1080px; height: 301px;}
+#legalBox{height: 172px; width: 1080px; background-color: #EFEFF0; bottom: 0px;}
+
+</style>
+</head>
+
+<body>
+
+<div id="container">
+  <div id="content">
+    <div id="text1a" class="light">Offers that are better</div>
+    <div id="text2c" class="bold">CASH BONUS</div>
+    <div id="text2d" class="">when you open and maintain new eligible <strong>Citi<sup style="font-size: 30px;">®</sup> Checking</strong><br>and <strong>Savings Accounts</strong> and<br>complete required activities.</div>
+    <div id="text2e" class="bold"></div>
+
+    <div id="maskImg"><img id="" src="checkingBackground2.png" /></div>
+    <div id="background"><img id="" src="checkingBackground.png" /></div>
+    <div id="text2a" class="light">Earn up to a</div>
+    <div id="text2b" class="bold"><sup style="font-size: 141px; vertical-align: 90px;">$</sup>1,500</div>
+    <div id="talent"><img id="" src="checkingTalent.png" /></div>
+
+    <div id="text3">
+      <div id="checkingCard"><img id="" src="checkingCard.png" /></div>
+      <div id="text3b" class=""><span id="text_placeholder_1">3</span><sup style="font-size: 150px; vertical-align: 79px;">%</sup></div>
+      <div id="text3c" class="">CASH BACK FOR 12 MONTHS</div>
+      <div id="text3d" class="">Open and maintain new eligible deposit accounts and apply and get approved for a new <Strong>Citi<sup style="font-size: 30px;">®</sup> Double Cash Card,</Strong> and you can earn</div>
+      <div id="text3e" class="">with <span id="text_placeholder_2">2</span>% cash back for<br>12 months on all purchases</div>
+      <div id="text3f" class="">+ <span id="text_placeholder_3">1</span>% cash back as you<br>pay for those purchases.</div>
+      <div id="text3g" class="">After 12 months, you will continue to earn<br>1% cash back on all purchases and 1% as you<br>pay for those purchases.</div>
+
+    </div>
+
+    <div id="logo">
+      <div id="pltC"><img src="pltC.png"/></div>
+      <div id="pltB"><img src="pltB.png"/></div>
+      <div id="pltA"><img src="pltA.png"/></div>
+      <div id="pltD"><img src="pltD.png"/></div>
+    </div>
+
+    <div id="legalBox">
+      <div id="legal" class="">©2021 Citibank, N.A. Member FDIC. Citi, Citi and Arc Design and other marks used herein are service marks of Citigroup Inc. or its affiliates, used and registered throughout the world</div>
+      <div id="legal2" class="">Terms and conditions apply.<br>Come inside for details.</div>
+      <div id="legal3" class="bold">Limited-time offer only available in branch.</div>
+
+    </div>
+
+    <div id="whiteBox"></div>
+  </div>
+</div>
+
+<script>
+
+if (isCMS) {
+
+    // Ensure all non-placeholder images have loaded and any other "ready" steps are done.
+    var imageList = document.images;
+    var stepTotal = imageList.length + 1; // 1 extra ready step (see below)
+    var stepCount = 0;
+
+    for (var i=0; i<imageList.length; i++) {
+      if (!imageList[i].src) { // Skip placeholder'd images
+	countStep();
+      }
+      else if (imageList[i].complete) {
+	countStep();
+      } else {
+	imageList[i]['onload'] = function() { 
+	  countStep(); 
+	}
+      }
+    }
+
+    function countStep() {
+      if (++stepCount === stepTotal) {
+	// This should not be called until all assets NOT listed
+	// as Placeholders have been confirmed to have loaded, and all
+	// video/animation preparation code has been defined and paused.
+	mwCreativeAPI.Ready();
+      }
+    }
+
+    mwCreativeAPI.Placeholders({
+      text:   ['text_placeholder_1', 'text_placeholder_2', 'text_placeholder_3']
+    });
+
+} // if isCMS
+
+//---------------- Animation code ----------------//
+
+var tl = new TimelineMax({ onComplete: mwCreativeAPI.Ended });
+tl.pause();
+
+tl.from("#pltD", 1, { delay:0, top:350,ease:Expo.easeOut})
+.from("#pltC", 1, {top:350,ease:Expo.easeOut},'-=.95')
+.from("#pltB", 1, {top:350,ease:Expo.easeOut},'-=.9')
+.from("#pltA", 1, {top:350,ease:Expo.easeOut},'-=.85')
+.from("#text1a", 1, { alpha:0,ease:Expo.easeOut},'-=1')
+.from("#background", 1, {y:1700,ease:Expo.easeOut},'-=.8')
+.from("#talent", 1, {y:1400,ease:Expo.easeOut},'-=.75')
+.from(["#text2c","#text2d","#text2e","#text2f"], .1, {alpha:0})
+//.from("#mask1", .5, {y:200,ease:Expo.easeOut},'-=.6')
+.from("#maskImg", 1, {y:200,opacity:0,ease:Expo.easeOut},'-=.9')
+
+.to(["#background","#maskImg","#text1a"], 1.25, {delay:1.75, top:-1039, ease:Expo.easeInOut})
+.from(["#text2a","#text2b"], 1.25, {y:1600,ease:Expo.easeInOut},'-=1.25')
+.to("#talent", 1.25, { top:1853, ease:Expo.easeInOut},'-=1.25')
+.to("#legal", .5, {alpha:0,ease:Expo.easeOut},'-=1')
+.from("#legal2", .5, {alpha:0,ease:Expo.easeOut},'-=1')
+.to("#pltA", 1, { delay:0, top:350,ease:Expo.easeOut},'-=.9')
+.to("#pltB", 1, {top:350,ease:Expo.easeOut},'-=.85')
+.to("#pltC", 1, {top:350,ease:Expo.easeOut},'-=.825')
+.to("#pltD", 1, {top:350,ease:Expo.easeOut},'-=.9')
+.to(["#text1a","#backgroundText"], .1, {alpha:0})
+
+.to("#background", 1, {delay:3.75, y:-700,ease:Expo.easeInOut},'-=.25')
+.to("#text2a", .3, {css:{color:"#005992"}, ease:Expo.easeOut},'-=.6')
+.to("#text2b", .3, {css:{color:"#43BDEB"}, ease:Expo.easeOut},'-=.6')
+
+.to(["#text2a","#text2b","#text2c","#text2d","#text2e"], 1.5, {delay:0, y:-1300,ease:Expo.easeInOut})
+
+.from("#text3",1.5, {y:1850,ease:Expo.easeInOut},'-=1.5')
+
+.from("#backgroundBottom", 1, {y:550,ease:Expo.easeInOut},'-=1')
+.from("#legal3", 1, {alpha:0,ease:Expo.easeInOut},'-=1')
+
+.to("#background", .1, {alpha:0, ease:Expo.easeInOut},'-=.5')
+
+.to(["#backgroundBottom"], 1.5, {delay:7, y:400,ease:Expo.easeInOut})
+.from("#whiteBox", 2, {delay:0, y:-1920,ease:Expo.easeInOut},'-=1.5')
+
+if (isCMS) {
+  // Indicate that animation setup is complete.
+  countStep();
+} else {
+  tl.play();
+}
+
+</script>
+
+</body>
+</html>
