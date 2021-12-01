@@ -7,7 +7,7 @@
 <style>
 body{font-family:Arial, sans-serif;font-size:1.3em;line-height:1.4;background-color: #8b8680;}
 /*main{max-width:800px;margin:0 auto;}*/
-h1{text-align:left;}
+h1{text-align:center;font-size: 2.5em;mix-blend-mode: overlay;}
 h2{text-align:left;}
 h3{margin: 0em;}
 
@@ -22,8 +22,6 @@ label{margin-right:1.3em;padding:8px;}
 .column-reverse{flex-direction:column-reverse;}
 .item{/*background:#2c2a28;*//*border:solid 2px #000;*//*margin:5px;*/text-align:center;color:white;flex-grow:1;flex-shrink:1;flex-basis:auto;}
 .extra{flex-basis:content;}
-
-
 
 /* Style the navbar */
 #navbar {
@@ -41,19 +39,12 @@ label{margin-right:1.3em;padding:8px;}
   text-decoration: none;
 }
 
-/* Page content */
-.content {
-  padding: 16px;
-}
-
-/* The sticky class is added to the navbar with JS when it reaches its scroll position */
 .sticky {
   position: fixed;
   top: 0;
   width: 100%;
 }
 
-/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
 .sticky + .content {
   padding-top: 60px;
 } 
@@ -67,13 +58,21 @@ label{margin-right:1.3em;padding:8px;}
 
 
 <body>
+
+
+
+
+
+
+
+
+
 <main>
 
 
 
 
-
- <div id="navbar">
+ <div id="navbar" class="sticky">
   <a href="#home">THE PORTFOLIO OF ADS</a>
 <!--   <a href="#news">News</a>
   <a href="#contact">Contact</a> -->
@@ -81,7 +80,7 @@ label{margin-right:1.3em;padding:8px;}
 
 
 
-<h1>Scott Ustas</h1>
+<!-- <h1>Scott Ustas</h1> -->
 
 <!-- <h2>Developer Technology</h2>
 <p>Over 12 years of experience working in the digital ad agency world. I have extensive web development and design experience with dynamic display ads, dynamic emails, video animation and landing pages. I have done a lot of freelance and have done work for many Chicago agencies.</p>
@@ -96,11 +95,11 @@ label{margin-right:1.3em;padding:8px;}
 <p>McDonalds Citi Reynolds Hefty Mikes Hard Lemonade Bertolli Loews Hotels Ragu Office Depot Celebrity Crusies Starbucks Dish Network Sears Blue Cross Blue Shield Craftsman Einstein Bagel Bros Northern Trust Bank Hotelscom Safelite Liberty Mutual Moen Cracker Barrel Fitbit Accenture Autozone Duralast Kenmore Paypal Diehard Batteries PLS Loan BMO Harris Bank AAFES State Farm</p> -->
 
 
-<h2>Work</h2>
+<!-- <h2>Work</h2> -->
 
-<div style="background-color: #312D2A">
+<div style="background-color: #312D2A; padding-top: 57px;">
   <div class="container">
-    <div class="item"><h2 style="text-align: center;">Starbucks</h2></div>
+    <div class="item"><h1>STARBUCKS</h1></div>
     <div class="item extra"><a href="starbucksNasdaq.mp4" target="_blank" style="color:#ffffff;" class=""><img src='starbucksHero.jpg'></a></div>
     <div class="item"><p>New York City Nasdaq display for the launch of Starbucks reward program. Animation developed in After Effects with Newton 3.</p></div>
   </div>
@@ -108,7 +107,7 @@ label{margin-right:1.3em;padding:8px;}
 
 <div style="background-color: #B71111">
   <div class="container">
-    <div class="item"><h2 style="text-align: center;">McDonalds</h2></div>
+    <div class="item"><h1>MCDONALDS</h1></div>
     <div class="item extra"><a href="burrito.mp4" target="_blank" style="color:#ffffff;" class=""><img src='mcdCombinePreview.jpg'></a></div>
     <div class="item"><p>HTML5 Landing pages development for Fish McBites, Western Burrito, McMuffin, Premium Mcwrap. Display Ads, Site work.</p></div>
   </div>
@@ -116,7 +115,7 @@ label{margin-right:1.3em;padding:8px;}
 
 <div style="background-color: #A7BBEE">
   <div class="container">
-    <div class="item"><h2 style="text-align: center;">Citibank</h2></div>
+    <div class="item"><h1>CITIBANK</h1></div>
     <div class="item extra"><a href="citi-display-2020/index.html" target="_blank" style="color:#ffffff;" class=""><img src='citibank_inStore.jpg'></a></div>
     <div class="item"><p>HTML5 Animation for in store display served dynamically, by time and location. HTML5 and video motion graphics development.</p></div>
   </div>
@@ -124,7 +123,7 @@ label{margin-right:1.3em;padding:8px;}
 
 <div style="background-color: #252F53">
   <div class="container">
-    <div class="item"><h2 style="text-align: center;">Fitbit</h2></div>
+    <div class="item"><h1>FITBIT</h1></div>
     <div class="item extra"><img src='fitbit.jpg'></div>
     <div class="item"><p>Dynamic responsive email development with Ampscript in Salesforce Cloud. Modular template design with multi-language support.</p></div>
   </div>
@@ -133,7 +132,7 @@ label{margin-right:1.3em;padding:8px;}
 
 <div style="background-color: #E8DFE4">
   <div class="container">
-    <div class="item"><h2 style="text-align: center;">Pillsbury</h2></div>
+    <div class="item"><h1>PILLSBURY</h1></div>
     <div class="item extra"><a href="20200929_Pills_HalloweenBanner_300x250/index.html" target="_blank" style="color:#ffffff;" class=""><img src='pillsbury_dough.jpg'></a></div>
     <div class="item"><p>HTML5 animation using gsap particle emitter.</p></div>
   </div>
@@ -146,25 +145,7 @@ label{margin-right:1.3em;padding:8px;}
 <footer><h3><a href="ScottUstasResume.pdf" style="color:#ffffff;" class="">Resume</a> / <a href="mailto:scottustas@gmail.com" style="color:#ffffff; text-align: right;" class="">Contact</a></h3></footer>
 
 
-<script type="text/javascript">
-  // When the user scrolls the page, execute myFunction
-window.onscroll = function() {myFunction()};
 
-// Get the navbar
-var navbar = document.getElementById("navbar");
-
-// Get the offset position of the navbar
-var sticky = navbar.offsetTop;
-
-// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
-} 
-</script>
 
 
 </body>
