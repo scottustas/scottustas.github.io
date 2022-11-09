@@ -27,11 +27,11 @@ var bannerTimer = setInterval(function()
 }, delay);
 
 function initEB() {
-  if (!EB.isInitialized()) {
-    EB.addEventListener(EBG.EventName.EB_INITIALIZED, startAd);
-  } else {
+  // if (!EB.isInitialized()) {
+  //   EB.addEventListener(EBG.EventName.EB_INITIALIZED, startAd);
+  // } else {
     startAd();
-  }
+  // }
 }
 
 function startAd() {
