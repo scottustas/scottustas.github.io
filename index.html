@@ -1,128 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta charset="UTF-8">
-<title>Scott Ustas Portfolio</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<style>
-body{font-family:Arial, sans-serif;background-color: #303841;}
-h1{text-align:center;font-size: 3em;mix-blend-mode: overlay;}
-img{max-width:100%;}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>Scott Ustas Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #303841;
+    }
 
-#navbar {
-  overflow: hidden;
-  background-color: #333;
-  transition: 0.3s;
-}
+    h1 {
+      text-align: center;
+      font-size: 3em;
+      mix-blend-mode: overlay;
+    }
 
-#navbar:hover {
-  background-color: #0C95B7;
-}
+    img {
+      max-width: 100%;
+    }
 
-#navbar a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px;
-  text-decoration: none;
-}
+    #navbar {
+      overflow: hidden;
+      background-color: #333;
+      transition: 0.3s;
+      font-size: 1.25em;
+    }
 
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-}
+    #navbar:hover {
+      background-color: #0C95B7;
+    }
 
-.sticky + .content {
-  padding-top: 60px;
-} 
+    #navbar a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px;
+      text-decoration: none;
+    }
 
-.row {
-  line-height: 0;
-}
+    .sticky {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+    }
 
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  filter: drop-shadow(0 10mm 10mm rgb(160, 0, 210));
-}
+    .sticky+.content {
+      padding-top: 60px;
+    }
 
-.centeredLogo {
-  position: absolute;
-  top: 50%;
-  left: 47%;
-  transform: translate(-50%, -50%);
-  filter: drop-shadow(0 10mm 10mm rgb(160, 0, 210));
-}
+    .row {
+      line-height: 0;
+    }
 
-.container {
-  position: relative;
-  text-align: center;
-  color: white;
-}
+    .centered {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      filter: drop-shadow(0 10mm 10mm rgb(160, 0, 210));
+    }
 
-.heroImage{
-  /*filter: brightness(.85) saturate(2) sepia(0.43);*/
-}
+    .centeredLogo {
+      position: absolute;
+      top: 50%;
+      left: 47%;
+      transform: translate(-50%, -50%);
+      filter: drop-shadow(0 10mm 10mm rgb(160, 0, 210));
+    }
 
-</style>
+    .container {
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+
+    .heroImage {
+      /*filter: brightness(.85) saturate(2) sepia(0.43);*/
+    }
+  </style>
 </head>
 
 <body>
   <main>
-
     <div id="navbar" class="sticky">
       <a href="ScottUstasResume.pdf" target="_blank">RESUME</a>
       <a href="">|</a>
       <a href="displayExamples.html" target="_blank">DISPLAY EXAMPLES</a>
       <a href="">|</a>
       <a href="emailExamples.html" target="_blank">EMAIL EXAMPLES</a>
-    </div> 
-
+    </div>
     <div style="height: 46.4px;"></div>
-
     <div class="row">
-
       <div style="" class="container">
         <div class="heroImage"><img src='turntableHero.png'></div>
         <div class="heroImage centeredLogo"><img src='profile.png'></div>
       </div>
-
       <div style="" class="container">
-        <div class="heroImage"><img src='starbucksHero.jpg'></div>
+        <a href="starbucksNasdaq.mp4" target="_blank"><div class="heroImage"><img src='starbucksHero.jpg'></div></a>
       </div>
-
       <div style="" class="container">
         <div class="heroImage"><img src='mcdCombinePreview.jpg'></div>
       </div>
-
       <div style="" class="container">
-        <div class="heroImage"><img src='fitbit.jpg'></div>
+        <a href="emails/fitbitExample1.html" target="_blank"><div class="heroImage"><img src='fitbit.jpg'></div></a>
       </div>
-
       <div style="" class="container">
-        <div class="heroImage"><img src='citiHero.jpg'></div>
+        <a href="Citi_TNAP_Banner_Boingo_640x360.mp4" target="_blank"><div class="heroImage"><img src='citiHero.jpg'></div></a>
       </div>
-
       <div style="" class="container">
         <div class="heroImage"><img src='mikesHero.jpg'></div>
       </div>
-
       <div style="" class="container">
-        <div class=""><img src='lmiHero.jpg'></div>
+        <a href="emails/lmiExample1.html" target="_blank"><div class=""><img src='lmiHero.jpg'></div></a>
       </div>
-
       <div style="" class="container">
         <div class="heroImage"><img src='citiThumb.jpg'></div>
       </div>
-
     </div>
-
   </main>
 </body>
+
 </html>
+
+

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+<style>
+*{margin:0px;padding:0px;}
+body{font-family:Arial, sans-serif;background-color:#333639;}
+a{border:none;cursor:pointer;outline:none;user-select:none;}
+div, img{position:absolute;}
+#container{background-color:#000;border:1px solid #000;display:none;margin:auto;overflow:hidden;position:absolute;top:0px;left:0px;width:298px;height:248px;}
+#content{display:none;position:absolute;left:0px;top:0px;width:100%;height:100%;}
+#background_exit{background-color:#000000;cursor:pointer !important;opacity:0;width:100%;height:100%;left:0px;top:0px;}
+#content div{border:none;display:block;position:absolute;}
+.x2 img{width:300px;}
+.visually-hidden{height:1px;width:2px;position:absolute;clip:rect(1px 1px 1px 1px);overflow:hidden;}
+
+#cta{overflow:hidden;top:200px;left:94px;width:112px;height:30px;}
+#cta img{overflow:hidden;width:112px;height:30px;}
+#glare{left: -150px;}
+#pass{top: -50px;}
+</style>
+
+<!--Developer scott ustas-->
+<!--CDN link for TweenMax-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+
+<!--Click Tag Code-->
+<meta name="ad.size" content="width=300,height=250">
+
+<script type="text/javascript">
+  var clickTag = "https://inheritancepass.com";
+</script>
+
+</head>
+
+<body>
+<div id="container">
+<div id="content">
+  <a href="javascript:void(0);" title="Learn More" onclick="window.open(clickTag);">
+    <span class="visually-hidden"></span>
+
+    <div class="" id="background1"><img src="background1.jpg"></div>
+    <div class="text1" id="text1a"><img src="text1a.png"></div>
+    <div class="text1" id="text1b"><img src="text1b.png"></div>
+    <div class="text1" id="text1c"><img src="text1c.png"></div>
+    <div class="text1" id="text1d"><img src="text1d.png"></div>
+    <div class="text1" id="text1e"><img src="text1e.png"></div>
+    <div class="" id="background2"><img src="background2.jpg"></div>
+    <div class="" id="pass"><img src="pass.png"></div>
+    <div class="" id="background3"><img src="background2.jpg"></div>
+    <div class="text2" id="text2a"><img src="text2a.png"></div>
+    <div class="text2" id="text2b"><img src="text2b.png"></div>
+    <div class="text2" id="text2c"><img src="text2c.png"></div>
+    <div class="text2" id="text2d"><img src="text2d.png"></div>
+    <div class="text2" id="logo"><img src="logo.png"></div>
+
+    <div class="text2" id="cta">
+      <div id="ctaImage"><img src="cta.png"> </div>
+      <div id="glare"> <img src="glare.png"> </div>
+    </div>
+
+    <a href="javascript:void(0);" onclick="window.open(clickTag);"> <div id="background_exit"></div>  </a>
+  </a>
+</div>
+</div>
+
+<script type="text/javascript">
+var container;
+var content;
+
+function init(){
+  container = document.getElementById('container');
+  content   = document.getElementById('content');
+  container.style.display = "block";
+  content.style.display   = "block";
+  startAnimation();
+}
+
+function addListeners() {
+  container.addEventListener('mouseover', ctaRollOverHandler, false);
+  container.addEventListener('mouseout', ctaRollOutHandler, false);
+}
+
+function startAnimation() {
+
+  var tl = new TimelineMax({  });
+  tl.timeScale( 1 );
+
+  tl.staggerFrom(".text1", .9, {top:"+=15", ease: "expo.out", opacity:0,}, .25);
+  tl.from("#background2", .75, {delay:2, ease: "expo.out", opacity:0});
+  tl.from("#pass", 1.25, {delay:0, rotation:25, ease: "power2.out", y:300},'-=.25');
+  tl.from("#background3", .75, {delay:2, ease: "expo.out", opacity:0});
+  tl.staggerFrom(".text2", .9, {top:"+=15", ease: "expo.out", opacity:0}, .25, '-=.5');
+  tl.fromTo("#glare", .75, {css: {alpha:1, left: -150}}, {css:{left:150, alpha:0}, onComplete:addListeners} ,'-=.5');
+
+}
+
+function ctaRollOverHandler(){
+  TweenMax.set("#cta", {scale:1.05, overwrite:true, ease:Expo.easeOut});
+  TweenMax.fromTo("#glare", .75, {css: {alpha:1, left: -150}}, {css:{left:150, alpha:0}} );
+}
+
+function ctaRollOutHandler(){
+  TweenMax.set("#cta", {scale:1.01, overwrite:false, ease:Expo.easeOut});
+}
+
+window.onload = function() {
+init();
+}
+
+</script>
+</body>
+</html>

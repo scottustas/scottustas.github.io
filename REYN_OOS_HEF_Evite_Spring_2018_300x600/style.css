@@ -1,0 +1,265 @@
+* {
+ margin: 0px;
+ padding: 0px;
+}
+
+body {
+ font-family: Arial, sans-serif;
+ background-color: #333639;
+
+}
+
+a {
+ border: none;
+ cursor: pointer;
+ outline: none;
+ user-select: none;
+}
+
+a:hover,
+a:active {
+  
+}
+
+#container {
+ display: none;
+ position: absolute;
+ width: 298px;
+ height: 598px;
+ border:1px solid #000000;
+ top: 0px;
+ left: 0px;
+ margin: auto;
+ background-color: #40ae49;
+ overflow: hidden;
+}
+
+#cup {
+ top: 0px;
+}
+#content {
+ display: none;
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ top: 0px;
+ left: 0px;
+}
+
+#background_exit {
+ width: 100%;
+ height: 100%;
+ top: 0px;
+ left: 0px;
+ cursor: pointer !important;
+ opacity: 0;
+ background-color: #000000;
+}
+
+#content div {
+ display: block;
+ position: absolute;
+ border: none;
+}
+
+#content div img{
+ width: 300px;
+}
+
+#cta{
+ overflow: hidden;
+ left: 91px;
+ top: 271px;
+ width: 117px;
+ height: 36px;
+}
+
+#cta img, #ctaImage img{
+ width: 117px !important;
+ height: 36px !important;
+}
+
+#glare{
+ top: 0px;
+ left: -120px;
+}
+
+/*USER//////////////////////////////////////// CSS*/
+
+/*#star1 img, #flower2 img, #dots img, #arrow img, #flowers img{
+ width: 300px;
+}*/
+
+#logo{
+ top: 178px;
+ left: 97px;
+ width: 101px;
+ height: 43px;
+
+}
+
+#plate{
+ /* top: 342px;
+ left: 34px;*/
+ top: 1px;
+ left: 0px;
+ }
+
+#plate img{
+ width: 232px !important;
+}
+
+#plateMask{position: absolute;height: 232px;width: 232px;top: 342px;left: 34px;background-color: black;border-radius: 117px;overflow: hidden;}
+
+/*#replayBtn{
+top: 10px;
+left: 269px;
+cursor: pointer;
+width: 22px;
+height: 21px;
+}*/
+
+#firework{
+  position: absolute;
+ opacity: 1;
+ top: 107px;
+ left: 250px;
+}
+
+
+
+#explosion1{
+ position: absolute;
+ opacity: 1;
+ left: 90px;
+ top: -50px;
+ height: 81px;
+ width: 66px;
+ transform: rotate(-97deg);
+}
+
+#star2{
+ position: absolute;
+ opacity: 1;
+ left: 169px;
+ top: 573px;
+ height: 18px;
+ width: 22px;
+}
+
+#star3{
+ position: absolute;
+ opacity: 1;
+ left: 197px;
+ top: 574px;
+ height: 9px;
+ width: 9px;
+}
+
+#star4{
+ position: absolute;
+ opacity: 1;
+ left: 0px;
+ top: 135px;
+ height: 18px;
+ width: 22px;
+ transform: rotate(41deg);
+}
+
+#bubble{
+ position: absolute;
+ opacity: 1;
+ left: 38px;
+ top: 21px;
+ height: 30px;
+ width: 30px;
+ transform: rotate(-77deg);
+
+}
+
+
+#swirl{
+ position: absolute;
+ opacity: 1;
+ left: -49px;
+ top: 294px;
+ height: 293px;
+ width: 195px;
+ transform: rotate(-21deg);
+ opacity: 1;
+}
+
+#flower2{
+  top: -4px;
+  left: 4px;
+}
+
+
+
+#flower3{
+ position: absolute;
+ width: 21px;
+ height: 21px;
+ top: 532px;
+ left: 21px;
+ opacity: 1;
+ transform: rotate(-29deg);
+}
+
+#arrow1{
+ position: absolute;
+ width: 54px;
+ height: 43px;
+ top: 114px;
+ left: 255px;
+ opacity: 1;
+ transform: rotate(-74deg);
+}
+
+#arrow2{
+ position: absolute;
+ width: 24px;
+ height: 33px;
+ top: 137px;
+ left: 278px;
+ opacity: 1;
+ transform: rotate(-121deg);
+}
+
+#arrow3{
+ position: absolute;
+ width: 54px;
+ height: 54px;
+ top: 160px;
+ left: 252px;
+ opacity: 1;
+ transform: rotate(-179deg);
+}
+
+#arrow4{
+ position: absolute;
+ width: 24px;
+ height: 33px;
+ top: 185px;
+ left: 279px;
+ opacity: 1;
+ transform: rotate(-225deg);
+}
+
+#arrow5{
+ position: absolute;
+ width: 14px;
+ height: 23px;
+ top: 136px;
+ left: 102px;
+ opacity: 1;
+ transform: rotate(-30deg);
+}
+
+
+
+
+
+
+
+

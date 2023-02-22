@@ -1,77 +1,41 @@
-<!--
+%%=ContentBlockByKey("FitBit_Global_Code_Block_2022")=%% <!--
 %%[
-/* 20210506_MDay_LuxeSpot_US */
+/* 20220610_FDay_Reminder_US */
 
-/* Testing DE: Universal Testing */
-set @EmailAddress =  email_address
-set @GlobalCustomerID = SubscriberKey 
-var @UIRows, @AttributeValue 
-var @locale, @FirstRow, @premium_eligibility_flag 
-set @UIRows = LOOKUPROWS("ENT.user_info", "global_customer_id", @GlobalCustomerID)  
-Set @RowCount = RowCount(@UIRows) 
-If @RowCount > 0 then 
-set @FirstRow = Row(@UIRows,1) 
-set @locale = Field(@FirstRow, "locale") 
-set @premium_eligibility_flag = Field(@FirstRow,"premium_eligibility_flag") 
-else 
-set @locale = "en_US" 
-EndIF
+/* UTM tagging */
+set @utm = "utm_source=ET&utm_medium=EM&utm_campaign=20220610_FDay_Rem_US_FM_M_SU_FT_00_NA"
 
-/* Control Group Log Begin */ 
-VAR @JobID, @ListID, @SubID, @SubscriberKey 
-/* above @EmailAddress, */ 
-VAR @AudienceID, @AudeinceCode, @SegmentID, @SegmentCode, @SegmentName, @TrackingCode, @AudienceName 
-set @JobID = jobid 
-set @ListID = listid 
-set @SubID = subscriberid 
-set @SubscriberKey = SubscriberKey 
-set @AudienceName = _DataSourceName 
-set @AudienceID = AudienceID 
-set @AudienceCode = AudienceCode 
-set @SegmentID = SegmentID 
-set @SegmentCode = SegmentCode 
-set @SegmentName = SegmentName 
-set @TrackingCode = TrackingCode 
-set @SubscriberKeyLength = Length(@SubscriberKey) 
-set @ContlogKey = substring(@SubscriberKey,@SubscriberKeyLength,1) 
-set @ControlGroupLogName = Concat('Control_Group_Log_Stg',@ContlogKey) 
-IF IndexOf(Lowercase(@SegmentName),'control') > 0 THEN 
-InsertDE(@ControlGroupLogName,'JobID',@JobID,'ListID',@ListID,'SubID',@SubID,'SubscriberKey',@SubscriberKey,'EmailAddress',@EmailAddress,'Audience_Name',@AudienceName,'AudienceId',@AudienceID,'AudienceCode',@AudienceCode,'SegmentID',@SegmentID,'SegmentCode',@SegmentCode,'SegmentName',@SegmentName,'TrackingCode',@TrackingCode,'CreatedDate',NOW()) 
-RaiseError('Control group', true) 
-ENDIF 
-/* Control Group Log End */  
+set @subjectline = "Still searching for a gift for Dad? 🔍"
+set @preheader = "Fresh tech up to $100 off."
+set @blog = concat("https://blog.fitbit.com", "?", @utm)
+
+SET @logolink = concat("https://www.fitbit.com/global/",@localelookupurl,"/home", "?", @utm, "&utm_content=logolink")
+SET @shoppingcartlink = concat("https://www.fitbit.com/global/",@localelookupurl,"/products", "?", @utm, "&utm_content=shoppingcartlink")
+SET @HeroCTALink = concat("https://www.fitbit.com/global/",@localelookupurl,"/products", "?", @utm, "&utm_content=HeroCTALink")
+SET @GiftGuideLink = concat("https://www.fitbit.com/global/",@localelookupurl,"/products/gift-guide", "?", @utm, "&utm_content=GiftGuideLink")
+SET @HeroImageLink = concat("https://www.fitbit.com/global/",@localelookupurl,"/products", "?", @utm, "&utm_content=HeroImageLink")
+SET @CashBackLink = concat("https://www.fitbit.com/global/",@localelookupurl,"/products", "?", @utm, "&utm_content=CashBackLink")
+SET @AccessoriesLink = concat("https://www.fitbit.com/global/",@localelookupurl,"/products/accessories", "?", @utm, "&utm_content=AccessoriesLink")
 
 var @headerLogo, @cartLogo, @headerBackgroundColor, @headerTheme, @shoppingcart
-set @headerBackgroundColor = "#F1C4C1" /* set BACKGROUNDCOLOR */
+set @headerBackgroundColor = "#E5E8E5" /* set BACKGROUNDCOLOR */
 set @headerTheme = "LIGHT" /* set LIGHT OR DARK */
 set @shoppingcart = "Y" /* Y OR N */
 
-/* UTM tagging */
-set @utm = "utm_source=ET&utm_medium=EM&utm_campaign=20210506_MDayLuxSp_US_FM_M_SU_FT_00_NA"
-var @locale
-var @localelookupurl
-set @locale = Locale
-set @localelookupurl = LOOKUP("ENT.LocaleRedirects","URLLocale","Locale",@locale)
+set @klarnacolor = "#000000"
+set @klarnabg="#D1DEE6"
 
-SET @logolink = concat("https://www.fitbit.com/global/us/home", "?", @utm, "&utm_content=logolink")
-SET @shoppingcartlink = concat("https://www.fitbit.com/global/us/products", "?", @utm, "&utm_content=shoppingcartlink")
-SET @HeroImageLink = concat("https://www.fitbit.com/global/us/products/trackers/luxe", "?", @utm, "&utm_content=HeroImageLink")
-SET @HeroCTALink = concat("https://www.fitbit.com/global/us/products/trackers/luxe", "?", @utm, "&utm_content=HeroCTALink")
-SET @IconsLink = concat("https://www.fitbit.com/global/us/products/trackers/luxe", "?", @utm, "&utm_content=IconsLink")
-SET @BannerImageLink = concat("https://www.fitbit.com/global/us/products", "?", @utm, "&utm_content=BannerImageLink")
-SET @BannerCTALink = concat("https://www.fitbit.com/global/us/products", "?", @utm, "&utm_content=BannerCTALink")
-
-set @subjectline = "A gift that’s worth the wait"
-set @preheader = "Pre-order Luxe, a gift Mom will love."
-
-set @legalfineprint = "&sup1;Sale applies to select Fitbit products and accessories on Fitbit.&zwnj;com while supplies last. Offer ends May 8, 2021 at 11:59 pm PDT. Purchase is limited to ten (10) Fitbit products. Exclusions apply. Cannot be combined with other discounts or applied after the order has been placed. Terms of offer are subject to change. Void where prohibited. "
-
+set @legalfineprint = "&sup1;Two (2) day shipping means two (2) business days and only while supplies last. Offer ends June 13, 2022 at 8:59 pm PDT. The two-day shipping offer is not valid for orders being shipped to Hawaii, Alaska and military addresses.<br>
+&sup2;Sale applies to select Fitbit products and accessories on Fitbit.c&zwnj;om while supplies last. Products on sale are subject to change throughout the promotion period. Offer ends June 19, 2022 at 11:59 pm PDT. Purchase is limited to ten (10) Fitbit products. Exclusions apply. Cannot be combined with other discounts or applied after the order has been placed. Terms of offer are subject to change. Void where prohibited.<br>
+&sup3;Offer applies to orders of $125.00 or more on Fitbit.c&zwnj;om (before taxes and shipping). Coupon is valid for redemption between 6/22/22 and 6/30/22 and is only valid for orders $50+. Customers must enter unique code at checkout to qualify for the discount. Cashback offer ends June 19, 2022 at 11:59 pm PDT. Cannot be combined with other discounts or applied after the order has been placed. Terms of offer are subject to change. Void where prohibited.
+"
 
 ]%% -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+
 <head>
-<!--[if gte mso 9]>
+  <!--[if gte mso 9]>
 <xml>
 <o:OfficeDocumentSettings>
 <o:AllowPNG/>
@@ -79,293 +43,353 @@ set @legalfineprint = "&sup1;Sale applies to select Fitbit products and accessor
 </o:OfficeDocumentSettings>
 </xml>
 <![endif]-->
-<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="format-detection" content="date=no" />
-<meta name="format-detection" content="address=no" />
-<meta name="format-detection" content="telephone=no" />
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="format-detection" content="date=no" />
+  <meta name="format-detection" content="address=no" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>%%=v(@subjectline)=%%</title>
+  <style type="text/css" media="screen">
+    /* Fonts */
+    @font-face {
+      font-family: 'Proxima Nova Regular';
+      src: url('https://marketing.fitbit.com/fonts/proxima-nova-regular-852046040da1526ac5ac9cdbee2e3723.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
 
-<title>%%=v(@subjectline)=%%</title>
+    @font-face {
+      font-family: 'Proxima Nova Medium';
+      src: url('https://marketing.fitbit.com/fonts/proxima-nova-thin-dec0715da57ea199cffc9f7338606ef5.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
 
-<style type="text/css" media="screen">
+    @font-face {
+      font-family: 'Proxima Nova Semibold';
+      src: url('https://marketing.fitbit.com/fonts/proxima-nova-semibold-3163eca2ebe9b39d7aaf4ba594ce39d7.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
 
-/* Fonts */
-@font-face { font-family: 'Proxima Nova Regular'; src: url('https://marketing.fitbit.com/fonts/proxima-nova-regular-852046040da1526ac5ac9cdbee2e3723.woff') format('woff');font-weight: normal; font-style: normal; }
-@font-face { font-family: 'Proxima Nova Medium'; src: url('https://marketing.fitbit.com/fonts/proxima-nova-thin-dec0715da57ea199cffc9f7338606ef5.woff') format('woff');font-weight: normal; font-style: normal; }
-@font-face { font-family: 'Proxima Nova Semibold'; src: url('https://marketing.fitbit.com/fonts/proxima-nova-semibold-3163eca2ebe9b39d7aaf4ba594ce39d7.woff') format('woff'); font-weight: normal; font-style: normal; }
-@font-face { font-family: 'Proxima Nova Bold'; src: url('https://marketing.fitbit.com/fonts/proxima-nova-bold-f73f22aa93a861006ae7f54f9968fec0.woff') format('woff'); font-weight: bold; font-style: normal; }
-@font-face { font-family: 'Proxima Nova Black'; src: url('https://marketing.fitbit.com/fonts/proxima-nova-black-b68819090cb3f466a9dd7d473d9e12a8.woff') format('woff'); font-style: normal; }
-@font-face { font-family: 'Proxima Nova Extrabold'; src: url('https://marketing.fitbit.com/fonts/proxima-nova-xbold-5d8ad01e573a280ed04306c1bfe5ef83.woff') format('woff'); font-style: normal; }
-@font-face {font-family: 'Proxima Nova Light';font-style: normal;font-weight: normal;src: url("https://marketing.fitbit.com/fonts/proxima-nova-light-25b45c331498ff377abe22554f05943d.eot") format("embedded-opentype"), url("https://marketing.fitbit.com/fonts/proxima-nova-light-b08aa39dfd53fb455693786505ed211e.woff") format("woff"), url("https://marketing.fitbit.com/fonts/proxima-nova-light-982154eacb03c17d9cf072a97208af46.ttf") format("truetype"), url("https://marketing.fitbit.com/fonts/proxima-nova-light-918e11e776f56b8c6097ae4af49461e6.svg") format("svg");-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale; }
+    @font-face {
+      font-family: 'Proxima Nova Bold';
+      src: url('https://marketing.fitbit.com/fonts/proxima-nova-bold-f73f22aa93a861006ae7f54f9968fec0.woff') format('woff');
+      font-weight: bold;
+      font-style: normal;
+    }
 
-/* Linked Styles */
- /* Linked Styles */
- body { padding:0 !important; margin:0 !important; display:block !important; min-width:100% !important; width:100% !important; background:#f5f5f5; -webkit-text-size-adjust:100%; }
-  a { text-decoration:none }
-  /*p { padding:0 !important; margin:0 !important } */
-  img { -ms-interpolation-mode: bicubic; /* Allow smoother rendering of resized image in Internet Explorer */ }
-  strong {font-family: 'Proxima Nova bold', Arial,sans-serif;font-weight: bold;}
-  .mcnPreviewText { display: none !important; }
-  .header-text a { color:#939c9e; text-decoration:underline }
-  btn-1 a,.intro-title-1 a,.intro-title-3 a,.intro-title-4 a { color:#ffffff; text-decoration:none }
-  .mobile-break{display:none !important;}
-  /* Mobile styles */
+    @font-face {
+      font-family: 'Proxima Nova Black';
+      src: url('https://marketing.fitbit.com/fonts/proxima-nova-black-b68819090cb3f466a9dd7d473d9e12a8.woff') format('woff');
+      font-style: normal;
+    }
 
-  @media only screen and (max-device-width: 414px), only screen and (max-width: 500px) {
-  .mobile-shell { width: 414px !important; min-width: 414px !important; }
-  .center { margin: 0 auto !important; }
-  .td { width: 100% !important; min-width: 100% !important; }
-  .headline{ font-size: 36px !important; line-height: 40px !important; padding:50px 50px 20px 50px !important; letter-spacing: 0.18px}
-  .newrow{display: block !important; text-align: center !important;}
-  .centered{text-align: center !important;}
-  .responsivetable{width: 100% !important;}
-  .mobile-text-align-left{text-align: left !important;}
-.hidden,
-.m-hide { display: none !important; width: 0 !important; height: 0 !important; font-size: 0 !important; line-height: 0 !important; min-height: 0 !important; }
-.no-mobile {text-indent: -99999em;display: none !important;}
-  .mobile-only {text-indent: 0 !important;display: block !important;width: 100% !important;height: auto !important;visibility: visible !important;overflow: visible !important;max-height: none !important;}
-  .mobile-only-cta{display: inline-block !important;}
+    @font-face {
+      font-family: 'Proxima Nova Extrabold';
+      src: url('https://marketing.fitbit.com/fonts/proxima-nova-xbold-5d8ad01e573a280ed04306c1bfe5ef83.woff') format('woff');
+      font-style: normal;
+    }
 
-  .m-td,
-  .hidden,
-  .m-hide { display: none !important; width: 0 !important; height: 0 !important; font-size: 0 !important; line-height: 0 !important; min-height: 0 !important; }
-  .arrow{ width: 15px !important; height: 14px !important;}
-  .p-0{padding: 0px !important;}
-  .secondary-CTA-Padding-top{padding-top: 25px !important;}
-  .responsivetable{width: 100% !important;}
-/* Template CSS*/
-.button-1{ padding: 11px 33px !important;}
-.hero-title-1 { font-size: 26px!important;line-height: 34px!important;padding: 20px 50px 0px !important; letter-spacing:.13px !important;}
-.hero-title-2 { font-size: 18px!important;line-height: 28px!important;padding: 15px 50px 0px !important;}
-.cta{ font-size: 20px !important; line-height: 40px !important; letter-spacing: .1px !important; padding:60px 50px 20px 50px !important; }
-.mobile-only-cta {display: inline-block !important;}
-.mob-btn-CTA{padding: 11px 33px !important;}
-/*Module H*/
-.ContentH-Pading-Right{padding-right: 80px!important;}
-.ContentH-Pading-Left{padding-left:80px!important; padding-right: 15px !important;}
-.ModuleH-Header-Padding{padding: 50px 50px 5px 50px !important;}
-.Module-H-Padding{ padding: 20px 0px 0px 0px !important; }
-.HeroG-Padding{padding-left:50px !important; padding-right: 50px !important;}
-.HeroG-MobileColumn-Padding{padding-left: 50px !important; padding-right: 50px !important;}
-.HeroG-Headline{font-size: 36px!important; line-height: 40px !important; letter-spacing: .18px !important;}
-.HeroG-Subhead{font-size: 26px !important; line-height: 34px !important; letter-spacing: .13px !important;}
-.HeroG-Column-Subhead{font-size: 32px !important; line-height: 36px !important; letter-spacing: .13px !important; }
-.mob-bg{   background-image: url('https://image.e.fitbit.com/lib/fe87137275620d7472/m/11/a5cd0ab3-5871-43c7-a617-a7be573e492a.png') !important;}
-.contentHlast {padding-bottom: 50px !important;}
+    @font-face {
+      font-family: 'Proxima Nova Light';
+      font-style: normal;
+      font-weight: normal;
+      src: url('https://marketing.fitbit.com/fonts/proxima-nova-light-25b45c331498ff377abe22554f05943d.eot') format('embedded-opentype'), url('https://marketing.fitbit.com/fonts/proxima-nova-light-b08aa39dfd53fb455693786505ed211e.woff') format('woff'), url('https://marketing.fitbit.com/fonts/proxima-nova-light-982154eacb03c17d9cf072a97208af46.ttf') format('truetype'), url('https://marketing.fitbit.com/fonts/proxima-nova-light-918e11e776f56b8c6097ae4af49461e6.svg') format('svg');
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
 
-}
-@media (prefers-color-scheme: dark){
+    /* Linked Styles */
+    body {
+      padding: 0 !important;
+      margin: 0 !important;
+      display: block !important;
+      min-width: 100% !important;
+      width: 100% !important;
+      background: #f5f5f5;
+      -webkit-text-size-adjust: 100%;
+    }
 
-    .h1fontcolor {color: #000000 !important }
-   
-  }
-/* End Mobile styles */
+    a {
+      text-decoration: none
+    }
 
-</style>
+    strong {
+      font-family: 'Proxima Nova bold', Arial, sans-serif;
+      font-weight: bold;
+    }
 
-<!--[if mso]>
+    /*.mob-btn-CTA{background-color: #601822 !important;}*/
+    /* Mobile styles */
+    @media only screen and (max-device-width: 414px),
+    only screen and (max-width: 500px) {
+
+      /* Header CSS*/
+      .mobile-shell {
+        width: 414px !important;
+        min-width: 414px !important;
+      }
+
+      .hidden,
+      .m-hide {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+        font-size: 0 !important;
+        line-height: 0 !important;
+        min-height: 0 !important;
+      }
+
+      .no-mobile {
+        text-indent: -99999em;
+        display: none !important;
+      }
+
+      .mobile-only {
+        text-indent: 0 !important;
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        visibility: visible !important;
+        overflow: visible !important;
+        max-height: none !important;
+      }
+
+      /* Template CSS*/
+      .mob-btn-CTA {
+        padding: 11px 33px !important;
+      }
+
+      .mobBtn {
+        padding-bottom: 20px !important;
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+
+      .headlineheroB {
+        font-size: 42px !important;
+        line-height: 51px !important;
+        letter-spacing: .21px !important;
+        padding: 60px 50px 15px 50px !important;
+      }
+
+      .hero-title-3 {
+        font-size: 18px !important;
+        line-height: 28px !important;
+        padding: 0px 50px 0px 50px !important;
+      }
+
+      .button-1 {
+        padding: 11px 33px !important;
+      }
+
+      .headline {
+        font-size: 33px !important;
+        line-height: 39px !important;
+        letter-spacing: .17px !important;
+        padding: 5px 50px 0px 50px !important;
+      }
+
+      .hero-title-1 {
+        font-size: 40px !important;
+        line-height: 45px !important;
+        padding: 50px 50px 20px !important;
+      }
+
+      .hero-title-2 {
+        font-size: 18px !important;
+        line-height: 28px !important;
+        padding: 20px 50px 0px !important;
+      }
+
+      .mobile-only-cta {
+        display: inline-block !important;
+      }
+
+      .bannerA {
+        padding: 15px 50px 15px 50px !important;
+      }
+
+      .TextAheadline {
+        font-size: 26px !important;
+        line-height: 34px !important;
+        letter-spacing: 0.13px !important;
+        padding: 40px 50px 30px !important;
+      }
+
+      .TextASub {
+        font-size: 18px !important;
+        line-height: 28px !important;
+        padding: 0px 50px 30px !important;
+      }
+
+      .bgImage1 {
+        background-image: url('https://image.e.fitbit.com/lib/fe87137275620d7472/m/14/a5d476eb-002b-4dcb-9fb7-31a791e8bbe1.gif') !important;
+        background-size: 414px 409px !important;
+      }
+    }
+
+    /* End Mobile styles */
+  </style>
+  <!--[if mso]>
 <style type="text/css">
 body, table, td, h1, p, span, strong, a {font-family: Arial, Helvetica, sans-serif !important;}
 </style>
 <![endif]-->
-
 </head>
 
 <body style="padding:0 !important; margin:0 !important; display:block !important; min-width:100% !important; width:100% !important; background:#f5f5f5; -webkit-text-size-adjust:none;">
   <!-- MOBILE PREHEADER PUSH ANY CONTENT AFTER THE PREHEADER FROM SHOWING UP INSERT UNDER BODY TAG -->
-  <div style="display: none; max-height: 0px; overflow: hidden;">
-     %%=v(@preheader)=%%
-  </div>
+  <div style="display: none; max-height: 0px; overflow: hidden;"> %%=v(@preheader)=%% </div>
   <!-- Insert &zwnj;&nbsp; hack after hidden preview text -->
-  <div style="display: none; max-height: 0px; overflow: hidden;">
-     &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
-  </div>
-  <custom name="opencounter" type="tracking">
+  <div style="display: none; max-height: 0px; overflow: hidden;"> &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp; </div>
+  <custom name="opencounter" type="tracking" />
   <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f5f5f5">
-     <tr>
-        <td align="center" valign="top">
-           <table width="600" border="0" cellspacing="0" cellpadding="0" class="mobile-shell" bgcolor="%%=v(@headerBackgroundColor)=%%" style="width: 600px;">
-              <!-- Header -->
-              <tr>
-                 <td align="center">
-                    <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="%%=v(@headerBackgroundColor)=%%">
-                       <tr>
-                          <td>
-                             %%=ContentBlockByName("Content Builder\Shared Contents\Header\Fitbit_Header_2021")=%%
-                          </td>
-                       </tr>
-                    </table>
-                 </td>
-              </tr>
-              <!-- END Header -->
-              <!-- HERO -->
-              <tr>
-                  <td style="" bgcolor="#F1C4C1">
-                     <table class="mob-bg" bgcolor="#F1C4C1" width="100%" border="0" cellspacing="0" cellpadding="0" background="https://image.e.fitbit.com/lib/fe87137275620d7472/m/11/16fb3176-25cd-4799-8d16-1b6a8f6f656d.png" bgcolor="#F1C4C1" valign="top" style="background-size: cover; background-repeat: no-repeat; background-image: url('https://image.e.fitbit.com/lib/fe87137275620d7472/m/11/16fb3176-25cd-4799-8d16-1b6a8f6f656d.png');">
-                        <!--  Sub Head -->
+    <tr>
+      <td align="center" valign="top">
+        <table width="600" border="0" cellspacing="0" cellpadding="0" class="mobile-shell" bgcolor="%%=v(@headerBackgroundColor)=%%" style="width: 600px;">
+          <tr>
+            <td>
+              <table role="presentation" class="" width="100%" cellspacing="0" cellpadding="10" border="0" bgcolor="#f5f5f5">
+                <tr>
+                  <td class="preheaderText" style="font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:14px; line-height:18px; padding:15px 0px 10px 0px;"><a href="https://view.e.fitbit.com/?qs=c7de94b48407181e115e086f3eba1fa2e01b4da42e3d10d1dd5d255a950127e7f4060ecdfec15b7f6eb4bc45e1ac40facf8e9c7643eebb68279c571341c3a5a7fc447667d51f50ff55397f3190186b54" style="color:#a4acae; text-decoration:none;">Fresh tech up to $100 off.</a></td>
+                  <td class="preheaderText hidden" style="font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:14px; line-height:18px; padding:15px 0px 10px 0px;" align="right"><a href="https://view.e.fitbit.com/?qs=c7de94b48407181e115e086f3eba1fa2e01b4da42e3d10d1dd5d255a950127e7f4060ecdfec15b7f6eb4bc45e1ac40facf8e9c7643eebb68279c571341c3a5a7fc447667d51f50ff55397f3190186b54" style="color:#a4acae; text-decoration:underline;">View in web browser</a></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <table role="presentation" style="" class="" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#E5E8E5">
+                <tr>
+                  <td class="logoIconTd" style="padding: 0px 0px 0px 30px;" width="173" height="69"> <a href="https://click.e.fitbit.com/?qs=08b2c15934c172d49308496c38486f81c124197f130a9ff1f336b488564bbaa7e1e1ea3b885cc85934d6fd5c25b20301ede269e76c5b5885"><img src="https://image.e.fitbit.com/lib/fe87137275620d7472/m/9/19fbf5aa-e5d7-4d0a-b42a-d38b9d768c97.png" alt="Fitbit" class="logoIcon" style="padding: 25px 0px 17px 0px;display:block; border:none;" width="27" height="27"></a></td>
+                  <td class="cartIconTd" style="padding: 0px 30px 0px 0px;" width="104" height="69" align="right"><a href="https://click.e.fitbit.com/?qs=08b2c15934c172d4bb5721149940c0b66c28f56b0429d5efa4108ea046c6eab8f92ff877023915a8e49c3b88c6929144bc7619a29c8c4dec"><img src="https://image.e.fitbit.com/lib/fe87137275620d7472/m/15/fda13d08-e310-47c4-b697-2b5076fc541b.png" class="cartIcon" style="padding: 27px 0px 20px 0px;display:block; border:none;" alt="Shopping cart" width="27" height="22"></a></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <table class="" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#CBD2CC">
+                <tr>
+                  <td class="bannerA" bgcolor="#CBD2CC" style="padding: 15px 40px 15px 40px; color:#000000; font-weight:400; font-family:'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height: 28px; text-align:center;"> Free 2-day shipping&sup1; on orders $50+ </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0" bgcolor="#E5E8E5">
+                <tr>
+                  <td align="center">
+                    <table width="600" height="334" border="0" cellpadding="0" cellspacing="0" class="mobile-shell">
                       <tr>
-                        <td align="center" class="ModuleH-Header-Padding" style="padding: 50px 75px 5px 75px;">
-                          <table cellspacing="0" border="0" role="presentation" width="100%"  style="width: 100%;">
+                        <td>
+                          <table border="0" cellspacing="0" cellpadding="0" role="presentation" bgcolor="#E5E8E5">
                             <tr>
-                              <td class="h1fontcolor HeroG-Column-Subhead" align="center" style="color:#000000; font-family: 'Proxima Nova Bold', Arial,sans-serif; font-size:36px; line-height:40px; font-weight: bold;  letter-spacing: 0.14px; padding-bottom: 20px;">
-                              <strong>Luxe is nearly here</strong>
+                              <td bgcolor="#E5E8E5" class="headlineheroB" style="padding: 60px 78px 0px 78px;color:#000000; font-family: 'Proxima Nova Bold', Arial,sans-serif; font-size:40px; line-height:44px; font-weight: bold; text-align:center; letter-spacing: 0.22px;">
+                                <strong>Sale’s still on for dads</strong>
                               </td>
                             </tr>
                             <tr>
-                              <td class="h1fontcolor" align="center" style="color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; font-weight: normal;  padding-bottom: 20px; ">
-                                 Shop Fitbit Luxe&trade; now and wow Mom later with this fashion-forward wellness tracker—it’s worth the wait.
+                              <td bgcolor="#E5E8E5" class="hero-title-3" style="padding: 15px 78px 0px 78px;color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; font-weight: normal; text-align:center;"> Help them go for their health and fitness goals with <strong>up to $100 off.</strong>&sup2; </td>
+                            </tr>
+                            <tr>
+                              <td align="center" class="mobBtn" style="padding: 30px 78px 20px 78px;" bgcolor="#E5E8E5">
+                                <table border="0" cellspacing="0" cellpadding="0" role="presentation" bgcolor="#E5E8E5">
+                                  <tr>
+                                    <td align="left" class="mob-btn-CTA" style="border-radius: 2px; padding: 11px 43px;" bgcolor="#ffffff">
+                                      <a href="%%=RedirectTo(@HeroCTALink)=%%" target="_blank" style="font-size: 18px; line-height: 22px; font-family: 'Proxima Nova Bold', Arial,sans-serif; color: #000000; text-decoration: none; text-decoration: none;border-radius: 2px; display: inline-block; font-weight: bold;">Shop sale</a>
+                                    </td>
+                                  </tr>
+                                </table>
                               </td>
                             </tr>
                             <tr>
-                              <td class="h1fontcolor centered " align="center" style="color:#000000; font-family: 'Proxima Nova Bold', Arial,sans-serif; font-size:18px; line-height:22px; font-weight: bold; text-align:center; letter-spacing: 0.18px; padding: 0px;">
-                                <a class="h1fontcolor" href="%%=RedirectTo(@HeroCTALink)=%%" target="_blank" style="color: #000000; text-decoration: none;">
-                                 Pre-order Luxe &#10132;
-                                </a>
+                              <td bgcolor="#E5E8E5" valign="middle" style="padding: 0px 0px 50px 0px; color:#000000 ; font-size: 18px; font-family:'Proxima Nova Bold', Arial , sans-serif; font-weight: normal; text-align: center; ">
+                                <p style="margin: 0px 0px 0px 0px; font-size: 18px; letter-spacing: 0px;">
+                                  <a href="%%=RedirectTo(@GiftGuideLink)=%%" target="_blank" style="line-height: 22px; letter-spacing: .18px; color:#000000; text-decoration:none; ">
+                                    <strong>Shop gift guide</strong> ➔ </a>
+                                </p>
                               </td>
-                            </tr> 
+                            </tr>
+                            <tr>
+                              <td align="center" bgcolor="#E5E8E5">
+                                <!--[if !mso]><!-->
+                                <div class="mobile-only" style="text-indent: -99999em; display: none; height: 0; width: 0; overflow: hidden; max-height: 0;">
+                                  <a href="%%=RedirectTo(@HeroImageLink)=%%" target="_blank">
+                                    <img src="https://image.e.fitbit.com/lib/fe87137275620d7472/m/14/236cfab9-8c43-424c-8bd0-d0f5be35339c.gif" border="0" style="display: block; width: 100%;" align="bottom" alt="Shop sale" />
+                                  </a>
+                                </div>
+                                <!-- <![endif]-->
+                                <div class="no-mobile">
+                                  <a href="%%=RedirectTo(@HeroImageLink)=%%" target="_blank">
+                                    <img src="https://image.e.fitbit.com/lib/fe87137275620d7472/m/14/8453414d-cc5a-4b4e-9aac-a2b334007357.gif" border="0" width="600" height="100%" style="display: block; width: 600px; height:auto;border: none;" align="top" alt="Shop sale" />
+                                  </a>
+                                </div>
+                              </td>
+                            </tr>
                           </table>
                         </td>
                       </tr>
-                      <!--[if !mso]><!-->
                       <tr>
-                        <td align="center" class="mobile-only" style="display: none; overflow: hidden;">
-                           <a href="%%=RedirectTo(@HeroImageLink)=%%" target="_blank">
-                              <img src="https://image.e.fitbit.com/lib/fe87137275620d7472/m/11/05f4c18b-0715-47ba-9ef6-86d8aca58703.png" alt="" width="100%" style="width: 100%;" /> 
-                           </a>
+                        <td bgcolor="#D1DEE6" class="TextAheadline" style="padding: 40px 78px 15px 78px;color:#000000; border: none !important; font-family: 'Proxima Nova Bold', Arial,sans-serif; font-size:28px; line-height:36px; font-weight: Bold; text-align:center; letter-spacing: 0.14px;"> Wins for everyone </td>
+                      </tr>
+                      <tr>
+                        <td bgcolor="#D1DEE6" class="TextASub" style="padding: 0px 78px 30px 78px;color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; font-weight: normal; text-align:center;"> Spend $125+ during the Father’s Day sale and get a <strong>$20 off</strong> coupon for your next purchase between 6/22–6/30.&sup3; </td>
+                      </tr>
+                      <tr>
+                        <td bgcolor="#D1DEE6" valign="middle" style="padding: 0px 0px 40px 0px; color:#000000 ; font-size: 18px; font-family:'Proxima Nova Bold', Arial , sans-serif; font-weight: normal; text-align: center; ">
+                          <p style="margin: 0px 0px 0px 0px; font-size: 18px; letter-spacing: 0px;">
+                            <a href="%%=RedirectTo(@CashBackLink)=%%" target="_blank" style="line-height: 22px; letter-spacing: .18px; color:#000000; text-decoration:none; "><strong>Start saving</strong> ➔</a>
+                          </p>
                         </td>
                       </tr>
-                      <!--<![endif]-->
                       <tr>
-                        <td align="center" class="Module-H-Padding">
-                           <table cellpadding="0" cellspacing="0" border="0" role="presentation" width="600" class="responsivetable" style="width: 600px;">
-                              <tr>
-                                 <th class="newrow">
-                                    <table cellpadding="0" cellspacing="0" border="0" role="presentation" width="100%"  style="width: 100%;">
-                                       
-                                       <tr>
-                                          <td align="center" class="p-0" valign="middle" style="padding-left: 45px; padding-right: 30px;">
-                                             <table cellpadding="0" cellspacing="0" border="0" role="presentation" width="100%"  style="width: 100%;">
-                                                <tr>
-                                                   <td class="ContentH-Pading-Left" align="center" valign="top" style="padding-right: 15px; margin: 0px; line-height:28px">
-                                                      <a class="" href="%%=RedirectTo(@IconsLink)=%%" target="_blank" style="color: #000000; text-decoration: none;"><img width="40" src="https://image.e.fitbit.com/lib/fe87137275620d7472/m/11/b3676259-2659-4e1a-b397-901382fa0626.png" alt="" style="width: 40px;  padding-bottom: 30px; display: block; "/></a>
-                                                   </td>
-                                                   <td class="h1fontcolor ContentH-Pading-Right"  align="center" valign="top" style="text-align:left; ;color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; font-weight: normal; padding-bottom: 48px; margin: 0px; ">
-                                                      Sleek jewelry design
-                                                </tr>
-                                                <tr>
-                                                   <td class="ContentH-Pading-Left" align="center" valign="" style="padding-right: 15px; margin: 0px; padding-bottom: 40px; line-height:28px">
-                                                      <a class="h1fontcolor" href="%%=RedirectTo(@IconsLink)=%%" target="_blank" style="color: #000000; text-decoration: none;"><img width="40" src="https://image.e.fitbit.com/lib/fe87137275620d7472/m/11/0ac9e5a3-aa4f-4d95-a8c7-5447569b383a.png" alt="" style=" width: 40px;  display: block;"/></a>
-                                                   </td>
-                                                   <td class="h1fontcolor ContentH-Pading-Right" align="center" valign="top" style="text-align:left; ;color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; font-weight: normal;  padding-bottom: 30px;  margin: 0px; ">
-                                                      Stress Management Score
-                                                   </td>
-                                                </tr>
-                                                <tr>
-                                                   <td class="ContentH-Pading-Left" align="center" valign="" style="padding-right: 15px; margin: 0px; padding-bottom: 40px; line-height:28px">
-                                                      <a class="h1fontcolor" href="%%=RedirectTo(@IconsLink)=%%" target="_blank" style="color: #000000; text-decoration: none;"><img width="40" src="https://image.e.fitbit.com/lib/fe87137275620d7472/m/11/413204cb-0386-43da-945a-81d9a9b64103.png" alt="" style="  width: 40px;  display: block;"/></a>
-                                                   </td>
-                                                   <td class="h1fontcolor ContentH-Pading-Right" align="center" valign="top" style="text-align:left; ;color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; font-weight: normal;  padding-bottom: 30px;  margin: 0px; ">
-                                                      Sleep tracking & Sleep Score
-                                                   </td>
-                                                </tr>
-                                                <tr>
-                                                   <td class="ContentH-Pading-Left contentHlast"  align="center" valign="" style="padding: 0px 15px 10px 0px ;margin: 0px; line-height:28px; ">
-                                                      <a class="h1fontcolor" href="%%=RedirectTo(@IconsLink)=%%" target="_blank" style="color: #000000; text-decoration: none;"><img width="40" src="https://image.e.fitbit.com/lib/fe87137275620d7472/m/11/083beb22-032d-4090-bc75-4629dc54a914.png" alt="" style=" width: 40px;  display: block;"/></a>
-                                                   </td>
-                                                   <td class="h1fontcolor ContentH-Pading-Right contentHlast" align="center" valign="top" style="text-align:left; ;color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; font-weight: normal;  margin: 0px; padding-bottom: 30px;">
-                                                      Active Zone Minutes
-                                                   </td>
-                                                </tr>
-                                             </table>
-                                          </td>
-                                       </tr>
-                                    </table>
-                                 </th>
-                                 <th class="no-mobile">
-                                    <table cellpadding="0" cellspacing="0" border="0" role="presentation" width="100%"  style="width: 100%;">
-                                       <tr>
-                                          <td align="center">
-                                             <a href="%%=RedirectTo(@HeroImageLink)=%%" target="_blank"><img src="https://image.e.fitbit.com/lib/fe87137275620d7472/m/11/65876fdd-3e4f-493f-b419-90373a614f7f.png" alt="" width="300" style="width: 300px;" /></a>
-                                          </td>
-                                       </tr>
-                                    </table>
-                                 </th>
-                              </tr>
-                           </table>
+                        <td bgcolor="#ABC1CF" class="TextAheadline" style="padding: 40px 78px 30px 78px;color:#000000; border: none !important; font-family: 'Proxima Nova Bold', Arial,sans-serif; font-size:28px; line-height:36px; font-weight: Bold; text-align:center; letter-spacing: 0.14px;"> Take their style to new heights </td>
+                      </tr>
+                      <tr>
+                        <td bgcolor="#ABC1CF" valign="middle" style="padding: 0px 0px 40px 0px; color:#000000 ; font-size: 18px; font-family:'Proxima Nova Bold', Arial , sans-serif; font-weight: normal; text-align: center; ">
+                          <p style="margin: 0px 0px 0px 0px; font-size: 18px; letter-spacing: 0px;">
+                            <a href="%%=RedirectTo(@AccessoriesLink)=%%" target="_blank" style="line-height: 22px; letter-spacing: .18px; color:#000000; text-decoration:none; "><strong>Shop 50% off accessories</strong> ➔</a>
+                          </p>
                         </td>
                       </tr>
                     </table>
                   </td>
                 </tr>
-               <tr>
-                  <td bgcolor="#EEE1D6" style="background-color: #EEE1D6;" class="mobile-only ForYahoo">
-                     <table class="mobile-only" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#EEE1D6" style="display: none; padding: 0px 0px 0px 0px;">
-                        <tr>
-                           <td style="padding: 45px 50px 0px 50px; border: none; color: #000000 !important; font-size: 17px; font-weight: normal; font-family: 'Proxima Nova Regular', Arial , sans-serif; text-align: center;" valign="top">
-                              <h1 style="font-family: 'Proxima Nova Bold', Arial , sans-serif; margin-top: 60px; color: #000000; font-size: 26px; line-height: 34px; font-weight: normal; text-align: center; margin:0px;">
-                              <span style="word-break: keep-all; word-wrap: break-word;font-family: 'Proxima Nova Bold', Arial , sans-serif; padding-top: 0px; color: #000000; font-size: 26px; line-height: 34px; font-weight: bold; text-align: center; margin:0px; letter-spacing: 0.13px;">More great gifts for Mom</span>
-                              </h1>
-                     
-                              <p style="word-break: keep-all; word-wrap: break-word;color: #000000; font-size:18px; font-weight: normal ; margin: 20px 0px 0px 0px; line-height: 28px; font-family: 'Proxima Nova Regular', Arial , sans-serif; margin-bottom: 0px; margin-top: 20px; text-align: center;">Give tools to help her feel her best with <strong>up to $50 off</strong> select gifts.&sup1;</p>
-                              <p style="padding-left: 0px !important; font-family:'Proxima Nova Bold', Arial , sans-serif; font-size: 18px; color: #000000;margin-top: 20px;  margin-bottom: 45px; letter-spacing: .01em;line-height: 22px;">
-                                 <a href="%%=RedirectTo(@BannerCTALink)=%%" target="_blank" style="word-break: keep-all; word-wrap: break-word;color:#000000; text-decoration:none;">
-                                    <strong style="color: #000000; font-family:'Proxima Nova Bold', Arial , sans-serif; letter-spacing: 0.18px; font-size: 18px; line-height: 22px; padding-right: 5px;">Shop sale &#10132;</strong>
-                                 </a>
-                              </p>
-                           </td>
-                        </tr>
-                        <tr>
-                           <td align="center">
-                              <a href="%%=RedirectTo(@BannerImageLink)=%%" target="_blank">
-                                 <img src="https://image.e.fitbit.com/lib/fe87137275620d7472/m/11/f1d14c67-77c2-4526-a3d4-19ac3345cb2d.png" alt="" border="0" width="100%" height="auto" style="width: 100%;height: auto; display: block;" />
-                              </a>
-                           </td>
-                        </tr>
-                     </table>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td align="center">
+              <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
+                <tr>
+                  <td class="title10" style="padding: 35px 78px 35px 78px; color:#5F6368; font-family:'Proxima Nova Regular', Arial,sans-serif; font-size:12px; line-height: 18px; text-align:left;">&sup1;Two (2) day shipping means two (2) business days and only while supplies last. Offer ends June 13, 2022 at 8:59 pm PDT. The two-day shipping offer is not valid for orders being shipped to Hawaii, Alaska and military addresses.<br>
+                    &sup2;Sale applies to select Fitbit products and accessories on Fitbit.c&zwnj;om while supplies last. Products on sale are subject to change throughout the promotion period. Offer ends June 19, 2022 at 11:59 pm PDT. Purchase is limited to ten (10) Fitbit products. Exclusions apply. Cannot be combined with other discounts or applied after the order has been placed. Terms of offer are subject to change. Void where prohibited.<br>
+                    &sup3;Offer applies to orders of $125.00 or more on Fitbit.c&zwnj;om (before taxes and shipping). Coupon is valid for redemption between 6/22/22 and 6/30/22 and is only valid for orders $50+. Customers must enter unique code at checkout to qualify for the discount. Cashback offer ends June 19, 2022 at 11:59 pm PDT. Cannot be combined with other discounts or applied after the order has been placed. Terms of offer are subject to change. Void where prohibited.</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td align="center">
+              <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#FAFAFA">
+                <tr>
+                  <td class="title11" style="padding: 35px 78px 35px 78px; color:#939C9E; font-family:'Proxima Nova Regular', Arial,sans-serif; font-size:12px; line-height: 18px; text-align:left;">Fitbit, the Fitbit logo, and related marks and logos are trademarks of Google LLC and/or its affiliates.<br><br>
+                    <strong>© Google LLC, 1600 Amphitheatre Parkway,<br> Mountain View, CA 94043, United States</strong>
                   </td>
-               </tr>
-               <!-- <![endif]-->
-
-               <tr>
-                  <td class="no-mobile notForYahoo" bgcolor="#EEE1D6" style="padding-top: 0px;">
-                     <table class="no-mobile" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#EEE1D6">
-                        <tr>
-                           <td width="300" bgcolor="">
-                              <a href="%%=RedirectTo(@BannerImageLink)=%%" target="_blank">
-                                 <img src="https://image.e.fitbit.com/lib/fe87137275620d7472/m/11/f5cc0472-5f58-46c5-8c56-2dd8f5e637de.png" alt="" border="0" width="300" height="auto" style="width: 300px;height: auto; display: block;" />
-                              </a>
-                           </td>
-                           <td style="padding: 0px 45px 0px 30px; color: #000000; font-size: 28px; line-height: 36px; font-family:'Proxima Nova Bold', Arial , sans-serif; font-weight: bold; text-align: left; ">
-                              <h1 style="word-break: keep-all; word-wrap: break-word;color: #000000; font-size: 28px; line-height: 36px; font-family:'Proxima Nova Bold', Arial , sans-serif; font-weight: bold; text-align: left; margin-top: 0px; margin-bottom: 0px; letter-spacing: .14px;">More great gifts for Mom</h1>
-                              <p style="word-break: keep-all; word-wrap: break-word;color: #000000; font-family:'Proxima Nova Regular', Arial , sans-serif; font-weight: normal; font-size: 18px; line-height: 28px; margin-bottom: 0px; margin-top: 20px;">Give tools to help her feel her best with <strong>up to $50 off</strong> select gifts.&sup1;</p>
-                              <p style="padding-left: 0px !important; font-family:'Proxima Nova Bold', Arial , sans-serif; font-size: 18px; color: #000000;margin-top: 20px;  margin-bottom: 0px; letter-spacing: .01em;line-height: 22px;">
-                                 <a href="%%=RedirectTo(@BannerCTALink)=%%" target="_blank" style="color:#000000; text-decoration:none;">
-                                    <strong style="word-break: keep-all; word-wrap: break-word;color: #000000; font-family:'Proxima Nova Bold', Arial , sans-serif; letter-spacing: 0.18px; font-size: 18px; padding-right: 5px; line-height: 22px;">Shop sale &#10132;</strong>
-                                 </a>
-                              </p>
-                           </td>
-                        </tr>
-                     </table>
-                  </td>
-               </tr>
-
-               <!-- Footer -->
-               <tr>
-                  <td align="center">
-                     <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
-                        <tr>
-                           <td>
-                              %%=ContentBlockByName("Content Builder\Shared Contents\Footers\Fitbit_Footer_2020")=%%
-                           </td>
-                        </tr>
-                     </table>
-                  </td>
-               </tr>
-               <!-- END Footer -->
-            </table>
-         </td>
-      </tr>
-   </table>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- END Footer -->
+        </table>
+      </td>
+    </tr>
+  </table>
 </body>
+
 </html>
