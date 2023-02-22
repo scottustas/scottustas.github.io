@@ -1,0 +1,117 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #333639;
+
+}
+
+a {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+
+a:hover,
+a:active {
+
+}
+
+div, img {
+  position: absolute;
+}
+
+.guideLayer{
+  position:absolute;
+  top:0px;
+  left:0px;
+}
+
+#container {
+  display: none;
+  position: absolute;
+  width: 298px;
+  height: 598px;
+  border:1px solid #000;
+  top: 0px;
+  left: 0px;
+  margin: auto;
+  /*background-color: #78c8be;*/
+  background-image: url("../assets/hefty-evite-bg.jpg");
+  overflow: hidden;
+}
+
+#content {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+#cup {
+  bottom: 265px;
+  right: 245px;
+}
+
+#logo{
+  top: 20px;
+  left: 20px;
+  width: 73px;
+  height: 36px;
+}
+
+#text1 { left: 56px; top: 74px; }
+
+#text2 { left: 43px; top: 175px; }
+
+#markers {
+  right: 18px;
+  top: 0px;
+}
+
+#background_exit {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  cursor: pointer !important;
+  opacity: 0;
+  background-color: #000000;
+}
+
+#content div {
+  display: block;
+  border: none;
+}
+
+#cta{
+  overflow: hidden;
+  bottom: 15px;
+  left: 65px;
+  width: 169px;
+  height: 46px;
+}
+
+#newIcon{
+  top: 7px;
+  left: 14px;
+}
+
+/*#glare{
+  top: 2px;
+  left: -120px;
+  opacity: .5;
+}*/
+
+#replayBtn{
+  top: 5px;
+  left: 5px;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}

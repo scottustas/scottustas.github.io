@@ -1,0 +1,193 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #333639;
+
+}
+a {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+a:hover,
+a:active {
+  
+}
+
+div, img {
+  position: absolute;
+}
+
+.guideLayer{
+  position:absolute;
+  top:0px;
+  left:0px;
+}
+
+#container {
+  display: none;
+  position: absolute;
+  width: 298px;
+  height: 598px;
+  border:1px solid #000;
+  top: 0px;
+  left: 0px;
+  margin: auto;
+  background-color: #e96b00;
+  overflow: hidden;
+}
+
+#content {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+#background_exit {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  cursor: pointer !important;
+  opacity: 0;
+  background-color: #000000;
+}
+
+#content div {
+  display: block;
+  border: none;
+}
+
+#logo{
+  top: 14px;
+  left: 192px;
+  width: 97px;
+  height: 30px;
+}
+
+#moneyGroup{
+  top: -320px;
+  left: -185px;
+  width: 300px;
+  height: 250px;
+}
+
+#cenaEndframe{
+  left: 0;
+  /* top: 15px; */
+  bottom: 0px;
+  width: 300px;
+  height: 425px;
+}
+
+#startframeBackground{
+  width: 300px;
+  height: 600px;
+  background-color: #e96b00;
+}
+
+#endframeBackground{
+  width: 300px;
+  height: 600px;
+  background-color: #ff7500;
+}
+
+#cenaRip{
+  top: 179px;
+  left: -4px;
+  width: 300px;
+  height: 379px;
+}
+
+#cenaRipGroup{
+  width: 300px;
+  height: 250px;
+  top: 170px;
+}
+
+#leftHand{
+  top: 134px;
+  left: 165px;
+}
+
+#rightHand{
+  top: 124px;
+  left: 83px;
+}
+
+#rip2, #rip3{
+  width: 300px;
+  height: 250px;
+}
+
+#rip1 {
+  width: 900px;
+  height: 750px;
+  top: -250px;
+  left: -298px;
+}
+
+#handsGroup{
+  width: 300px;
+  height: 250px;
+}
+
+#text1, #text2, #text3, #text4{
+  width: 300px;
+  height: 600px;
+}
+
+#buttonTear{
+  top: 504px;
+  left: 138px;
+}
+
+#oneDollar, #oneDollar2, #oneDollar3, #oneDollar4, #oneDollar5{
+  top: 208px;
+  left: 45px;
+  width: 101px;
+  height: 41px;
+}
+
+#fiveDollar, #fiveDollar2, #fiveDollar3, #fiveDollar4, #fiveDollar5{
+  top: 164px;
+  left: 95px;
+  width: 101px;
+  height: 56px;
+}
+
+#tenDollar, #tenDollar2, #tenDollar3, #tenDollar4,#tenDollar5{
+  top: 175px;
+  left: 45px;
+  width: 101px;
+  height: 53px;
+}
+
+#twentyDollar, #twentyDollar2, #twentyDollar3, #twentyDollar4, #twentyDollar5{
+  top: 185px;
+  left: 155px;
+  width: 101px;
+  height: 53px;
+}
+
+#fiftyDollar, #fiftyDollar2, #fiftyDollar3, #fiftyDollar4, #fiftyDollar5{
+  top: 215px;
+  left: 135px;
+  width: 100px;
+  height: 41px;
+}
+
+#replayBtn{
+  top: 5px;
+  left: 5px;
+  width: 14px;
+  height: 14px;
+  cursor: pointer; 
+}

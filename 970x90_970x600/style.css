@@ -1,0 +1,522 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body, body * {
+	vertical-align:baseline;
+	border:0 none;
+	outline:0;
+	padding:0;
+	margin:0;
+	background-color:transparent;
+       
+
+}
+
+body{
+   background-color: #333639;
+}
+
+
+#t1{
+	position: absolute;
+	left: 412px;
+	top: 38px;
+}
+
+#t2{
+	position: absolute;
+	left: 412px;
+	top: 34px;
+}
+#t3{
+	position: absolute;
+	left: 505px;
+	top: 45px;
+}
+
+#t4{
+	position: absolute;
+	left: 505px;
+	top: 45px;
+}
+
+#t5{
+	position: absolute;
+	left: 485px;
+	top: 43px;
+}
+
+#t6a{
+	position: absolute;
+	left: 405px;
+	top: 36px;
+}
+
+#t6b{
+	position: absolute;
+	left: 516px;
+	top: 50px;
+}
+
+#t6c{
+	position: absolute;
+	left: 622px;
+	top: 50px;
+}
+
+#t6d{
+	position: absolute;
+	left: 707px;
+	top: 50px;
+}
+
+#container_dc{
+	position:absolute;
+	width:970px;
+	height:600px;
+	top:0px;
+	left:0px;
+	margin:auto;
+}
+
+#collapsed {
+	position: absolute;
+	overflow: hidden;
+	width:968px;
+	height:88px;
+
+	border:1px solid #000000;
+	z-index:100;
+	display:block;
+	cursor: pointer;
+}
+
+#expand_btn{
+	position:absolute;
+	top: 53px;
+	right: 32px;
+	width: 101px;
+	height: 24px;
+	background-image: url('expandCta.png');
+	display:none;
+	cursor: pointer;
+	z-index:200;
+}
+
+#expanded{
+	position:absolute;
+	overflow: hidden;
+	top:0px;
+	left:0px;
+	width:968px;
+	height:598px;
+	border:1px solid #000000;
+	background-color: #FFFFFF;
+	z-index:300;
+	display:none;
+}
+
+#expandedBackground{
+	position: absolute;
+	top: 15px;
+	left: 15px;
+}
+
+#expandYourWorldText{
+	position: absolute;
+	top: 112px;
+	left: 164px;
+	width: 620px;
+	height: 43px;
+}
+
+#card{
+	position: absolute;
+	top: 393px;
+	left: 761px;
+	width: 181px;
+	height: 129px;
+	/* border: solid 1px; */
+	overflow: hidden;
+}
+
+#cardText{
+	position: absolute;
+	top: 519px;
+	left: 775px;
+}
+
+#mcLogo{
+	position: absolute;
+	top: 481px;
+	left: 712px;
+}
+
+#cta{
+	position: absolute;
+	top: 554px;
+	left: 779px;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+ .glare {
+	position: absolute;
+	width:80px;
+	height:50px;
+	background-image:url("glare.png");
+	left:-80px;
+	top:0px;
+	background-repeat:no-repeat;
+}
+
+ .cardGlare {
+	position: absolute;
+	width:181px;
+	height:225px;
+	background-image:url("cardGlare.png");
+	left:-280px;
+	top:0px;
+	background-repeat:no-repeat;
+}
+
+
+
+#boxBar1{
+	position: absolute;
+	top: 576px;
+	left: 15px;
+	width: 138px;
+	height: 9px;
+	background-color: #005f97;
+}
+
+#boxBar2{
+	position: absolute;
+	top: 576px;
+	left: 167px;
+	width: 138px;
+	height: 9px;
+	background-color: #005f97;
+}
+
+#boxBar3{
+	position: absolute;
+	top: 576px;
+	left: 320px;
+	width: 138px;
+	height: 9px;
+	background-color: #005f97;
+}
+
+#boxBar4{
+	position: absolute;
+	top: 576px;
+	left: 472px;
+	width: 138px;
+	height: 9px;
+	background-color: #005f97;
+}
+
+#box1{
+	position: absolute;
+	top: 488px;
+	left: 15px;
+	width: 138px;
+	height:97px;
+	background-color: #005f97;
+}
+
+#box2{
+	position: absolute;
+	top: 488px;
+	left: 167px;
+	width: 138px;
+	height:97px;
+	background-color: #005f97;
+}
+
+#box3{
+	position: absolute;
+	top: 488px;
+	left: 320px;
+	width: 138px;
+	height:97px;
+	background-color: #005f97;
+}
+
+#box4{
+	position: absolute;
+	top: 488px;
+	left: 472px;
+	width: 138px;
+	height:97px;
+	background-color: #005f97;
+}
+
+#b1t1{
+	position: absolute;
+	top: 25px;
+	left: 181px;
+}
+
+#t1a{
+	position: absolute;
+	top: -11px;
+	left: 5px;
+	width: 244px;
+	height: 31px;
+	border-bottom: solid 0px white;
+	cursor: pointer;
+	/*styling for layering in <=IE 10.0*/
+	background: transparent 0 0 repeat scroll url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBR‌​AA7"); 
+}
+
+#t1b{
+	position: absolute;
+	top: 27px;
+	left: 32px;
+	width: 191px;
+	height: 31px;
+	border-bottom: solid 0px white;
+	cursor: pointer;
+	/*styling for layering in <=IE 10.0*/
+	background: transparent 0 0 repeat scroll url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBR‌​AA7"); 
+}
+
+#t1c{
+	position: absolute;
+	top: 66px;
+	left: -3px;
+	width: 258px;
+	height: 31px;
+	border-bottom: solid 0px white;
+	cursor: pointer;
+	/*styling for layering in <=IE 10.0*/
+	background: transparent 0 0 repeat scroll url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBR‌​AA7"); 
+}
+
+#t2a{
+	position: absolute;
+	top: -11px;
+	left: 2px;
+	width: 204px;
+	height: 31px;
+	border-bottom: solid 0px white;
+	cursor: pointer;
+	/*styling for layering in <=IE 10.0*/
+	background: transparent 0 0 repeat scroll url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBR‌​AA7"); 
+}
+
+#t2b{
+	position: absolute;
+	top: 27px;
+	left: 2px;
+	width: 204px;
+	height: 31px;
+	border-bottom: solid 0px white;
+	cursor: pointer;
+	/*styling for layering in <=IE 10.0*/
+	background: transparent 0 0 repeat scroll url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBR‌​AA7"); 
+}
+
+#t2c{
+	position: absolute;
+	top: 65px;
+	left: 16px;
+	width: 176px;
+	height: 31px;
+	border-bottom: solid 0px white;
+	cursor: pointer;
+	/*styling for layering in <=IE 10.0*/
+	background: transparent 0 0 repeat scroll url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBR‌​AA7"); 
+}
+
+#t3a{
+	position: absolute;
+	top: 41px;
+	left: 41px;
+	width: 145px;
+	height: 31px;
+	border-bottom: solid 0px white;
+	cursor: pointer;
+	/*styling for layering in <=IE 10.0*/
+	background: transparent 0 0 repeat scroll url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBR‌​AA7"); 
+}
+
+#t3b{
+	position: absolute;
+	top: 67px;
+	left: 41px;
+	width: 145px;
+	height: 31px;
+	border-bottom: solid 0px white;
+	cursor: pointer;
+	/*styling for layering in <=IE 10.0*/
+	background: transparent 0 0 repeat scroll url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBR‌​AA7"); 
+}
+
+#t3c{
+	position: absolute;
+	top: 43px;
+	left: 347px;
+	width: 127px;
+	height: 31px;
+	border-bottom: solid 0px white;
+	cursor: pointer;
+	/*styling for layering in <=IE 10.0*/
+	background: transparent 0 0 repeat scroll url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBR‌​AA7"); 
+}
+
+#t3d{
+	position: absolute;
+	top: 70px;
+	left: 334px;
+	width: 153px;
+	height: 31px;
+	border-bottom: solid 0px white;
+	cursor: pointer;
+	/*styling for layering in <=IE 10.0*/
+	background: transparent 0 0 repeat scroll url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBR‌​AA7"); 
+}
+
+#t4a{
+	position: absolute;
+	top: -7px;
+	left: 162px;
+	width: 145px;
+	height: 31px;
+	border-bottom: solid 0px white;
+	cursor: pointer;
+	/*styling for layering in <=IE 10.0*/
+	background: transparent 0 0 repeat scroll url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBR‌​AA7"); 
+}
+
+#b2t1{
+	position: absolute;
+	top: 25px;
+	left: 201px;
+}
+#b3t1{
+	position: absolute;
+	top: 20px;
+	left: 37px;
+}
+#b4t1{
+	position: absolute;
+	top: 26px;
+	left: 70px;
+}
+#box1Btn{
+	position: absolute;
+	top: 488px;
+	left: 15px;
+	width: 138px;
+	height:97px;
+	cursor: pointer;
+}
+
+#box2Btn{
+	position: absolute;
+	top: 488px;
+	left: 167px;
+	width: 138px;
+	height:97px;
+	cursor: pointer;	
+}
+
+#box3Btn{
+	position: absolute;
+	top: 488px;
+	left: 320px;
+	width: 138px;
+	height:97px;
+	cursor: pointer;	
+}
+
+#box4Btn{
+	position: absolute;
+	top: 488px;
+	left: 472px;
+	width: 138px;
+	height:97px;
+	cursor: pointer;	
+}
+
+#benefitBox{
+	position: absolute;
+	width: 595px;
+	height: 143px;
+	top: 330px;
+	left: 15px;
+	background-color: rgba(65,64,66,0.9);
+}
+
+#boxCloseBtn1, #boxCloseBtn2, #boxCloseBtn3, #boxCloseBtn4{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 25px;
+	height:25px;
+	background: url('plusMinus.svg');
+	background-position: 0px;
+	cursor: pointer;
+}
+
+
+#icon1{
+	position: absolute;
+	top: 15px;
+	left: 32px;
+	background: url('benefitSheet.svg') no-repeat 0 -7px;
+	width: 70px;
+	height: 70px;
+}
+
+#icon2{
+	position: absolute;
+	top: 13px;
+	left: 42px;
+	background: url('benefitSheet.svg') no-repeat -160px -5px;
+	width: 53px;
+	height: 72px;
+}
+
+#icon3{
+	position: absolute;
+	top: 19px;
+	left: 45px;
+	background: url('benefitSheet.svg') no-repeat -314px -11px;
+	width: 53px;
+	height: 66px;
+}
+
+#icon4{
+	position: absolute;
+	top: 13px;
+	left: 39px;
+	background: url('benefitSheet.svg') no-repeat -459px -5px;
+	width: 60px;
+	height: 72px;
+}
+
+#exit_btn{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	cursor:pointer;
+	z-index:400;
+}
+
+#close_btn{
+	position:absolute;
+	top: 24px;
+	right: 26px;
+	width: 29px;
+	height: 11px;
+	background:url('closeBtn.svg');
+	cursor:pointer;
+	z-index:401;
+}

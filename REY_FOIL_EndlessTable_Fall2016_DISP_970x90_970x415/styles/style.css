@@ -1,0 +1,110 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0px;
+  background-color: #333639;
+
+}
+
+sup {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+}
+#container {
+  position: absolute;
+  display: none;
+  width: 970px;
+  height: 90px;
+}
+#ad {
+  position: absolute;
+  display: block;
+  left: 0px;
+  border: rgb(145, 153, 153) 1px solid;
+  overflow: hidden;
+
+}
+#ad.collapsed {
+  /*2px smaller to account for border*/
+  width: 968px;
+  height: 88px;
+}
+#ad.expanded {
+  /*2px smaller to account for border*/
+  width: 968px;
+  height: 413px;
+}
+#banner {
+  position: absolute;
+  display: block;
+  width: 968px;
+  height: 88px;
+  left: 0px;
+  background-color: #000;
+  overflow: hidden;
+}
+#panel {
+  position: absolute;
+  width: 968px;
+  height: 416px;
+  background-color: #FFF;
+  background-image: url(../images/backgroundPanel.jpg);
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+/*AUTHOR CSS*/
+
+#bannerBckg{
+  position: absolute;
+  top: 0px;
+}
+#expandBtn {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  width: 970px;
+  height: 90px;
+  background-color: black;
+  opacity: 0;
+}
+#closeButton {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  right: 8px;
+  top: 8px;
+}
+.expanded #banner {
+  display: none;
+}
+.collapsed #panel {
+  display: none;
+}
+
+#clickthroughButton {
+  position: absolute;
+  top: 296px;
+  left: 709px;
+  cursor: pointer;
+}
+#videoContainer{
+  display: block;
+  position: absolute;
+  top: 49px;
+  left: 46px;
+}
+#text1, #ctaText, #ctaArrows{
+  position: absolute;
+}
+#ctaArrows{
+  top: -1px;
+}
+#panelText{
+  position: absolute;
+/*  top: 87px;
+  left: 665px;*/
+}

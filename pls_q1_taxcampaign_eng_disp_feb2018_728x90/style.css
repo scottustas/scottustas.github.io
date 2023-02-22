@@ -1,0 +1,124 @@
+* {
+ margin: 0px;
+ padding: 0px;
+}
+
+body {
+ font-family: Arial, sans-serif;
+background-color: #333639;
+}
+
+a {
+ border: none;
+ cursor: pointer;
+ outline: none;
+ user-select: none;
+}
+
+a:hover,
+a:active {
+  
+}
+
+#container {
+ display: none;
+ position: absolute;
+ width: 718px;
+ height: 88px;
+ border:1px solid #000000;
+ top: 0px;
+ left: 0px;
+ margin: auto;
+ background-color: #40ae49;
+ overflow: hidden;
+}
+
+#content {
+ display: none;
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ top: 0px;
+ left: 0px;
+}
+
+#background_exit {
+ width: 100%;
+ height: 100%;
+ top: 0px;
+ left: 0px;
+ cursor: pointer !important;
+ opacity: 0;
+ background-color: #000000;
+}
+
+#content div {
+ display: block;
+ position: absolute;
+ border: none;
+}
+
+#cta{
+ overflow: hidden;
+ left: 460px;
+ top: 26px;
+ width: 125px;
+ height: 35px;
+
+}
+
+#ctaImage{
+
+}
+
+#glare{
+ top: 0px;
+ left: -120px;
+}
+
+/*USER//////////////////////////////////////// CSS*/
+#logo{
+ top: 22px;
+ left: 610px;
+ width: 101px;
+ height: 43px;
+
+}
+
+#card{
+/* top: 138px;
+ left: 80px;*/
+}
+
+#cardMask{
+width: 118px;
+height: 75px;
+top: 6px;
+left: 594px;
+overflow: hidden;
+}
+
+
+
+/*#replayBtn{
+top: 10px;
+left: 269px;
+cursor: pointer;
+width: 22px;
+height: 21px;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
