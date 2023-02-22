@@ -29,6 +29,21 @@
       font-size: 1.25em;
     }
 
+    #navbarMobile {
+      overflow: hidden;
+      background-color: #333;
+      transition: 0.3s;
+      font-size: 1.25em;
+      text-align: left;
+    }
+
+    #navbarMobile a {
+      display: block;
+      color: #f2f2f2;
+      text-align: left;
+      text-decoration: none;
+    }
+
     #navbar:hover {
       background-color: #0C95B7;
     }
@@ -82,6 +97,21 @@
     .heroImage {
       /*filter: brightness(.85) saturate(2) sepia(0.43);*/
     }
+
+    @media only screen and (max-device-width: 414px),
+    only screen and (max-width: 500px) {
+      #navbar {
+        display: none;
+      }
+
+      .no-mobile {
+        display: none;
+      }
+
+      .mobile-only {
+        display: block !important;
+      }
+    }
   </style>
 </head>
 
@@ -94,29 +124,42 @@
       <a href="">|</a>
       <a href="emailExamples.html" target="_blank">EMAIL EXAMPLES</a>
     </div>
-    <div style="height: 46.4px;"></div>
+    <div class="no-mobile" style="height: 46.4px;"></div>
+    <div id="navbarMobile" class="mobile-only" style="display: none;" class="sticky">
+      <a style="padding: 10px 0px 0px 10px;" href="ScottUstasResume.pdf" target="_blank">RESUME</a>
+      <a style="padding: 10px 0px 0px 10px;"href="displayExamples.html" target="_blank">DISPLAY EXAMPLES</a>
+      <a style="padding: 10px 0px 10px 10px;"href="emailExamples.html" target="_blank">EMAIL EXAMPLES</a>
+    </div>
     <div class="row">
       <div style="" class="container">
         <div class="heroImage"><img src='turntableHero.png'></div>
         <div class="heroImage centeredLogo"><img src='profile.png'></div>
       </div>
       <div style="" class="container">
-        <a href="starbucksNasdaq.mp4" target="_blank"><div class="heroImage"><img src='starbucksHero.jpg'></div></a>
+        <a href="starbucksNasdaq.mp4" target="_blank">
+          <div class="heroImage"><img src='starbucksHero.jpg'></div>
+        </a>
       </div>
       <div style="" class="container">
         <div class="heroImage"><img src='mcdCombinePreview.jpg'></div>
       </div>
       <div style="" class="container">
-        <a href="emails/fitbitExample1.html" target="_blank"><div class="heroImage"><img src='fitbit.jpg'></div></a>
+        <a href="emails/fitbitExample1.html" target="_blank">
+          <div class="heroImage"><img src='fitbit.jpg'></div>
+        </a>
       </div>
       <div style="" class="container">
-        <a href="Citi_TNAP_Banner_Boingo_640x360.mp4" target="_blank"><div class="heroImage"><img src='citiHero.jpg'></div></a>
+        <a href="Citi_TNAP_Banner_Boingo_640x360.mp4" target="_blank">
+          <div class="heroImage"><img src='citiHero.jpg'></div>
+        </a>
       </div>
       <div style="" class="container">
         <div class="heroImage"><img src='mikesHero.jpg'></div>
       </div>
       <div style="" class="container">
-        <a href="emails/lmiExample1.html" target="_blank"><div class=""><img src='lmiHero.jpg'></div></a>
+        <a href="emails/lmiExample1.html" target="_blank">
+          <div class=""><img src='lmiHero.jpg'></div>
+        </a>
       </div>
       <div style="" class="container">
         <div class="heroImage"><img src='citiThumb.jpg'></div>
@@ -126,5 +169,3 @@
 </body>
 
 </html>
-
-
