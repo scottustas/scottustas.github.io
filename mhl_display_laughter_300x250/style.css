@@ -1,0 +1,124 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #333639;
+
+}
+
+a {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+
+a:hover,
+a:active {
+  
+}
+
+#container {
+  display: none;
+  position: absolute;
+  width: 298px;
+  height: 248px;
+  border:1px solid #000000;
+  top: 0px;
+  left: 0px;
+  margin: auto;
+  background-color: #ffdc00;
+  overflow: hidden;
+}
+
+#content {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+#background_exit {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  cursor: pointer !important;
+  opacity: 0;
+  background-color: #000000;
+}
+
+#content div {
+  display: block;
+  position: absolute;
+  border: none;
+}
+
+
+#cta{
+    overflow: hidden;
+    top: 172px;
+    left: 19px;
+    width: 101px;
+height: 41px;
+}
+
+#ctaImage img{
+  width: 101px;
+height: 41px;
+}
+
+#ctaImage2 img{
+  width: 101px;
+height: 41px;
+}
+
+#glare{
+  top: 0px;
+  left: -120px;
+}
+
+/*USER//////////////////////////////////////// CSS*/
+#text1{
+  width: 100%;
+  height: 100%;
+}
+
+#text2{
+  width: 100%;
+  height: 100%;
+}
+#legal{
+  left:20px;
+  top:228px;
+}
+
+#bottle{
+  top: 38px;
+  left: 184px;
+  height: 223px;
+  width: 134px;
+}
+#bottle img{
+  height: 223px;
+  width: 134px;
+}
+#light{
+  top: -132px;
+  left: -9px;
+}
+#ctaImage2{
+  opacity: 0;
+}
+#replayBtn{
+  width: 14px;
+  height: 14px;
+  top: 7px;
+  left: 278px;
+  cursor: pointer;
+}

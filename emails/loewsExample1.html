@@ -1,0 +1,888 @@
+<!--
+%%[
+
+/* LH Mrktg EM 2021.04.27 Brandwide_SoakUpSun */
+
+SET @JobID = jobid
+SET @customerID = customerID
+SET @SendDate = Format(xtshortdate, "MMdd")
+SET @firstname = TRIM(firstname)
+set @experiencename = experiencename
+set @unsubscribe = unsubscribe
+
+
+/*UBSUBSCRIBE*/
+SET @unsubscribe = trim(unsubscribe)
+SET @unsublink = concat('https://subscription.loewshotels.com/#/manage-subscription?payload=', @unsubscribe)
+
+/*LINKS*/
+
+SET @resbut = concat("https://reservations.loewshotels.com/?chebs=HVS-Brandwide_SoakUpSun~",@experiencename,"_",@senddate,"_%%jobid%%_",@customerid,"_resbut","&utm_medium=email&utm_source=SFMC&utm_campaign=21-04-27-Brandwide-SoakUpSun","/#")
+SET @resbutmobtop = concat("https://reservations.loewshotels.com/?chebs=HVS-Brandwide_SoakUpSun~",@experiencename,"_",@senddate,"_%%jobid%%_",@customerid,"_resbutmobtop","&utm_medium=email&utm_source=SFMC&utm_campaign=21-04-27-Brandwide-SoakUpSun","/#")
+SET @resbutmob = concat("https://reservations.loewshotels.com/?chebs=HVS-Brandwide_SoakUpSun~",@experiencename,"_",@senddate,"_%%jobid%%_",@customerid,"_resbutmob","&utm_medium=email&utm_source=SFMC&utm_campaign=21-04-27-Brandwide-SoakUpSun","/#")
+SET @desbut = concat("https://www.loewshotels.com/destinations/?chebs=HVS-Brandwide_SoakUpSun~",@experiencename,"_",@senddate,"_%%jobid%%_",@customerid,"_desbut","&utm_medium=email&utm_source=SFMC&utm_campaign=21-04-27-Brandwide-SoakUpSun")
+SET @desbutmobtop = concat("https://www.loewshotels.com/destinations/?chebs=HVS-Brandwide_SoakUpSun~",@experiencename,"_",@senddate,"_%%jobid%%_",@customerid,"_desbutmobtop","&utm_medium=email&utm_source=SFMC&utm_campaign=21-04-27-Brandwide-SoakUpSun")
+SET @desbutmob = concat("https://www.loewshotels.com/destinations/?chebs=HVS-Brandwide_SoakUpSun~",@experiencename,"_",@senddate,"_%%jobid%%_",@customerid,"_desbutmob","&utm_medium=email&utm_source=SFMC&utm_campaign=21-04-27-Brandwide-SoakUpSun")
+SET @blogbut = concat("https://www.loewshotels.com/blog/?chebs=HVS-Brandwide_SoakUpSun~",@experiencename,"_",@senddate,"_%%jobid%%_",@customerid,"_blogbut","&utm_medium=email&utm_source=SFMC&utm_campaign=21-04-27-Brandwide-SoakUpSun")
+SET @blogbutmob = concat("https://www.loewshotels.com/blog/?chebs=HVS-Brandwide_SoakUpSun~",@experiencename,"_",@senddate,"_%%jobid%%_",@customerid,"_blogbutmob","&utm_medium=email&utm_source=SFMC&utm_campaign=21-04-27-Brandwide-SoakUpSun")
+SET @offbut = concat("https://www.loewshotels.com/special-offers/?chebs=HVS-Brandwide_SoakUpSun~",@experiencename,"_",@senddate,"_%%jobid%%_",@customerid,"_offbut","&utm_medium=email&utm_source=SFMC&utm_campaign=21-04-27-Brandwide-SoakUpSun")
+SET @offbutmob = concat("https://www.loewshotels.com/special-offers/?chebs=HVS-Brandwide_SoakUpSun~",@experiencename,"_",@senddate,"_%%jobid%%_",@customerid,"_offbutmob","&utm_medium=email&utm_source=SFMC&utm_campaign=21-04-27-Brandwide-SoakUpSun")
+SET @hero = concat("https://www.loewshotels.com/santa-monica/specials/california-dreamin?chebs=HVS-Brandwide_SoakUpSun~",@experiencename,"_",@senddate,"_%%jobid%%_",@customerid,"_hero","&utm_medium=email&utm_source=SFMC&utm_campaign=21-04-27-Brandwide-SoakUpSun")
+SET @heromob = concat("https://www.loewshotels.com/santa-monica/specials/california-dreamin?chebs=HVS-Brandwide_SoakUpSun~",@experiencename,"_",@senddate,"_%%jobid%%_",@customerid,"_heromob","&utm_medium=email&utm_source=SFMC&utm_campaign=21-04-27-Brandwide-SoakUpSun")
+SET @tile1 = concat("https://www.loewshotels.com/santa-monica/specials/memorial-day-family-getaway?chebs=HVS-Brandwide_SoakUpSun~",@experiencename,"_",@senddate,"_%%jobid%%_",@customerid,"_tile1","&utm_medium=email&utm_source=SFMC&utm_campaign=21-04-27-Brandwide-SoakUpSun")
+SET @tile1mob = concat("https://www.loewshotels.com/santa-monica/specials/memorial-day-family-getaway?chebs=HVS-Brandwide_SoakUpSun~",@experiencename,"_",@senddate,"_%%jobid%%_",@customerid,"_tile1mob","&utm_medium=email&utm_source=SFMC&utm_campaign=21-04-27-Brandwide-SoakUpSun")
+SET @tile2 = concat("https://www.loewshotels.com/santa-monica/happenings?chebs=HVS-Brandwide_SoakUpSun~",@experiencename,"_",@senddate,"_%%jobid%%_",@customerid,"_tile2","&utm_medium=email&utm_source=SFMC&utm_campaign=21-04-27-Brandwide-SoakUpSun")
+SET @tile2mob = concat("https://www.loewshotels.com/santa-monica/happenings?chebs=HVS-Brandwide_SoakUpSun~",@experiencename,"_",@senddate,"_%%jobid%%_",@customerid,"_tile2mob","&utm_medium=email&utm_source=SFMC&utm_campaign=21-04-27-Brandwide-SoakUpSun")
+
+/*EXPERIENCES*/
+
+/*EXPERIENCES*/
+
+SET @subject = "Celebrate Summer in Santa Monica ☀️"
+
+
+
+if _messagecontext == "SEND" and @JobID > 0 then
+InsertDE("Loews_Dynamic_Attributes", "EmailAddress", EmailAddress, "CustomerID", CustomerID, "Source", "Customer", "JobID", @JobID, "SentDate", now(), "Brand_Hotel", "", "NLP", "", "MVG", "", "Segment", "")
+endif
+
+]%% -->
+<html>
+
+<head>
+  <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+  <meta name="referrer" content="no-referrer">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <!--[if !mso]><!-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--<![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <!--[if gte mso 9]>
+      <style type="text/css" media="all">
+
+      sup { font-size: 100% !important; }
+      table, th, td, div, p, strong, span, a { font-family: Arial,sans-serif !important; }
+
+      </style>
+      <![endif]-->
+  <style type="text/css">
+    @font-face {
+      font-family: "GT America Extended";
+      src: url("https://www.loewshotels.com/skins/loews/assets/desktop/fonts/gt-america-extended-thin.woff2") format("woff2"), url("https://www.loewshotels.com/skins/loews/assets/desktop/fonts/gt-america-extended-thin.woff") format("woff");
+      font-weight: normal;
+      font-style: normal;
+      mso-font-alt: 'Arial';
+    }
+
+    @font-face {
+      font-family: "GT America Extended";
+      src: url("https://www.loewshotels.com/skins/loews/assets/desktop/fonts/gt-america-extended-medium.woff2") format("woff2"), url("https://www.loewshotels.com/skins/loews/assets/desktop/fonts/gt-america-extended-medium.woff") format("woff");
+      font-weight: 700;
+      font-style: normal;
+      mso-font-alt: 'Arial';
+    }
+
+    @font-face {
+      font-family: "GT America Extended";
+      src: url("https://www.loewshotels.com/skins/loews/assets/desktop/fonts/gt-america-extended-bold.woff2") format("woff2"), url("https://www.loewshotels.com/skins/loews/assets/desktop/fonts/gt-america-extended-bold.woff") format("woff");
+      font-weight: 900;
+      font-style: normal;
+      mso-font-alt: 'Arial';
+    }
+
+    body {
+      -webkit-text-size-adjust: 100%;
+      -webkit-font-smoothing: antialiased;
+      box-sizing: border-box;
+      border-collapse: collapse;
+    }
+
+    table {
+      border-collapse: collapse;
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+      table-layout: fixed;
+    }
+
+    table table {
+      table-layout: auto;
+    }
+
+    td {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      line-height: 12px;
+    }
+
+    a[x-apple-data-detectors=true] {
+      color: inherit !important;
+      text-decoration: inherit !important;
+    }
+
+    .fade-slow1 {
+      transition: 0.3s !important;
+      color: #000000 !important;
+      background-color: #ffffff !important;
+      /* background: url("http://image.loews-emails.com/lib/fe3f15707564047e771175/m/4/8b09eb9d-be24-40ae-8875-23c2473f0971.jpg")no-repeat; */
+    }
+
+    .fade-slow1 img {
+      transition: 0.3s !important;
+      color: #000000 !important;
+      width: 203px !important
+    }
+
+    .fade-slow1:hover img {
+      transition: 0.3s !important;
+      opacity: 0.1 !important;
+      width: 203px !important
+    }
+
+    .fade-slow2 {
+      transition: 0.3s !important;
+      color: #000000 !important;
+      background-color: #ffffff !important;
+      /* background: url("http://image.loews-emails.com/lib/fe3f15707564047e771175/m/4/1c2285bb-1a89-44a5-9bb5-34c5067f3b38.jpg")no-repeat; */
+    }
+
+    .fade-slow2 img {
+      transition: 0.3s !important;
+      color: #000000 !important;
+      width: 203px !important
+    }
+
+    .fade-slow2:hover img {
+      transition: 0.3s !important;
+      opacity: 0.1 !important;
+      width: 203px !important;
+    }
+
+    .fade-slow3 {
+      transition: 0.3s !important;
+      color: #000000 !important;
+      background-color: #ffffff !important;
+      /* background: url("http://image.loews-emails.com/lib/fe3f15707564047e771175/m/4/777cbd01-632c-49ec-aed9-02a67d5b7fa4.jpg")no-repeat; */
+    }
+
+    .fade-slow3 img {
+      transition: 0.3s !important;
+      color: #000000 !important;
+      width: 203px !important;
+    }
+
+    .fade-slow3:hover img {
+      transition: 0.3s !important;
+      opacity: 0.1 !important;
+      width: 203px !important;
+    }
+
+    /* fade in animation */
+    @media screen yahoo {
+      .notForYahoo {
+        max-height: 0;
+        display: none;
+        mso-hide: all;
+        overflow: hidden;
+        font-size: 0;
+      }
+    }
+
+    @media only screen and (max-width: 640px) {
+      .mobile-display {
+        display: block !important;
+      }
+
+      body {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
+
+      #container {
+        width: 414px !important;
+      }
+
+      img {
+        max-width: 414px !important;
+        height: auto !important;
+      }
+
+      .no-mobile {
+        text-indent: -99999em;
+        display: none !important;
+      }
+
+      .mobile-only {
+        text-indent: 0 !important;
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        visibility: visible !important;
+        overflow: visible !important;
+        max-height: none !important;
+      }
+
+      .noMobilePadding {
+        padding: 0px 0px 0px 0px !important;
+      }
+
+      .header-link {
+        padding: 0px 40px 0px 0px;
+      }
+
+      .header-logo {
+        padding: 0px 0px 0px 0px !important;
+      }
+
+      .header-logo img {
+        width: 130px !important;
+      }
+
+      .body-copy {
+        padding: 5px 20px 13px 20px !important;
+        height: auto !important;
+      }
+
+      .sub-headline {
+        font-size: 12px !important;
+        line-height: 18px !important;
+      }
+
+      .tile-button {
+        padding: 20px 32px 20px 33px !important;
+      }
+
+      .tile-container {
+        padding: 0px 0px 0px 0px !important;
+      }
+
+      .module {
+        width: 100% !important;
+      }
+
+      .footer {
+        padding: 0px 0px 0px 0px !important;
+      }
+
+      .legal-text {
+        padding: 5px 15px 15px 15px !important;
+      }
+
+      .header-link {
+        font-size: 10px !important;
+      }
+
+      .footer-social {
+        text-align: center !important;
+        padding: 25px 25px !important;
+      }
+
+      .footer-social-table {
+        width: 132px !important;
+      }
+
+      .hero-headline {
+        padding: 24px 30px 0px 30px !important;
+      }
+
+      .spleft {
+        padding-left: 125px !important;
+      }
+
+      .spright {
+        padding-right: 125px !important;
+      }
+
+      .hero-subheadline {
+        padding: 20px 47px 10px !important;
+      }
+
+      .amex {
+        padding: 20px 107px !important;
+      }
+
+      .mobile-padding {
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+      }
+
+      div.preheader {
+        display: none !important;
+      }
+    }
+
+    /* Small only */
+    @media screen and (max-width: 39.9375em) {
+      .no-mobile {
+        display: none !important;
+        visibility: hidden !important;
+        height: 0px;
+        overflow: hidden !important;
+      }
+
+      .callouttext {
+        padding: 15px 37px !important;
+      }
+    }
+  </style>
+  <!--[if mso]>
+      <style type="text/css">
+         .copy{
+         font-size: 11px !important;
+         }
+        
+         body, table, td, h1, p, span, strong, a {
+            font-family: Arial, Helvetica, sans-serif !important;
+         }
+
+
+      </style>
+      <![endif]-->
+  <!--
+         we need 1k of characters in the head to prevent iOS devices from displaying the "download rest of message"... message...
+         http://www.emailonacid.com/blog/details/C6/ensure_that_your_entire_email_is_rendered_by_default_in_the_iphone_ipad
+         -->
+</head>
+
+<body style="margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 12px; min-width: 100%;">
+  <!-- SSL -->
+  <div id="preheader" style="display:text-indent: -99999em; display:none !important; height: 0; width: 0; overflow: hidden; max-height: 0; mso-hide:all; padding: 0;font-size:1px;"> Enjoy special offers and activities all Summer long at Loews Santa Monica Beach Hotel. </div>
+  <!-- #SSL -->
+  <div style="display: none; max-height: 0px; overflow: hidden;"> &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp; </div>
+  <table bgcolor="#ffffff" align="center" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tbody>
+      <tr>
+        <td align="center" style="background: #ffffff" bgcolor="#ffffff">
+          <table id="container" width="640" cellpadding="0" cellspacing="0" border="0" style="text-align: left; width: 640px; margin: 0 auto; padding: 0;" align="center">
+            <tbody>
+              <!-- HEADER -->
+              <tr>
+                <td>
+                  <table width="100%" bgcolor="#ffffff" border="0" cellspacing="0" cellpadding="0" style="background-color: #ffffff;">
+                    <tbody>
+                      <tr>
+                        <td class="header-link" align="left" style="padding: 10px 20px 10px 10px;font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 10px; line-height: 20px; color: #000000;">
+                          <a href="tel:+1-866-368-9205" style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 10px; line-height: 20px; color: #000000; text-decoration: none;">866-368-9205</a>
+                        </td>
+                        <td class="header-link" align="right" style="padding-right:10px;font-family: Arial, Helvetica, sans-serif; font-size: 10px; line-height: 10px; color: #000000; border-collapse: collapse;" valign="middle" height="20">
+                          <a href="%%view_email_url%%" style="font-family: Arial, Helvetica, sans-serif; font-size: 10px; line-height: 20px; color:#000000; text-decoration: underline;" target="_blank">View Online Version</a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <!-- LOGO + Navigation -->
+                  <table width="100%" bgcolor="#ffffff" border="0" cellspacing="0" cellpadding="0" style="background-color: #ffffff;">
+                    <tbody>
+                      <tr>
+                        <td bgcolor="#ffffff" class="" style="padding:10px 0px 10px 0px;text-align: center;">
+                          <div class="mobile-only" style="text-indent: -99999em; display: none; height: 0; width: 0; overflow: hidden; max-height: 0;">
+                            <img src="http://image.loews-emails.com/lib/fe3f15707564047e771175/m/3/968cca67-b53e-477e-93f9-13db26d4eae3.png" width="414" alt="Loews Hotels logo" border="0" style="display: block;border: none; width: 414px">
+                          </div>
+                          <div class="no-mobile">
+                            <img src="http://image.loews-emails.com/lib/fe3f15707564047e771175/m/3/0122737d-16e7-47d6-8226-2071092298bd.png" width="640" alt="Loews Hotels logo" border="0" style="display: block; width: 640px;" align="absbottom">
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td bgcolor="#ffffff" height="20" style="font-size:20px;line-height:20px;"></td>
+                      </tr>
+                      <!--Mobile Nav-->
+                      <!--[if !mso]><!-->
+                      <tr>
+                        <td class="mobile-only" style="text-indent: -99999em; display: none; height: 0; width: 0; overflow: hidden; max-height: 0; padding: 0px 0px 0px 0px; text-align: center">
+                          <!-- header links -->
+                          <div class="mobile-only" style="text-indent: -99999em; display: none; height: 0; width: 0; overflow: hidden; max-height: 0; mso-hide: all  !important; font-size: 12px; color: #FFFFFF">
+                            <a href="%%=RedirectTo(@resbutmobtop)=%%" style="padding-left: 0px;font-family:'gt-america-extended', Arial, Helvetica, sans-serif; font-weight: 600; font-size: 16px; line-height: 1.3; color: #333333; text-decoration:none; border-bottom:1px solid #ce3914!important;margin-right:10px;">MAKE A RESERVATION</a>   &nbsp;|&nbsp;  <a href="%%=RedirectTo(@desbutmobtop)=%%" style="font-family:'gt-america-extended', Arial, Helvetica, sans-serif; font-weight: 600; font-size: 16px; line-height: 1.3; color: #333333; text-decoration: none;border-bottom:1px solid #ce3914!important;letter-spacing:1px">DESTINATIONS</a>
+                            <br>
+                          </div>
+                        </td>
+                      </tr>
+                      <!--<![endif]-->
+                      <!--#Mobile Nav-->
+                      <!--DSK Nav-->
+                      <tr>
+                        <td bgcolor="#ffffff" class="no-mobile" style="padding: 0px 65px 5px 65px">
+                          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td bgcolor="#ffffff" align="center" width="155" style="border-bottom:1px solid #ce3914;  padding-bottom: 4px; margin: 0px; text-decoration: none; width: 155px; ">
+                                <a href="%%=RedirectTo(@resbut)=%%" s bgcolor="#ffffff" class="tile-link" style=" display: block;text-decoration: none ;border:0;text-align: center;font-weight: 700;font-size: 12px;font-family:'GT America Extended', Arial, Helvetica,sans-serif;color: #000000; background-color: #ffffff " target="_blank"> MAKE&nbsp;A&nbsp;RESERVATION </a>
+                              </td>
+                              <td style="border-bottom:1px solid #FFF;" bgcolor="#ffffff" align="center" width="20" style=""> &nbsp; </td>
+                              <td bgcolor="#ffffff" align="center" width="103" style="border-bottom:1px solid #ce3914;  padding-bottom: 4px; margin: 0px; text-decoration: none; width: 103px;">
+                                <a href="%%=RedirectTo(@desbut)=%%" bgcolor="#ffffff" class="tile-link" style="display: block;text-decoration: none;border:0;text-align: center;font-weight: 700;font-size: 12px;font-family:'GT America Extended', Arial, Helvetica,sans-serif;color: #000000;background-color: #ffffff" target="_blank"> DESTINATIONS </a>
+                              </td>
+                              <td style="border-bottom:1px solid #FFF;" bgcolor="#ffffff" align="center" width="20" style=""> &nbsp; </td>
+                              <td bgcolor="#ffffff" align="center" width="73" style="border-bottom:1px solid #ce3914; padding-bottom: 4px; margin: 0px; text-decoration: none; width: 73px">
+                                <a href="%%=RedirectTo(@blogbut)=%%" bgcolor="#ffffff" class="tile-link" style="display: block;text-decoration: none ;border:0;text-align: center;font-weight: 700;font-size: 12px;font-family:'GT America Extended', Arial, Helvetica,sans-serif;color: #000000; background-color: #ffffff" target="_blank"> OUR&nbsp;BLOG </a>
+                              </td>
+                              <td style="border-bottom:1px solid #FFF;" bgcolor="#ffffff" align="center" width="20" style=""> &nbsp; </td>
+                              <td bgcolor="#ffffff" align="center" width="119" style="border-bottom:1px solid #ce3914;  padding-bottom: 4px; margin: 0px; text-decoration: none; width: 119px">
+                                <a href="%%=RedirectTo(@offbut)=%%" bgcolor="#ffffff" class="tile-link" style="display: block;text-decoration: none ;border:0;text-align: center;font-weight: 700;font-size: 12px;font-family:'GT America Extended', Arial, Helvetica,sans-serif;color: #000000;background-color: #ffffff" target="_blank"> SPECIAL&nbsp;OFFERS </a>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#ffffff" height="25" style="font-size:25px;line-height:25px;"> </td>
+              </tr>
+              <!-- #HEADER -->
+              <!-- HERO -->
+              <tr>
+                <td bgcolor="#ddd7d1">
+                  <div class="mobile-only" style="text-indent: -99999em; display: none; height: 0; width: 0; overflow: hidden; max-height: 0;">
+                    <a href="%%=RedirectTo(@heromob)=%%" target="_blank">
+                      <img src="http://image.loews-emails.com/lib/fe3f15707564047e771175/m/4/4b547dab-3038-4b91-924a-048dc8cc2658.jpg" width="414" alt="Soak up the sun in Santa Monica Enjoy a $50 dining credit plus waived valet and resort fees - BOOK NOW" border="0" style="display: block;border: none; width: 414px">
+                    </a>
+                  </div>
+                  <div class="no-mobile">
+                    <a href="%%=RedirectTo(@hero)=%%" target="_blank" style="line-height: 0px;">
+                      <img src="http://image.loews-emails.com/lib/fe3f15707564047e771175/m/4/4cfe5eea-e7bc-4583-841e-60455bc5bb57.jpg" width="640" alt="Soak up the sun in Santa Monica Enjoy a $50 dining credit plus waived valet and resort fees - BOOK NOW" border="0" style="display: block; width: 640px;" align="absbottom">
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              <!-- #HERO -->
+              <tr>
+                <td bgcolor="#ffffff" height="20" style="font-size:20px;line-height:20px;"> </td>
+              </tr>
+              <!--  tile1 -->
+              <tr class="no-mobile">
+                <td class="no-mobile" bgcolor="#ffffff">
+                  <table class="no-mobile" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <a href="%%=RedirectTo(@tile1)=%%" target="_blank" style="line-height: 0px;">
+                            <img src="http://image.loews-emails.com/lib/fe3f15707564047e771175/m/4/efaa47b6-62d0-452f-ab4f-1fdec0cf22a7.png" width="640" alt="" border="0" style="display: block; width: 640px;" align="absbottom">
+                          </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td bgcolor="#FFFFFF" style="padding: 30px 70px 40px; color: #000000; font-size: 17px; font-family: Arial , sans-serif; text-align: center;">
+                          <h1 style="color: #1e223f; font-size: 14px; font-weight: 700; text-align: center; margin-bottom: 15px; font-family:'GT America Extended', Arial, Helvetica,sans-serif;">
+                            <span style="font-size: 24px; line-height: 30px; font-family: 'GT America Extended', Arial , sans-serif;  font-weight: 800">Memorial Day Weekend Getaway</span><br>
+                            <img width="62" height="2" src="http://image.loews-emails.com/lib/fe3f15707564047e771175/m/2/5.16_test2_mob_13.jpg" alt="" style="margin-top: 15px; height: 2px !important; display: inline-block; width: 62px !important;">
+                          </h1>
+                          <p style="color: #000000; font-weight: 300; font-size: 14px; line-height: 22px; margin-bottom:20px; text-align: center; font-family: Arial , sans-serif; "> Celebrate the start of summer with 20% off, a $100 dining credit, exclusive access to our Americana poolside BBQ, beachside amenities and more. </p>
+                          <!--BUTTON 2 DSK-->
+                          <a href="%%=RedirectTo(@tile1)=%%" style="padding: 9px 0px;width:196px;display: block;margin:0 auto; text-decoration: none;font-weight: 800;font-size: 14px;font-family:'GT America Extended', Arial, Helvetica,sans-serif;color: #000000;background: #ffffff;border: 2px solid #c99c72;text-align: center; line-height:18px;" target="_blank"> &nbsp;KICK OFF SUMMER&nbsp; <!--#BUTTON 2 DSK-->
+                          </a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <!-- tile1 -->
+              <!-- tile2 -->
+              <tr class="no-mobile">
+                <td class="no-mobile" bgcolor="#ffffff">
+                  <table class="no-mobile" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <a href="%%=RedirectTo(@tile2)=%%" target="_blank" style="line-height: 0px;">
+                            <img src="http://image.loews-emails.com/lib/fe3f15707564047e771175/m/4/caf18400-3d2c-432c-aee8-2e79f79eab3a.png" width="640" alt="" border="0" style="display: block; width: 640px;" align="absbottom">
+                          </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td bgcolor="#FFFFFF" style="padding: 30px 70px 40px; color: #000000; font-size: 17px; font-family: Arial , sans-serif; text-align: center;">
+                          <h1 style="color: #1e223f; font-size: 14px; font-weight: 700; text-align: center; margin-bottom: 15px; font-family:'GT America Extended', Arial, Helvetica,sans-serif;">
+                            <span style="font-size: 24px; line-height: 30px; font-family: 'GT America Extended', Arial , sans-serif;  font-weight: 800">Summer Happenings</span><br>
+                            <img width="62" height="2" src="http://image.loews-emails.com/lib/fe3f15707564047e771175/m/2/5.16_test2_mob_13.jpg" alt="" style="margin-top: 15px; height: 2px !important; display: inline-block; width: 62px !important;">
+                          </h1>
+                          <p style="color: #000000; font-weight: 300; font-size: 14px; line-height: 22px; margin-bottom:20px; text-align: center; font-family: Arial , sans-serif; "> From May to August enjoy seasonal amenities, beachside activities<br> and summer specials, such as: </p>
+                          <!--BUTTON 2 DSK-->
+                          <p style="color: #000000; font-weight: 300; font-size: 14px; line-height: 22px; margin-bottom:20px; text-align: center; font-family: Arial , sans-serif;  margin-top: 20px;">
+                            <strong>Saturday Dive-In Movies</strong>
+                            <br> Watch cinematic classics poolside and snack on curated munchies.
+                          </p>
+                          <p style="color: #000000; font-weight: 300; font-size: 14px; line-height: 22px; margin-bottom:20px; text-align: center; font-family: Arial , sans-serif;  margin-top: 20px;">
+                            <strong>Golden Hour</strong>
+                            <br> Experience our sunset ritual on Fridays and Saturdays with live music and drink specials.
+                          </p>
+                          <p style="color: #000000; font-weight: 300; font-size: 14px; line-height: 22px; margin-bottom:20px; text-align: center; font-family: Arial , sans-serif;  margin-top: 20px;">
+                            <strong>Sunday Beats & Brunch</strong>
+                            <br> Enjoy beachside beats and an oceanfront brunch paired<br> with bottomless mimosas.
+                          </p>
+                          <p style="color: #000000; font-weight: 300; font-size: 14px; line-height: 22px; margin-bottom:20px; text-align: center; font-family: Arial , sans-serif;  margin-top: 20px;">
+                            <strong>Fun in the Sun</strong>
+                            <br> Visit our Coast Concierge for beach amenities including bikes, beach<br> toys, tickets to Pacific Park on the Santa Monica Pier, and more.
+                          </p>
+                          <p style="color: #000000; font-weight: 300; font-size: 14px; line-height: 22px; margin-bottom:20px; text-align: center; font-family: Arial , sans-serif;  margin-top: 20px; margin-bottom: 20px;">
+                            <strong>Mother’s Day Botanical Brunch</strong>
+                            <br> ndulge in a three-course prix fixe brunch at Blue Streak with Mom. Enjoy live music, giveaways and floral-inspired activities including an interactive botanical spritz bar, DIY bouquets, keepsake photos, and more.
+                          </p>
+                          <a href="%%=RedirectTo(@tile2)=%%" style="padding: 9px 0px;width:196px;display: block;margin:0 auto; text-decoration: none;font-weight: 800;font-size: 14px;font-family:'GT America Extended', Arial, Helvetica,sans-serif;color: #000000;background: #ffffff;border: 2px solid #c99c72;text-align: center; line-height:18px;" target="_blank"> &nbsp;LEARN MORE&nbsp; <!--#BUTTON 2 DSK-->
+                          </a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <!--  tile2 -->
+              <!-- Mob Start-->
+              <!--[if !mso]><!-->
+              <!-- Mob 1 Tile-->
+              <tr>
+                <td bgcolor="#ffffff">
+                  <div class="mobile-only" style="text-indent: -99999em; display: none; height: 0; width: 0; overflow: hidden; max-height: 0;">
+                    <a href="%%=RedirectTo(@tile1mob)=%%" target="_blank">
+                      <img src="http://image.loews-emails.com/lib/fe3f15707564047e771175/m/4/92a94f34-d8fa-4c95-891c-3c41116567c2.png" width="414" alt="" border="0" style="display: block;border: none;">
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="mobile-only" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff" style="color: #1f223f; display: none; line-height: 30px; padding: 30px 0px 0px 0px; font-weight: 900;font-size: 24px;font-family:'GT America Extended', Arial, Helvetica,sans-serif; text-align: center;" valign="top" bgcolor="#ffffff"> Memorial Day<br> Weekend Getaway </td>
+              </tr>
+              <tr>
+                <td class="mobile-only" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff" style="display: none; padding: 15px 0px 0px 0px;  text-align: center;" valign="top" bgcolor="#ffffff">
+                  <img width="62" height="2" src="http://image.loews-emails.com/lib/fe3f15707564047e771175/m/2/5.16_test2_mob_13.jpg" alt="" style="margin:0px; height: 2px !important; display: inline-block; width: 62px !important;">
+                </td>
+              </tr>
+              <tr>
+                <td class="mobile-only" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff" style="display: none; padding: 15px 0px 0px 0px; text-align: center; font-size: 14px; line-height: 22px; font-family: Arial , sans-serif; text-align: center; color: #000000" valign="top" bgcolor="#ffffff"> Celebrate the start of summer with 20% off,<br> a $100 dining credit, exclusive access to<br> our Americana poolside BBQ, beachside<br> amenities and more. </td>
+              </tr>
+              <tr>
+                <td bgcolor="#ffffff" class="mobile-only" style="display: none; padding: 20px 0px 40px 0px;  text-align: center;">
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;">
+                    <tr>
+                      <td class="tile-button-padding" style="padding:5px 53px 0px 52px;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;">
+                        <table border="0" align="center" cellpadding="0" cellspacing="0" style="width:250px;border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;">
+                          <tr>
+                            <td align="center" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;">
+                              <table border="0" cellpadding="0" cellspacing="0" width="250" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;">
+                                <tr>
+                                  <td align="center" bgcolor="#ffffff" width="176">
+                                    <a href="%%=RedirectTo(@tile1mob)=%%" style="padding:9px 0px;width:196px;display: block;text-decoration: none;border:0;text-align: center;font-weight: 900;font-size: 14px;font-family:'GT America Extended', Arial, Helvetica,sans-serif;color: #000000;background: #ffffff;border: 2px solid #c99c72;line-height:18px;" target="_blank"> KICK OFF SUMMER </a>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <!-- #Mob 1 Tile-->
+              <!-- Mob 2 Tile-->
+              <tr>
+                <td bgcolor="#ffffff">
+                  <div class="mobile-only" style="text-indent: -99999em; display: none; height: 0; width: 0; overflow: hidden; max-height: 0;">
+                    <a href="%%=RedirectTo(@tile2mob)=%%" target="_blank">
+                      <img src="http://image.loews-emails.com/lib/fe3f15707564047e771175/m/4/73beb83c-ecac-4460-8bbf-53aba0967b09.png" width="414" alt="" border="0" style="display: block;border: none;">
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="mobile-only" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff" style="color: #1f223f; display: none; line-height: 30px; padding: 30px 0px 0px 0px; font-weight: 900;font-size: 24px;font-family:'GT America Extended', Arial, Helvetica,sans-serif; text-align: center;" valign="top" bgcolor="#ffffff"> Summer Happenings </td>
+              </tr>
+              <tr>
+                <td class="mobile-only" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff" style="display: none; padding: 15px 0px 0px 0px;  text-align: center;" valign="top" bgcolor="#ffffff">
+                  <img width="62" height="2" src="http://image.loews-emails.com/lib/fe3f15707564047e771175/m/2/5.16_test2_mob_13.jpg" alt="" style="margin:0px; height: 2px !important; display: inline-block; width: 62px !important;">
+                </td>
+              </tr>
+              <tr>
+                <td class="mobile-only" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff" style="display: none; padding: 15px 0px 0px 0px; text-align: center; font-size: 14px; line-height: 22px; font-family: Arial , sans-serif; text-align: center; color: #000000" valign="top" bgcolor="#ffffff"> From May to August enjoy seasonal amenities,<br> beachside activities and summer specials, such as: </td>
+              </tr>
+              <tr>
+                <td bgcolor="#ffffff" class="mobile-only" style="display: none; padding: 20px 0px 20px 0px;  text-align: center;">
+                  <p style="color: #000000; font-weight: 300; font-size: 14px; line-height: 22px; margin-bottom:20px; text-align: center; font-family: Arial , sans-serif;  margin-top: 0px;">
+                    <strong>Saturday Dive-In Movies</strong>
+                    <br> Watch cinematic classics poolside and snack<br> on curated munchies.
+                  </p>
+                  <p style="color: #000000; font-weight: 300; font-size: 14px; line-height: 22px; margin-bottom:20px; text-align: center; font-family: Arial , sans-serif;  margin-top: 20px;">
+                    <strong>Golden Hour</strong>
+                    <br>Experience our sunset ritual on Fridays and Saturdays with live music and drink specials.
+                  </p>
+                  <p style="color: #000000; font-weight: 300; font-size: 14px; line-height: 22px; margin-bottom:20px; text-align: center; font-family: Arial , sans-serif;  margin-top: 20px;">
+                    <strong>Sunday Beats & Brunch</strong>
+                    <br> Enjoy beachside beats and an oceanfront brunch<br> paired with bottomless mimosas.
+                  </p>
+                  <p style="color: #000000; font-weight: 300; font-size: 14px; line-height: 22px; margin-bottom:20px; text-align: center; font-family: Arial , sans-serif;  margin-top: 20px;">
+                    <strong>Fun in the Sun</strong>
+                    <br> Visit our Coast Concierge for beach amenities<br> including bikes, beach toys, tickets to Pacific Park<br> on the Santa Monica Pier, and more.
+                  </p>
+                  <p style="color: #000000; font-weight: 300; font-size: 14px; line-height: 22px; margin-bottom:20px; text-align: center; font-family: Arial , sans-serif;  margin-top: 20px; margin-bottom: 0px;">
+                    <strong>Mother’s Day Botanical Brunch</strong>
+                    <br> Indulge in a three-course prix fixe brunch at Blue Streak with Mom. Enjoy live music, giveaways and floral-inspired activities including an interactive botanical spritz bar, DIY bouquets, keepsake photos, and more.
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#ffffff" class="mobile-only" style="display: none; padding: 0px 0px 40px 0px;  text-align: center;">
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;">
+                    <tr>
+                      <td class="tile-button-padding" style="padding:0px 53px 0px 52px;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;">
+                        <table border="0" align="center" cellpadding="0" cellspacing="0" style="width:250px;border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;">
+                          <tr>
+                            <td align="center" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;">
+                              <table border="0" cellpadding="0" cellspacing="0" width="250" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;">
+                                <tr>
+                                  <td align="center" bgcolor="#ffffff" width="176">
+                                    <a href="%%=RedirectTo(@tile2mob)=%%" style="padding:9px 0px;width:196px;display: block;text-decoration: none;border:0;text-align: center;font-weight: 900;font-size: 14px;font-family:'GT America Extended', Arial, Helvetica,sans-serif;color: #000000;background: #ffffff;border: 2px solid #c99c72;line-height:18px;" target="_blank"> LEARN MORE </a>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <!-- #Mob 2 Tile-->
+              <!-- #Mob Tile 1-->
+              <!-- header links MOBILE -->
+              <tr>
+                <td bgcolor="#ffffff" class="mobile-only" style="display:none;">
+                  <div class="mobile-only" style="text-indent: -99999em; display: none; height: 0; width: 0; overflow: hidden; max-height: 0;">
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                      <tbody>
+                        <tr>
+                          <td>
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" style="background-color: #ffffff;border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;">
+                              <tbody>
+                                <tr>
+                                  <td style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;">
+                                    <table border="0" align="center" cellpadding="0" cellspacing="0" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;">
+                                      <tbody>
+                                        <tr>
+                                          <td align="center" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0px;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;">
+                                            <table border="0" cellpadding="0" cellspacing="0" width="414" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;">
+                                              <tbody>
+                                                <tr>
+                                                  <td align="center" width="412">
+                                                    <a href="%%=RedirectTo(@resbutmob)=%%" style="padding: 10px 0px;background-color:#1e223f;border:1px solid #1e223f;color:#ffffff;display:inline-block;font-family: 'GT America Extended', Arial, Helvetica,sans-serif;font-size:18px;font-weight:bold;line-height:38px;text-align:center;text-decoration:none;width:412px;-webkit-text-size-adjust:none;mso-hide:all; font-weight: 900; ">MAKE A RESERVATION </a>
+                                                  </td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td bgcolor="#ffffff" height="5" style="font-size:5px;line-height:5px;"> </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                      <tbody>
+                        <tr>
+                          <td>
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" style="background-color: #ffffff;border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;">
+                              <tbody>
+                                <tr>
+                                  <td style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;">
+                                    <table border="0" align="center" cellpadding="0" cellspacing="0" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;">
+                                      <tbody>
+                                        <tr>
+                                          <td align="center" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;">
+                                            <table border="0" cellpadding="0" cellspacing="0" width="414" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;">
+                                              <tbody>
+                                                <tr>
+                                                  <td align="center" width="412">
+                                                    <a href="%%=RedirectTo(@desbutmob)=%%" style="padding: 10px 0px; background-color:#1e223f;border:1px solid #1e223f;color:#ffffff;display:inline-block;font-family: 'GT America Extended', Arial, Helvetica,sans-serif;font-size:18px;font-weight:bold;line-height:38px;text-align:center;text-decoration:none;width:412px;-webkit-text-size-adjust:none;mso-hide:all; font-weight: 900">DESTINATIONS</a>
+                                                  </td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td bgcolor="#ffffff" height="5" style="font-size:5px;line-height:5px;"> </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                      <tbody>
+                        <tr>
+                          <td>
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" style="background-color: #ffffff;border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;">
+                              <tbody>
+                                <tr>
+                                  <td style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;">
+                                    <table border="0" align="center" cellpadding="0" cellspacing="0" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;">
+                                      <tbody>
+                                        <tr>
+                                          <td align="center" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;">
+                                            <table border="0" cellpadding="0" cellspacing="0" width="414" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;">
+                                              <tbody>
+                                                <tr>
+                                                  <td align="center" width="412">
+                                                    <a href="%%=RedirectTo(@blogbutmob)=%%" style="padding: 10px 0px; background-color:#1e223f;border:1px solid #1e223f;color:#ffffff;display:inline-block;font-family: 'GT America Extended', Arial, Helvetica,sans-serif;font-size:18px;font-weight:bold;line-height:38px;text-align:center;text-decoration:none;width:412px;-webkit-text-size-adjust:none;mso-hide:all; font-weight: 900">OUR BLOG </a>
+                                                  </td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td bgcolor="#ffffff" height="5" style="font-size:5px;line-height:5px;"> </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                      <tbody>
+                        <tr>
+                          <td>
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" style="background-color: #ffffff;border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;">
+                              <tbody>
+                                <tr>
+                                  <td style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;">
+                                    <table border="0" align="center" cellpadding="0" cellspacing="0" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;">
+                                      <tbody>
+                                        <tr>
+                                          <td align="center" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;">
+                                            <table border="0" cellpadding="0" cellspacing="0" width="414" style="border-spacing:0;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;">
+                                              <tbody>
+                                                <tr>
+                                                  <td align="center" width="412">
+                                                    <a href="%%=RedirectTo(@offbutmob)=%%" style="padding: 10px 0px; background-color:#1e223f;border:1px solid #1e223f;color:#ffffff;display:inline-block;font-family: 'GT America Extended', Arial, Helvetica,sans-serif;font-size:18px;font-weight:bold;line-height:38px;text-align:center;text-decoration:none;width:412px;-webkit-text-size-adjust:none;mso-hide:all; font-weight: 900">SPECIAL OFFERS </a>
+                                                  </td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td bgcolor="#ffffff" height="5" style="font-size:5px;line-height:5px;"> </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </td>
+              </tr>
+              <!--<![endif]-->
+              <!-- #header links MOBILE -->
+              <!-- Social FOOTER -->
+              <tr>
+                <td style="padding:20px 85px 20px; color:#1f2340; font-size:18px; line-height: 20px; font-weight:normal; font-family:Arial, sans-serif; text-align:center;" valign="top" bgcolor="#ddd7d1"> #LoewsHotels </td>
+              </tr>
+              <tr>
+                <td class="" bgcolor="#ddd7d1" style="padding-bottom: 20px">
+                  <table class="" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ddd7d1">
+                    <tbody>
+                      <tr>
+                        <td class="spleft" style="padding-left:238px">   </td>
+                        <td style="padding-right: 30px">
+                          <a href="https://www.instagram.com/loewshotels/" target="_blank">
+                            <img src="http://image.loews-emails.com/lib/fe3f15707564047e771175/m/2/ignew1.png" alt="instagram" border="0" width="33" height="" style="display: block; width: 33px;border: none;" align="top">
+                          </a>
+                        </td>
+                        <td style="padding-right: 30px">
+                          <a href="https://www.facebook.com/LoewsHotels/" target="_blank">
+                            <img src="http://image.loews-emails.com/lib/fe3f15707564047e771175/m/2/fbnew1.png" alt="facebook" border="0" width="16" height="" style="display: block; width: 16px;border: none;" align="top">
+                          </a>
+                        </td>
+                        <td>
+                          <a href="https://twitter.com/Loews_Hotels" target="_blank">
+                            <img src="http://image.loews-emails.com/lib/fe3f15707564047e771175/m/2/twitternew1.png" alt="twitter" border="0" width="37" height="" style="display: block; width: 37px;border: none;" align="top">
+                          </a>
+                        </td>
+                        <td class="spright" style="padding-right:238px">   </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <!-- AMEX -->
+              <tr>
+                <td bgcolor="#ffffff" align="center" class="amex" style="padding: 20px 220px; align-content: center;">
+                  <div class="mobile-only" style="text-indent: -99999em; display: none; height: 0; width: 0; overflow: hidden; max-height: 0;">
+                    <img src="http://image.loews-emails.com/lib/fe3f15707564047e771175/m/2/amex7.18new_06.jpg" width="200" alt="Loews Hotels & Co Warmly Welcomes - AMERICAN EXPRESS" border="0" style="display: block;border: none;">
+                  </div>
+                  <div class="no-mobile">
+                    <img src="http://image.loews-emails.com/lib/fe3f15707564047e771175/m/2/amex7.18new_06.jpg" width="200" alt="Loews Hotels & Co Warmly Welcomes - AMERICAN EXPRESS" border="0" style="display: block; " align="absbottom">
+                  </div>
+                </td>
+              </tr>
+              <!-- #AMEX -->
+              <!-- #FOOTER -->
+              <!-- LEGAL -->
+              <tr>
+                <td bgcolor="#ffffff" class="legal-text" style="text-align:center; padding: 10px 20px 20px 20px; font-family: Arial, Helvetica, sans-serif; font-size: 10px; line-height: 18px; color: #636466;">
+                  <!--[if !mso]><!-->
+                  <div class="mobile-only" style="text-indent: -99999em; display: none; height: 0; width: 0; overflow: hidden; max-height: 0; mso-hide: all  !important; color: #c99c72">
+                    <a href="https://www.loewshotels.com/contact-us" style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 11px; line-height: 1.3; color: #1f2340; text-decoration: none;">Contact Us</a>  |  <a href="https://www.loewshotels.com/privacy-policy" style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 11px; line-height: 1.3; color: #1f2340; text-decoration: none;">Privacy Policy</a>  |  <a href="https://www.loewshotels.com/terms-of-use" style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 11px; line-height: 1.3; color: #1f2340; text-decoration: none;">Terms & Conditions</a>  |  <a href="%%unsub_center_url%%" style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 11px; line-height: 1.3; color: #1f2340; text-decoration: none;">Unsubscribe</a>
+                  </div>
+                  <!--<![endif]-->
+                  <div class="no-mobile" style="color: #c99c72">
+                    <a href="https://www.loewshotels.com/contact-us" style="font-family: Arial, Helvetica, sans-serif; font-size: 11px; font-weight: bold; line-height: 1.3; color: #1f2340; text-decoration: none;padding-right: 5px;">Contact Us</a> | <a href="https://www.loewshotels.com/privacy-policy" style="font-family: Arial, Helvetica, sans-serif; font-size: 11px; font-weight: bold; line-height: 1.3; color: #1f2340; text-decoration: none;padding-left: 5px;padding-right: 5px;">Privacy Policy</a> | <a href="https://www.loewshotels.com/terms-of-use" style="font-family: Arial, Helvetica, sans-serif; font-size: 11px; font-weight: bold; line-height: 1.3; color: #1f2340; text-decoration: none;padding-left: 5px;padding-right: 5px;">Terms & Conditions</a> | <a href="%%unsub_center_url%%" style="font-family: Arial, Helvetica, sans-serif; font-size: 11px; font-weight: bold; line-height: 1.3; color: #1f2340; text-decoration: none;padding-left: 5px;">Unsubscribe</a>
+                  </div>
+                  <br>
+                  <a style="font-family: Arial, Helvetica, sans-serif; font-size: 10px; line-height: 1.85; color: #000000;text-decoration: underline; font-weight: normal;" href="https://www.loewshotels.com/santa-monica/specials/california-dreamin" target="_blank"><strong>California dreamin terms & conditions</strong></a>
+                  <br>
+                  <br>
+                  <span style="display: inline-block;color:#000000;">You received this email as a valued subscriber of Loews Hotels & Co updates and promotions. To ensure delivery, <br />please add <a href="mailto:loyalty@loews-emails.com" style="color:#000000;">loyalty@loews-emails.com</a> to your email contacts list. </span>
+                  <br><br>
+                  <span style="display: inline-block;color:#000000;">Please do not reply to this email. If you need to contact us with questions or feedback, please contact Loews Hotels & Co. </span>
+                  <br><br>
+                  <!--<span style="display: inline-block;color:#000000;">
+                           Copyright © 2019 Loews Hotels & Co, <a name="address" style="font-family: Arial, Helvetica, sans-serif; font-size: 10px; line-height: 1.43; color: #636466; color: #000000 !important;text-decoration: none !important;">667 Madison Ave, New York, NY 10065</a>-->
+                  <span style="display: inline-block;color:#000000;">Copyright &copy; %%xtyear%% %%Member_Busname%% & Co, <a name="address" style="font-family: Arial, Helvetica, sans-serif; font-size: 10px; line-height: 1.43; color: #000000; color: #000000 !important;text-decoration: none !important;">%%Member_Addr%%, %%Member_City%%, %%Member_State%% %%Member_PostalCode%%</a>
+                    <a class="profile-center-link" href="%%profile_center_url%%" style="font-family: Arial, Helvetica, sans-serif; font-size: 10px; line-height: 1.3; color: #000000; text-decoration: none !important;" target="_blank"></a>
+                    <a style="font-family: Arial, Helvetica, sans-serif; font-size: 10px; line-height: 1.3; color: #000000; text-decoration: none !important;" class="profile-center-link" href="" target="_blank"></a>
+                    <custom name="opencounter" type="tracking">
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td bgcolor="#ffffff" height="20" style="font-size:20px;line-height:20px;"> </td>
+              </tr>
+              <!-- END LEGAL -->
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- Exact Target tracking pixel -->
+  <img src="" width="1" height="1">
+</body>
+
+</html>

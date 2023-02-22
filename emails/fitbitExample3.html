@@ -1,0 +1,628 @@
+<!-- set @subjectline = "Nice, your Fitbit order is in" 
+set @preheader = "We’ve got it from here" -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>%%=v(@subjectline)=%%</title>
+  <style type="text/css" media="screen">
+    @font-face {
+      font-family: 'Proxima Nova Regular';
+      src: url('https://marketing.fitbit.com/fonts/proxima-nova-regular-852046040da1526ac5ac9cdbee2e3723.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Proxima Nova Bold';
+      src: url('https://marketing.fitbit.com/fonts/proxima-nova-bold-f73f22aa93a861006ae7f54f9968fec0.woff') format('woff');
+      font-weight: bold;
+      font-style: normal;
+    }
+
+    body {
+      padding: 0 !important;
+      margin: 0 !important;
+      display: block !important;
+      min-width: 100% !important;
+      width: 100% !important;
+      background: #f5f5f5;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    h1,
+    h2 {
+      margin: 0px !important;
+    }
+
+    a {
+      text-decoration: none
+    }
+
+    strong {
+      font-family: 'Proxima Nova bold', Arial, sans-serif;
+      font-weight: bold;
+    }
+
+    @media only screen and (max-device-width: 414px),
+    only screen and (max-width: 500px) {
+      .mobile-shell {
+        width: 414px !important;
+        min-width: 414px !important;
+      }
+
+      .no-mobile {
+        text-indent: -99999em;
+        display: none !important;
+      }
+
+      .mobile-only {
+        text-indent: 0 !important;
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        visibility: visible !important;
+        overflow: visible !important;
+        max-height: none !important;
+      }
+
+      .cta {
+        padding: 11px 33px !important;
+      }
+
+      .title1 {
+        padding: 60px 50px 0px 50px !important;
+      }
+
+      .title1-text {
+        font-size: 30px !important;
+        line-height: 34px !important;
+        letter-spacing: .15px !important;
+      }
+
+      .title2 {
+        padding: 30px 50px 0px 50px !important;
+      }
+
+      .title2-text {
+        font-size: 22px !important;
+        line-height: 26px !important;
+        letter-spacing: 0px !important;
+      }
+
+      .title3 {
+        padding: 10px 50px 0px 50px !important;
+      }
+
+      .title3-text {
+        font-size: 22px !important;
+        line-height: 26px !important;
+        letter-spacing: 0px !important;
+      }
+
+      .title4 {
+        padding: 30px 50px 20px 50px !important;
+      }
+
+      .title4-text {
+        font-size: 16px !important;
+        line-height: 24px !important;
+        letter-spacing: 0px !important;
+      }
+
+      .title5 {
+        padding: 30px 50px 0px 50px !important;
+      }
+
+      .title5-text {
+        font-size: 26px !important;
+        line-height: 32px !important;
+        letter-spacing: 0px !important;
+      }
+
+      .title6 {
+        padding: 40px 50px 40px 50px !important;
+        font-size: 26px !important;
+        line-height: 34px !important;
+        letter-spacing: .13px !important;
+      }
+
+      .title7 {
+        padding: 0px 50px 0px 50px !important;
+      }
+
+      .title8 {
+        padding: 40px 50px 0px 50px !important;
+      }
+
+      .title9 {
+        padding: 25px 50px 40px 50px !important;
+      }
+
+      .title10 {
+        padding: 35px 50px 35px 50px !important;
+      }
+
+      .title11 {
+        padding: 35px 50px 50px 50px !important;
+      }
+
+      .logo1 {
+        padding: 25px 0px 17px 25px !important;
+      }
+
+      .logo2 {
+        padding: 31px 30px 23px 0px !important;
+      }
+    }
+  </style>
+  <!--[if mso]>
+<style type="text/css">
+body, table, td, h1, p, span, strong, a {font-family: Arial, Helvetica, sans-serif !important;}
+</style>
+<![endif]-->
+</head>
+
+<body style="padding:0 !important; margin:0 !important; display:block !important; min-width:100% !important; width:100% !important; background:#f5f5f5; -webkit-text-size-adjust:none;">
+  <div style="display: none; max-height: 0px; overflow: hidden;"> %%=v(@preheader)=%% </div>
+  <div style="display: none; max-height: 0px; overflow: hidden;"> &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp; </div>
+  <custom name="opencounter" type="tracking" />
+  <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f5f5f5">
+    <tr>
+      <td align="center" valign="top">
+        <table role="presentation" width="600" border="0" cellspacing="0" cellpadding="0" class="mobile-shell" bgcolor="#006166" style="width: 600px;">
+          <tr>
+            <td align="center">
+              <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#006166">
+                <tr>
+                  <td>
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%" class="" bgcolor="#006166">
+                      <tr>
+                        <td style="padding: 25px 0px 17px 30px" class="logo1">
+                          <a href="#">
+                            <img src="https://image.e.fitbit.com/lib/fe87137275620d7472/m/22/9c7fc5c8-3c7d-4ec5-9255-508ff25761f9.png" width="102" height=auto style="display:block; border:none;" alt="fitbit inspire 2" class="logoimage">
+                          </a>
+                        </td>
+                        <td align="right" width="200" style="padding: 31px 30px 22px 0px" class="logo2">
+                          <img src="https://image.e.fitbit.com/lib/fe87137275620d7472/m/22/ed7bc0cb-bd70-4dcd-92e6-a39a6233e1dd.png" width="63" height=auto style="display:block; border:none;" alt="fitbit inspire 2" class="logoimage">
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td bgcolor="#006166">
+              <table role="presentation" bgcolor="#006166" width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td bgcolor="#006166" class="title1" style="padding: 60px 78px 0px 78px;">
+                    <h1 class="title1-text" style="margin: 0px; color:#ffffff; font-family: 'Proxima Nova Bold', Arial,sans-serif; font-size:38px; line-height:42px; text-align:center; letter-spacing: .19px; font-weight: bold;"> Your order is in! You’ve got great taste. </h1>
+                  </td>
+                </tr>
+                <tr>
+                  <td bgcolor="#006166" class="title2" style="padding: 30px 78px 0px 78px;">
+                    <h1 class="title2-text" style="margin: 0px; color:#ffffff; font-family: 'Proxima Nova Bold', Arial,sans-serif; font-size:24px; line-height:28px; text-align:center; letter-spacing: .19px; font-weight: bold;"> Order #: 123456 </h1>
+                  </td>
+                </tr>
+                <tr>
+                  <td bgcolor="#006166" class="title3" style="padding: 10px 78px 0px 78px;">
+                    <h1 class="title3-text" style="margin: 0px; color:#ffffff; font-family: 'Proxima Nova Bold', Arial,sans-serif; font-size:24px; line-height:28px; text-align:center; letter-spacing: .19px; font-weight: bold;"> Order date: XX/XX/XXXX </h1>
+                  </td>
+                </tr>
+                <tr>
+                  <td bgcolor="#006166" align="center" style=" padding: 30px 0px 0px 0px;">
+                    <table role="presentation" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td align="left" class="cta" style="border-radius: 2px; padding: 11px 43px;" bgcolor="#D2FFFA">
+                          <a href="%%=RedirectTo(@HeroCTA)=%%" target="_blank" style="font-size: 18px; line-height: 22px; font-family: 'Proxima Nova Bold', Arial,sans-serif; color: #000000; text-decoration: none; display: inline-block; font-weight: 700;">Check status</a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td bgcolor="#006166" class="title4" style="padding: 30px 78px 20px 78px;">
+                    <p class="title4-text" style="margin: 0px; color:#ffffff; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:16px; line-height:24px; font-weight: normal; text-align:center; "> You’ll see a temporary authorization hold on your account, but you won’t be charged for an item until it ships. Once it does, you’ll get a shipping confirmation email with tracking. </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <table role="presentation" class="" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
+                <tr>
+                  <td bgcolor="#ffffff">
+                    <!--[if !mso]><!-->
+                    <div class="mobile-only" style="text-indent: -99999em; display: none; height: 0; width: 0; overflow: hidden; max-height: 0;">
+                      <img src="https://image.e.fitbit.com/lib/fe87137275620d7472/m/22/1a1472a8-277c-482e-a6d7-b3da4c49b33a.png" border="0" style="display: block; width: 100%;" align="bottom" alt="" />
+                    </div>
+                    <!-- <![endif]-->
+                    <div class="no-mobile">
+                      <img src="https://image.e.fitbit.com/lib/fe87137275620d7472/m/22/1a1472a8-277c-482e-a6d7-b3da4c49b33a.png" border="0" width="600" height="auto" style="display: block; width: 600px; height:auto;border: none;" align="top" alt="" />
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td bgcolor="#ffffff" class="title5" style="padding: 30px 78px 0px 78px; color:#000000;">
+                    <h1 class="title5-text" style="color:#000000; font-family: 'Proxima Nova Bold', Arial,sans-serif; font-size:28px; line-height:32px; font-weight: bold; text-align:center; letter-spacing: 0.16px;"><strong>Here’s what’s coming</strong></h1>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- DESKTOP -->
+          <tr>
+            <td>
+              <table role="presentation" class="no-mobile" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
+                <tr>
+                  <td>
+                    <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
+                      <tr>
+                        <td valign="top" bgcolor="#ffffff" class="" style="padding: 30px 20px 0px 50px; margin: 0px; color:#000000;">
+                          <img src="https://image.e.fitbit.com/lib/fe87137275620d7472/m/22/286d60bd-3779-4044-b234-221882c00c55.png" border="0" width="114" style="display: block; width: 114px;" align="bottom" alt="" />
+                        </td>
+                        <td valign="top" bgcolor="#ffffff" class="" style="padding: 30px 50px 0px 0px; margin: 0px; color:#000000;">
+                          <p style="margin: 0; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:24px; font-weight: normal; text-align:left;"> Sense 2 (Carbon/Graphite, Stainless Steel)</p>
+                          <p style="margin: 10px 0px 0px 0px; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; font-weight: normal; text-align:left;">QTY: 1</p>
+                        </td>
+                        <td valign="top" bgcolor="#ffffff" class="" style="padding: 30px 50px 0px 0px; margin: 0px; color:#000000;">
+                          <p style="margin: 0; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; font-weight: normal; text-align:left;"> $XXX.XX </p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
+                      <tr>
+                        <td valign="top" bgcolor="#ffffff" class="" style="padding: 50px 20px 0px 50px; margin: 0px; color:#000000;">
+                          <img src="https://image.e.fitbit.com/lib/fe87137275620d7472/m/22/51224e25-cb3c-4640-9e5b-cc9fefaf1c5e.png" border="0" width="114" style="display: block; width: 114px;" align="bottom" alt="" />
+                        </td>
+                        <td valign="top" bgcolor="#ffffff" class="" style="padding: 50px 50px 0px 0px; margin: 0px; color:#000000;">
+                          <p style="margin: 0; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:24px; font-weight: normal; text-align:left;"> Luxe Special Edition gorjana (Soft Gold Stainless Steel Parker Link Bracelet)</p>
+                          <p style="margin: 10px 0px 0px 0px; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; font-weight: normal; text-align:left;">QTY: 1</p>
+                        </td>
+                        <td valign="top" bgcolor="#ffffff" class="" style="padding: 50px 50px 0px 0px; margin: 0px; color:#000000;">
+                          <p style="margin: 0; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; font-weight: normal; text-align:left;"> $XXX.XX </p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
+                      <tr>
+                        <td width="366" valign="top" bgcolor="#FFFFFF" class="" style="width: 366px; padding: 40px 0px 0px 0px; margin: 0px; color:#000000;">
+                        </td>
+                        <td width="89" bgcolor="#ffffff" class="" style="padding: 50px 0px 0px 0px; color:#000000;">
+                          <p style="margin: 0; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; font-weight: normal; text-align:right;"> Subtotal: </p>
+                        </td>
+                        <td bgcolor="#ffffff" class="" style="padding: 50px 50px 0px 20px; color:#000000;">
+                          <p style="margin: 0; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; font-weight: normal; text-align:left;"> $XXX.XX </p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td width="366" valign="top" bgcolor="#FFFFFF" class="" style="width: 366px;  margin: 0px; color:#000000;">
+                        </td>
+                        <td bgcolor="#ffffff" class="" style="padding: 10px 0px 0px 0px; color:#000000;">
+                          <p style="margin: 0; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; font-weight: normal; text-align:right;"> Shipping: </p>
+                        </td>
+                        <td bgcolor="#ffffff" class="" style="padding: 10px 50px 0px 20px; color:#000000;">
+                          <p style="margin: 0; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; font-weight: normal; text-align:left;"> $XXX.XX </p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td width="366" valign="top" bgcolor="#FFFFFF" class="" style="width: 366px;  margin: 0px; color:#000000;">
+                        </td>
+                        <td bgcolor="#ffffff" class="" style="padding: 10px 0px 0px 0px; color:#000000;">
+                          <p style="margin: 0; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; font-weight: normal; text-align:right;"> Tax: </p>
+                        </td>
+                        <td bgcolor="#ffffff" class="" style="padding: 10px 50px 0px 20px; color:#000000;">
+                          <p style="margin: 0; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; font-weight: normal; text-align:left;"> $XXX.XX </p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td width="366" valign="top" bgcolor="#FFFFFF" class="" style="width: 366px;  margin: 0px; color:#000000;">
+                        </td>
+                        <td bgcolor="#ffffff" class="" style="padding: 10px 0px 0px 0px; color:#000000;">
+                          <p style="margin: 0; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; font-weight: normal; text-align:right;"> Total: </p>
+                        </td>
+                        <td bgcolor="#ffffff" class="" style="padding: 10px 50px 0px 20px; color:#000000;">
+                          <p style="margin: 0; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; font-weight: normal; text-align:left;"> $XXX.XX </p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td bgcolor="#ffffff" style="padding: 50px 0px 0px 0px;">
+                    <img src="https://image.e.fitbit.com/lib/fe87137275620d7472/m/22/32250d10-2e17-44a5-b022-b18148a0ef44.png" border="0" width="600" height="auto" style="display: block; width: 600px; height:auto;border: none;" align="top" alt="" />
+                  </td>
+                </tr>
+                <tr>
+                  <td bgcolor="#ffffff" class="" style="padding: 50px 78px 40px 78px; color:#000000;">
+                    <h1 class="" style="color:#000000; font-family: 'Proxima Nova Bold', Arial,sans-serif; font-size:28px; line-height:32px; font-weight: bold; text-align:center; letter-spacing: 0.16px;"><strong>Payment & shipping info</strong></h1>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
+                      <tr>
+                        <td width="20" valign="top" bgcolor="#FFFFFF" class="" style="width: 20px; padding: 40px 0px 0px 0px; margin: 0px; color:#000000;">
+                        </td>
+                        <td width="" valign="top" bgcolor="#F2F2F2" class="" style=" padding: 40px 30px 40px 30px; margin: 0px; color:#000000;">
+                          <p style="margin: 0; color:#000000; font-family: 'Proxima Nova Bold', Arial,sans-serif; font-size:18px; line-height:28px; letter-spacing: 0px; font-weight: bold; text-align:left;"> Billed to: </p>
+                          <p style="margin: 15px 0px 0px 0px; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; letter-spacing: 0px; font-weight: normal; text-align:left;"> [FName] [Lname] </p>
+                          <p style="margin: 10px 0px 0px 0px; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; letter-spacing: 0px; font-weight: normal; text-align:left;"> [Street address] </p>
+                          <p style="margin: 0; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; letter-spacing: 0px; font-weight: normal; text-align:left;"> [City], [ST] [Zip code] </p>
+                          <p style="margin: 0; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; letter-spacing: 0px; font-weight: normal; text-align:left;"> [email@email.com] </p>
+                          <p style="margin: 0; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; letter-spacing: 0px; font-weight: normal; text-align:left;"> [XXX.XXX.XXXX] </p>
+                          <p style="margin: 10px 0px 0px 0px; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; letter-spacing: 0px; font-weight: normal; text-align:left;"> <img src="https://image.e.fitbit.com/lib/fe87137275620d7472/m/22/c7a48815-b3d2-4dd4-8373-7571b16d4abc.png" border="0" width="26" height="auto" style="display: inline-block; width: 26px; height:auto;border: none;" align="top" alt="" />&nbsp;&nbsp;Mastercard: 0123</p>
+                        </td>
+                        <td width="28" valign="top" bgcolor="#FFFFFF" class="" style="width: 28px; padding: 40px 0px 0px 0px; margin: 0px; color:#000000;">
+                        </td>
+                        <td width="" valign="top" bgcolor="#F2F2F2" class="" style=" padding: 40px 30px 40px 30px; margin: 0px; color:#000000;">
+                          <p style="margin: 0; color:#000000; font-family: 'Proxima Nova Bold', Arial,sans-serif; font-size:18px; line-height:28px; letter-spacing: 0px; font-weight: bold; text-align:left;"> Sent to: </p>
+                          <p style="margin: 15px 0px 0px 0px; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; letter-spacing: 0px; font-weight: normal; text-align:left;"> [FName] [Lname] </p>
+                          <p style="margin: 10px 0px 0px 0px; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; letter-spacing: 0px; font-weight: normal; text-align:left;"> [Street address] </p>
+                          <p style="margin: 0; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; letter-spacing: 0px; font-weight: normal; text-align:left;"> [City], [ST] [Zip code] </p>
+                          <p style="margin: 0; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; letter-spacing: 0px; font-weight: normal; text-align:left;"> [email@email.com] </p>
+                          <p style="margin: 0; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; letter-spacing: 0px; font-weight: normal; text-align:left;"> [XXX.XXX.XXXX] </p>
+                        </td>
+                        <td width="20" valign="top" bgcolor="#FFFFFF" class="" style="width: 20px; padding: 40px 0px 0px 0px; margin: 0px; color:#000000;">
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td bgcolor="#ffffff" height="25" style="font-size:25px;line-height:25px;">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td>
+                    <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
+                      <tr>
+                        <td width="20" valign="top" bgcolor="#FFFFFF" class="" style="width: 20px; padding: 40px 0px 0px 0px; margin: 0px; color:#000000;">
+                        </td>
+                        <td width="470" valign="top" bgcolor="#F2F2F2" class="" style="width: 470px; padding: 40px 45px 45px 45px; margin: 0px; color:#000000;">
+                          <p style="margin: 0; color:#000000; font-family: 'Proxima Nova Bold', Arial,sans-serif; font-size:18px; line-height:28px; font-weight: bold; text-align:center;"> Shipping method: </p>
+                          <p style="margin: 15px 0px 0px 0px; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; font-weight: normal; text-align:center;"> [Standard (via UPS)] </p>
+                          <p style="margin: 10px 0px 0px 0px; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; font-weight: normal; text-align:center;"> X–X business days* </p>
+                          <p style="margin: 0; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; font-weight: normal; text-align:center;"> <i>*Some shipping areas may take up to XX business days.</i> </p>
+                        </td>
+                        <td width="20" valign="top" bgcolor="#FFFFFF" class="" style="width: 20px; padding: 40px 0px 0px 0px; margin: 0px; color:#000000;">
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- END DESKTOP -->
+          <!-- MOBILE -->
+          <!--[if !mso]><!-->
+          <tr>
+            <td>
+              <table role="presentation" class="mobile-only" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff" style="display: none;">
+                <tr>
+                  <td>
+                    <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
+                      <tr>
+                        <td valign="top" bgcolor="#ffffff" class="" style="padding: 30px 10px 0px 20px; margin: 0px; color:#000000;">
+                          <img src="https://image.e.fitbit.com/lib/fe87137275620d7472/m/22/286d60bd-3779-4044-b234-221882c00c55.png" border="0" width="114" style="display: block; width: 114px;" align="bottom" alt="" />
+                        </td>
+                        <td valign="top" bgcolor="#ffffff" class="" style="padding: 30px 30px 0px 0px; margin: 0px; color:#000000;">
+                          <p style="margin: 0; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; font-weight: normal; text-align:left;"> Sense 2 (Carbon/Graphite, Stainless Steel)</p>
+                          <p style="margin: 10px 0px 0px 0px; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; font-weight: normal; text-align:left;">QTY: 1<br>$XXX.XX</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
+                      <tr>
+                        <td valign="top" bgcolor="#ffffff" class="" style="padding: 50px 10px 0px 20px; margin: 0px; color:#000000;">
+                          <img src="https://image.e.fitbit.com/lib/fe87137275620d7472/m/22/51224e25-cb3c-4640-9e5b-cc9fefaf1c5e.png" border="0" width="114" style="display: block; width: 114px;" align="bottom" alt="" />
+                        </td>
+                        <td valign="top" bgcolor="#ffffff" class="" style="padding: 50px 30px 0px 0px; margin: 0px; color:#000000;">
+                          <p style="margin: 0; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:22px; font-weight: normal; text-align:left;"> Luxe Special Edition gorjana (Soft Gold Stainless Steel Parker Link Bracelet)</p>
+                          <p style="margin: 10px 0px 0px 0px; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; font-weight: normal; text-align:left;">QTY: 1<br>$XXX.XX</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
+                      <tr>
+                        <td bgcolor="#ffffff" class="" style="padding: 40px 0px 0px 116px; color:#000000;">
+                          <p style="margin: 0; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; font-weight: normal; text-align:right;"> Subtotal: </p>
+                        </td>
+                        <td bgcolor="#ffffff" class="" style="padding: 40px 85px 0px 20px; color:#000000;">
+                          <p style="margin: 0; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; font-weight: normal; text-align:left;"> $XXX.XX </p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td bgcolor="#ffffff" class="" style="padding: 10px 0px 0px 116px; color:#000000;">
+                          <p style="margin: 0; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; font-weight: normal; text-align:right;"> Shipping: </p>
+                        </td>
+                        <td bgcolor="#ffffff" class="" style="padding: 10px 85px 0px 20px; color:#000000;">
+                          <p style="margin: 0; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; font-weight: normal; text-align:left;"> $XXX.XX </p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td bgcolor="#ffffff" class="" style="padding: 10px 0px 0px 116px; color:#000000;">
+                          <p style="margin: 0; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; font-weight: normal; text-align:right;"> Tax: </p>
+                        </td>
+                        <td bgcolor="#ffffff" class="" style="padding: 10px 85px 0px 20px; color:#000000;">
+                          <p style="margin: 0; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; font-weight: normal; text-align:left;"> $XXX.XX </p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td bgcolor="#ffffff" class="" style="padding: 10px 0px 0px 116px; color:#000000;">
+                          <p style="margin: 0; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; font-weight: normal; text-align:right;"> Total: </p>
+                        </td>
+                        <td bgcolor="#ffffff" class="" style="padding: 10px 85px 0px 20px; color:#000000;">
+                          <p style="margin: 0; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; font-weight: normal; text-align:left;"> $XXX.XX </p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td bgcolor="#ffffff" style="padding: 50px 0px 0px 0px;">
+                    <img src="https://image.e.fitbit.com/lib/fe87137275620d7472/m/22/e28ce051-06c6-4ff7-b652-f4c940658190.png" border="0" width="414" height="auto" style="display: block; width: 414px; height:auto;border: none;" align="top" alt="" />
+                  </td>
+                </tr>
+                <tr>
+                  <td bgcolor="#ffffff" class="" style="padding: 50px 50px 30px 50px; color:#000000;">
+                    <h1 class="" style="color:#000000; font-family: 'Proxima Nova Bold', Arial,sans-serif; font-size:26px; line-height:32px; font-weight: bold; text-align:center; letter-spacing: 0.16px;"><strong>Payment & shipping info</strong></h1>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
+                      <tr>
+                        <td width="20" valign="top" bgcolor="#FFFFFF" class="" style="width: 20px; padding: 40px 0px 0px 0px; margin: 0px; color:#000000;">
+                        </td>
+                        <td width="" valign="top" bgcolor="#F2F2F2" class="" style=" padding: 30px 74px 30px 70px; margin: 0px; color:#000000;">
+                          <p style="margin: 0; color:#000000; font-family: 'Proxima Nova Bold', Arial,sans-serif; font-size:18px; line-height:28px; letter-spacing: 0px; font-weight: bold; text-align:left;"> Billed to: </p>
+                          <p style="padding: 15px 0px 0px 0px; margin: 0; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; letter-spacing: 0px; font-weight: normal; text-align:left;"> [FName] [Lname] </p>
+                          <p style="margin: 10px 0px 0px 0px; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; letter-spacing: 0px; font-weight: normal; text-align:left;"> [Street address] </p>
+                          <p style="margin: 0; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; letter-spacing: 0px; font-weight: normal; text-align:left;"> [City], [ST] [Zip code] </p>
+                          <p style="margin: 0; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; letter-spacing: 0px; font-weight: normal; text-align:left;"> [email@email.com] </p>
+                          <p style="margin: 0; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; letter-spacing: 0px; font-weight: normal; text-align:left;"> [XXX.XXX.XXXX] </p>
+                          <p style="margin: 10px 0px 0px 0px; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; letter-spacing: 0px; font-weight: normal; text-align:left;"> <img src="https://image.e.fitbit.com/lib/fe87137275620d7472/m/22/c7a48815-b3d2-4dd4-8373-7571b16d4abc.png" border="0" width="26" height="auto" style="display: inline-block; width: 26px; height:auto;border: none;" align="top" alt="" />&nbsp;&nbsp;Mastercard: 0123</p>
+                        </td>
+                        <td width="20" valign="top" bgcolor="#FFFFFF" class="" style="width: 20px; padding: 40px 0px 0px 0px; margin: 0px; color:#000000;">
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td bgcolor="#ffffff" height="20" style="font-size:20px;line-height:20px;">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td>
+                    <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
+                      <tr>
+                        <td width="20" valign="top" bgcolor="#FFFFFF" class="" style="width: 20px; padding: 40px 0px 0px 0px; margin: 0px; color:#000000;">
+                        </td>
+                        <td width="" valign="top" bgcolor="#F2F2F2" class="" style=" padding: 30px 74px 30px 70px; margin: 0px; color:#000000;">
+                          <p style="margin: 0; color:#000000; font-family: 'Proxima Nova Bold', Arial,sans-serif; font-size:18px; line-height:28px; letter-spacing: 0px; font-weight: bold; text-align:left;"> Sent to: </p>
+                          <p style="padding: 15px 0px 0px 0px; margin: 0; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; letter-spacing: 0px; font-weight: normal; text-align:left;"> [FName] [Lname] </p>
+                          <p style="margin: 10px 0px 0px 0px; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; letter-spacing: 0px; font-weight: normal; text-align:left;"> [Street address] </p>
+                          <p style="margin: 0; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; letter-spacing: 0px; font-weight: normal; text-align:left;"> [City], [ST] [Zip code] </p>
+                          <p style="margin: 0; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; letter-spacing: 0px; font-weight: normal; text-align:left;"> [email@email.com] </p>
+                          <p style="margin: 0; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; letter-spacing: 0px; font-weight: normal; text-align:left;"> [XXX.XXX.XXXX] </p>
+                        </td>
+                        <td width="20" valign="top" bgcolor="#FFFFFF" class="" style="width: 20px; padding: 40px 0px 0px 0px; margin: 0px; color:#000000;">
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td bgcolor="#ffffff" height="20" style="font-size:20px;line-height:20px;">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td>
+                    <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
+                      <tr>
+                        <td width="20" valign="top" bgcolor="#FFFFFF" class="" style="width: 20px; padding: 40px 0px 0px 0px; margin: 0px; color:#000000;">
+                        </td>
+                        <td width="" valign="top" bgcolor="#F2F2F2" class="" style="padding: 30px 74px 30px 70px; margin: 0px; color:#000000;">
+                          <p style="margin: 0; color:#000000; font-family: 'Proxima Nova Bold', Arial,sans-serif; font-size:18px; line-height:28px; font-weight: bold; text-align:left;"> Shipping method: </p>
+                          <p style="padding: 15px 0px 0px 0px; margin: 0; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; font-weight: normal; text-align:left;"> [Standard (via UPS)] </p>
+                          <p style="margin: 0; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; font-weight: normal; text-align:left;"> X–X business days* </p>
+                          <p style="margin: 0; color:#000000; font-family: 'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height:28px; font-weight: normal; text-align:left;"> <i>*Some shipping areas may take up to XX business days.</i> </p>
+                        </td>
+                        <td width="20" valign="top" bgcolor="#FFFFFF" class="" style="width: 20px; padding: 40px 0px 0px 0px; margin: 0px; color:#000000;">
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- <![endif]-->
+          <!-- END MOBILE -->
+          <tr>
+            <td bgcolor="#ffffff" height="60" style="font-size:60px;line-height:60px;">&nbsp;</td>
+          </tr>
+          <tr>
+            <td>
+              <table class="" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#D2FFFA">
+                <tr>
+                  <td class="title6" style="padding: 40px 78px 40px 78px; color:#000000; font-family:'Proxima Nova Bold', Arial,sans-serif; font-size:28px; line-height: 36px; text-align:center;"><strong>Open Premium in the Fitbit app to unlock exclusive workouts & deeper insights.&sup1;</strong></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <table class="" align="center" class="" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#006166">
+                <tr>
+                  <td class="title7" valign="top" style="padding: 0px 40px 0px 40px; color: #ffffff !important; font-size: 18px; font-family: 'Proxima Nova Bold', Arial , sans-serif; text-align: center;">
+                    <p class="" style="margin: 15px 0px 15px 0px; font-family: 'Proxima Nova Regular', Arial, sans-serif; text-align: center; font-size: 18px;  line-height: 28px; letter-spacing: 0.18px; color: #ffffff; ">Have questions about your order?<br> <a href="#" target="_blank" style="color:#ffffff; text-decoration:none; font-family: 'Proxima Nova bold', Arial , sans-serif; letter-spacing: 0.18px;">
+                        <strong style="color: #ffffff; font-family:'Proxima Nova Bold', Arial , sans-serif; font-weight: bold;">Contact us&nbsp;&#10132;</strong></a></p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td align="center">
+              <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
+                <tr>
+                  <td class="title8" style="padding: 40px 78px 0px 78px; color:#000000; font-family:'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height: 24px; text-align:center;">If you need help, please visit <a href="#" target="_blank" style="display: inline; text-decoration:underline; color: #000000;">help.fitbit.com</a> or contact Fitbit Customer Support at <a href="tel:+48225155129" style="color: #ffffff; text-decoration: none; color: #000000;">+48225155129</a> or <a href="#" target="_blank" style="display: inline; text-decoration:underline; color: #000000;">support-[locale abbr.]@fitbit.com</a>.</td>
+                </tr>
+                <tr>
+                  <td class="title9" style="padding: 25px 78px 40px 78px; color:#000000; font-family:'Proxima Nova Regular', Arial,sans-serif; font-size:18px; line-height: 24px; text-align:center;">Need more details? See our <a href="#" target="_blank" style="display: inline; text-decoration:underline; color: #000000;">Terms of Sale</a> and <a href="#" target="_blank" style="display: inline; text-decoration:underline; color: #000000;">Terms of Service</a>.</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td bgcolor="#fafafa" height="10" style="font-size:10px;line-height:10px;">&nbsp;</td>
+          </tr>
+          <tr>
+            <td align="center">
+              <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
+                <tr>
+                  <td class="title10" style="padding: 35px 78px 35px 78px; color:#5F6368; font-family:'Proxima Nova Regular', Arial,sans-serif; font-size:12px; line-height: 18px; text-align:left;">By subscribing, you authorize us to charge you the subscription cost (as described above) automatically, charged monthly to the payment method provided. If you need to make a change to your billing information or subscription, please visit My Subscriptions.<br><br>&sup1;Fitbit Premium content and features subject to change.</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td align="center">
+              <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#FAFAFA">
+                <tr>
+                  <td class="title11" style="padding: 35px 78px 35px 78px; color:#939C9E; font-family:'Proxima Nova Regular', Arial,sans-serif; font-size:12px; line-height: 18px; text-align:left;">Fitbit, the Fitbit logo, and related marks and logos are trademarks of Google LLC and/or its affiliates.<br><br>
+                    <strong>© Google LLC, 1600 Amphitheatre Parkway,<br> Mountain View, CA 94043, United States</strong>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>

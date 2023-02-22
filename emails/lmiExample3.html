@@ -1,0 +1,529 @@
+<!-- %%[
+set @model = model
+set @year = year
+set @mon = "Jan23"
+SET @pin = TRIM(pin)
+SET @firstname = TRIM(firstname)
+set @src = src
+set @sl = sl
+
+IF SL == 1 THEN
+SET @subject = CONCAT(@firstname,", you could be so close to saving on auto insurance")
+  SET @ssl = "See how much you can save with Liberty Mutual."
+ELSE
+  SET @subject = "Did you forget to see your potential auto insurance savings?"
+  SET @ssl = "It's easy to get a quote from Liberty Mutual."
+ENDIF
+
+set @logo = concat("https://www.libertymutual.com/mercedes-benz?MM_webID=0000010859&cmpgncde=2293&keyCode=EDMERCP0&src=email_pmercedes_emfu1_",@mon,"_tc",@src,"_logo&PIN=",@pin)
+set @topquotebut = concat("https://www.libertymutual.com/mercedes-benz?MM_webID=0000010859&cmpgncde=2293&keyCode=EDMERCP0&src=email_pmercedes_emfu1_",@mon,"_tc",@src,"_topquotebut&PIN=",@pin)
+set @img = concat("https://www.libertymutual.com/mercedes-benz?MM_webID=0000010859&cmpgncde=2293&keyCode=EDMERCP0&src=email_pmercedes_emfu1_",@mon,"_tc",@src,"_img&PIN=",@pin)
+set @botquotebut = concat("https://www.libertymutual.com/mercedes-benz?MM_webID=0000010859&cmpgncde=2293&keyCode=EDMERCP0&src=email_pmercedes_emfu1_",@mon,"_tc",@src,"_botquotebut&PIN=",@pin)
+set @mobquotebut = concat("https://www.libertymutual.com/mercedes-benz?MM_webID=0000010859&cmpgncde=2293&keyCode=EDMERCP0&src=email_pmercedes_emfu1_",@mon,"_tc",@src,"_mobquotebut&PIN=",@pin)
+set @mobbotquote = concat("https://www.libertymutual.com/mercedes-benz?MM_webID=0000010859&cmpgncde=2293&keyCode=EDMERCP0&src=email_pmercedes_emfu1_",@mon,"_tc",@src,"_mobbotquote&PIN=",@pin)
+    
+]%% -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <style type="text/css">
+    @font-face {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    @font-face {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 700;
+      src: local('RobotoBold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfBBc4AMP6lQ.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    .benefit-header a {
+      text-decoration: none !important;
+      color: #002163 !important;
+    }
+
+    .ios-black a {
+      color: #343741 !important;
+      text-decoration: none;
+    }
+
+    .ios-gray a {
+      color: #343741 !important;
+      text-decoration: none !important;
+    }
+
+    @media only screen and (max-width: 640px) {
+      body {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
+
+      #container {
+        width: 320px !important;
+      }
+
+      img {
+        max-width: 320px !important;
+        height: auto !important;
+      }
+
+      .no-mobile {
+        text-indent: -99999em;
+        display: none !important;
+      }
+
+      .mobile-only {
+        text-indent: 0 !important;
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        visibility: visible !important;
+        overflow: visible !important;
+        max-height: none !important;
+      }
+
+      .body-copy,
+      .icon-rows-container {
+        padding: 0px 0px 0px 0px !important;
+      }
+
+      .icon-set {
+        padding-bottom: 30px !important;
+      }
+
+      .icon-set.last {
+        padding-bottom: 40px !important;
+      }
+
+      .module {
+        width: 100% !important;
+      }
+
+      .headline-main {
+        width: 194px !important;
+      }
+
+      .headline {
+        font-size: 32px !important;
+        line-height: 37px !important;
+        padding: 30px 40px 30px 40px !important;
+      }
+
+      .legal-text {
+        padding: 30px 20px 30px 20px !important;
+      }
+
+      .benefit-header {
+        font-size: 14px !important;
+      }
+
+      .header-link {
+        font-size: 10px !important;
+      }
+
+      .btn-link {
+        line-height: 22px !important;
+        width: 200px !important;
+      }
+
+      .btn-td {
+        width: 180px !important;
+      }
+
+      .no-widows {
+        white-space: nowrap !important;
+      }
+
+      .logos-area {
+        height: 40px !important;
+      }
+
+      .partner-logo-img {
+        max-width: 130px !important;
+        height: auto !important;
+      }
+
+      .partner-logo-img.vert-logo {
+        width: auto !important;
+        /*max-height: 40px !important;*/
+      }
+
+      .lmi-logo {
+        width: 160px !important;
+      }
+
+      .lmi-logo-img {
+        max-width: 320px !important;
+        height: auto !important;
+      }
+
+      .partner-logo {
+        width: 160px !important;
+      }
+
+      .partner-logo-img {
+        max-width: 101px !important;
+        height: auto !important;
+      }
+
+      .logo-divider {
+        width: 2px !important;
+        height: 28px !important;
+      }
+
+      .icon-set .icon {
+        width: 50px !important;
+        padding-right: 15px;
+      }
+
+      .text-module-td {
+        /*text-align: left !important;*/
+        padding: 5px 15px 0px 15px !important;
+      }
+
+      .rtb-section {
+        padding-bottom: 0 !important;
+      }
+
+      .benefits-header {
+        font-size: 16px !important;
+      }
+
+      .sub-headline {
+        font-size: 14px !important;
+        padding: 0px 10px !important;
+      }
+
+      .main-headline {
+        font-size: 32px !important;
+        line-height: 40px !important;
+      }
+
+      .intro-text {
+        padding: 20px 30px 21px 30px !important;
+      }
+
+      .icon-headline {
+        padding-top: 20px !important;
+        font-size: 20px !important;
+        line-height: 30px !important;
+        padding: 40px 40px 30px 40px !important;
+      }
+
+      .icon-headline3 {
+        font-size: 20px !important;
+        line-height: 30px !important;
+        padding: 0px 0px 40px 0px !important;
+      }
+
+      .sub-headlineV3 {
+        font-size: 14px !important;
+        padding: 0px 30px 20px 30px !important;
+      }
+
+      .headlineV7 {
+        font-size: 30px !important;
+        line-height: 20px !important;
+        padding: 10px 10px 30px 30px !important;
+      }
+
+      .sub-headlineV3 {
+        font-size: 14px !important;
+        padding: 0px 20px 20px 20px !important;
+      }
+
+      .body-copy2,
+      .icon-rows-container2 {
+        padding: 40px 20px 0px 20px !important;
+      }
+
+      .main-headline10 {
+        font-size: 19px !important;
+      }
+
+      .footer-logo {
+        padding: 20px 0px 0px 0px !important;
+      }
+    }
+  </style>
+  <!--[if gte mso 9]>
+      <style>
+          sup { font-size: 100% !important; }
+          td, span, div, a, p {
+              font-family: Arial, Helvetica, sans-serif !important;
+          }
+        
+          .rtb { line-height: 120%; }
+       
+      </style>
+  <![endif]-->
+  <!--
+      we need 1k of characters in the head to prevent iOS devices from displaying the "download rest of message"... message...
+      http://www.emailonacid.com/blog/details/C6/ensure_that_your_entire_email_is_rendered_by_default_in_the_iphone_ipad
+  -->
+</head>
+
+<body style="margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 1.231; background: #f5f5f5; -webkit-text-size-adjust: none; min-width: 100%;">
+  <!-- Mobile Pre-Header -->
+  <div id="preheader" style="text-indent: -99999em; display:none !important; height: 0; width: 0; overflow: hidden; max-height: 0; mso-hide:all; padding: 0;"> %%=v(@ssl)=%% </div>
+  <!-- #Mobile Pre-Header -->
+  <!-- Insert &zwnj;&nbsp; hack after hidden preview text -->
+  <div style="display: none; max-height: 0px; overflow: hidden;"> &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp; </div>
+  <main id="main">
+    <table bgcolor="#f5f5f5" align="center" cellpadding="0" cellspacing="0" border="0" width="100%">
+      <tr>
+        <td align="center" style="background: #EFEFEF;" bgcolor="#EFEFEF">
+          <table id="container" width="640" cellpadding="0" cellspacing="0" border="0" style="text-align: left; width: 640px; margin: 0 auto; padding: 0;" align="center">
+            <!-- Pre-Header Links -->
+            <tr>
+              <td style="padding-top: 10px;">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" style="background:#EFEFEF;">
+                  <tr>
+                    <td valign="middle">
+                      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <td width="10.59" style="vertical-align: middle; padding-right: 5.41px;" valign="middle">
+                            <a href="%%view_email_url%%" style="font-family: Arial, Helvetica, sans-serif; font-size: 10px; line-height: 15px; mso-line-height-rule:exactly; color: #343741; text-decoration: none;" class="header-link"><img src="http://image.email-libertymutual.com/lib/fe5b157071650d757212/m/6/74e719e3-7565-4018-839e-0de20e2f18e9.png" border="0" height="10.49" width="10.59" style="display: block;" />
+                            </a>
+                          </td>
+                          <td style="vertical-align: middle;" valign="middle">
+                            <a href="%%view_email_url%%" style="font-family: Arial, Helvetica, sans-serif;font-size: 10px; line-height: 12px; mso-line-height-rule:exactly; color: #176DB7; text-decoration: underline;" class="header-link"> View online </a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td align="right">
+                      <a href="%%unsub_center_url%%" style="font-family: Arial, Helvetica, sans-serif;; font-size: 10px; mso-line-height-rule:exactly; line-height: 12px; color: #176DB7; text-decoration: underline;" class="header-link"><span style="color: #176DB7;">Unsubscribe</span></a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- Message To Header -->
+            <tr>
+              <td style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 16px; color: #000000; text-decoration: none;padding: 20px 20px 24px 20px;" align="center" bgcolor="" class="intro-text" valign="middle">
+                <span style="text-decoration: none;">A special message from Liberty Mutual Insurance to <span class="no-widows"><span class="messageto-recip-type-plural">Mercedes-Benz&nbsp;owners</span>.</span></span>
+              </td>
+            </tr>
+            <!-- #Message To Header -->
+            <!-- Logos Line -->
+            <tr>
+              <td align="center" bgcolor="#EFEFEF" height="80" valign="middle" class="logos-area">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td align="center">
+                      <!--[if !mso]><!-->
+                      <div class="mobile-only" style="text-indent: -99999em; display: none; height: 0; width: 0; overflow: hidden; max-height: 0;">
+                        <a href="%%=RedirectTo(@logo)=%%" class="cta-link" target="_blank">
+                          <img src="http://image.email-libertymutual.com/lib/fe5b157071650d757212/m/6/44dbf0af-853f-4203-b37b-39341f8332cf.png" alt="Liberty Mutual Insurance Logo Mercedes-Benz Financial Services Logo" title="Liberty Mutual Insurance Logo Mercedes-Benz Financial Services Logo" border="0" align="center" width="320" class="lmi-logo-img" />
+                        </a>
+                      </div>
+                      <!--<![endif]-->
+                      <div class="no-mobile">
+                        <a href="%%=RedirectTo(@logo)=%%" class="cta-link hero-cta" target="_blank">
+                          <img src="http://image.email-libertymutual.com/lib/fe5b157071650d757212/m/6/c28ea733-d461-44c8-9662-ff57b1a38b28.png" alt="Liberty Mutual Insurance Logo Mercedes-Benz Financial Services Logo" title="Liberty Mutual Insurance Logo Mercedes-Benz Financial Services Logo" border="0" align="center" width="640" class="lmi-logo-img" />
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- #Logos Line -->
+            <!-- Headline -->
+            <tr>
+              <td bgcolor="#ffffff" style="padding: 50px 100px 0px 100px;" class="headline">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td style="font-family: Arial, Helvetica, sans-serif; font-size: 42px; line-height: 52px; text-align: center; color: #000000; font-weight: normal;" class="main-headline">
+                      <span id="headline" class="no-mobile">Savings are closer than&nbsp;they&nbsp;appear.</span>
+                      <span id="headline" class="mobile-only" style="display: none;">Savings are closer than they&nbsp;appear.</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center" class="no-mobile" style="padding: 30px 0px 20px 0px;" bgcolor="#ffffff">
+                      <table border="0" cellspacing="0" cellpadding="0" role="presentation" bgcolor="#ffffff">
+                        <tr>
+                          <td align="center" style="border-radius: 0px; background-color: #176DB7; width: 200px; height: 43px;" bgcolor="#176DB7" width="200" height="43">
+                            <a href="%%=RedirectTo(@topquotebut)=%%" target="_blank" style="font-size: 16px; line-height: 18px; text-align: center;  font-family: Arial, sans-serif; color: #FFFFFF; text-decoration: none; display: inline-block; font-weight: bold;">Get Your Quote</a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- #Headline -->
+            <!-- Mobile Buttons -->
+            <!--[if !mso]><!-->
+            <tr>
+              <td class="mobile-only" align="center" bgcolor="#ffffff" style="padding: 0px 0px 20px 0px; display: none;  height: 0; width: 0; overflow: hidden; max-height: 0;">
+                <div class="mobile-only" style="text-indent: -99999em;">
+                  <a href="%%=RedirectTo(@mobquotebut)=%%" style="font-family: Arial, Helvetica, sans-serif; background-color:#176DB7; color:#FFFFFF;  border-radius: 0px solid #176DB7 !important; display:inline-block;font-weight:bold; font-size:16px; line-height:43px; text-align:center; text-decoration:none; width:200px; -webkit-text-size-adjust:none; mso-hide:all;" alt="Get Your Quote" title="Get Your Quote"> Get Your Quote </a>
+                </div>
+              </td>
+            </tr>
+            <!--<![endif]-->
+            <!-- #Mobile Buttons -->
+            <!-- Hero -->
+            <tr>
+              <td bgcolor="#FFFFFF" style="border-bottom: 5px solid #343741;">
+                <!--[if !mso]><!-->
+                <div class="mobile-only" style="text-indent: -99999em; display: none; height: 0; width: 0; overflow: hidden; max-height: 0;">
+                  <a href="%%=RedirectTo(@img)=%%" style="border:none;" target="_blank">
+                    <img src="http://image.email-libertymutual.com/lib/fe5b157071650d757212/m/6/2f2f83ed-c965-419b-a82f-be0b5ecede75.gif" alt="$$$ SAVINGS IN MIRROR ARE CLOSER THAN THEY APPEAR" title="$$$ SAVINGS IN MIRROR ARE CLOSER THAN THEY APPEAR" border="0" style="display: block; width: 320px; height: auto;" width="320" height="235" class="hero-image" id="hero-image-mobile" />
+                  </a>
+                </div>
+                <div class="no-mobile">
+                  <a href="%%=RedirectTo(@img)=%%" style="border:none;" target="_blank">
+                    <img src="http://image.email-libertymutual.com/lib/fe5b157071650d757212/m/6/5c5614fb-ad18-4ac7-8ab3-0fa548135671.gif" alt="$$$ SAVINGS IN MIRROR ARE CLOSER THAN THEY APPEAR" title="$$$ SAVINGS IN MIRROR ARE CLOSER THAN THEY APPEAR" border="0" style="display: block; width: 640px; height: auto;" width="640" height="470" class="hero-image" id="hero-image-desktop" />
+                  </a>
+                </div>
+                <!--<![endif]-->
+                <!--[if (mso 12)|(mso 14)|(mso 15)|(mso 16)]>
+                <div>
+                    <a href="%%=RedirectTo(@img)=%%" target="_blank"><img src="http://image.email-libertymutual.com/lib/fe5b157071650d757212/m/6/4f6e0e11-f629-4f04-8692-06016dade3a2.jpg" alt="$$$ SAVINGS IN MIRROR ARE CLOSER THAN THEY APPEAR" title="$$$ SAVINGS IN MIRROR ARE CLOSER THAN THEY APPEAR" width="640" border="0" style=" width: 640px; display: block;"></a>
+                </div>
+              <![endif]-->
+              </td>
+            </tr>
+            <!-- #Hero -->
+            <!-- Body -->
+            <tr>
+              <td bgcolor="#EFEFEF" style="padding: 40px 95px 0px 95px; " class="body-copy">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <!-- Icon Rows -->
+                  <tr>
+                    <td style="" class="icon-rows">
+                      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <td width="100%" style="font-family: Arial, Helvetica, sans-serif; font-size: 20px; line-height: 30px; text-align: center; color: #000000; font-weight: normal; padding-bottom: 30px;" class="icon-headline"> In case you missed it last time, simply start your quote and see how you could <strong>save up to $652</strong>.&sup1; </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <!-- #Icon Rows -->
+                </table>
+              </td>
+            </tr>
+            <!-- #Body -->
+            <!-- Bottom CTA -->
+            <tr>
+              <td bgcolor="#EFEFEF" style="padding: 0px 0px 0px 0px" class="top-cta no-mobile" align="center">
+                <div>
+                  <center>
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td>
+                          <table border="0" align="center" cellpadding="0" cellspacing="0" style="margin:0 auto;">
+                            <tbody>
+                              <tr>
+                                <td align="center">
+                                  <table border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;" class="mobile-button-space">
+                                    <tr>
+                                      <!--[if mso]>
+                                      <v:roundrect
+                                        xmlns:v="urn:schemas-microsoft-com:vml"
+                                        xmlns:w="urn:schemas-microsoft-com:office:word" href="%%=RedirectTo(@botquotebut)=%%" style="font-family: Arial, Helvetica, sans-serif;height:43px;v-text-anchor:middle;width:250px; font-weight:bold"  arcsize="0%" stroke="true" strokecolor="#176DB7" strokeweight="2px" fillcolor="#EFEFEF">
+                                        <w:anchorlock/>
+                                        <center>
+                                          <![endif]-->
+                                      <td align="center" style=" border: #176DB7 2px solid; padding: 11px 0px 10px 0px; border-radius:3px; width: 196px;" bgcolor="#EFEFEF">
+                                        <a href="%%=RedirectTo(@botquotebut)=%%" target="_blank" style="font-size: 16px; line-height: 18px; font-family: Arial, Helvetica, sans-serif; color: #176DB7; text-decoration: none; display: inline-block; font-weight: bold;" alt="Get Your Quote" title="Get Your Quote">Get Your Quote</a>
+                                      </td>
+                                      <!--[if mso]>
+                                        </center>
+                                      </v:roundrect>
+                                      <![endif]-->
+                                    </tr>
+                                    <tr>
+                                      <td align="center" style="text-align: center;">
+                                        <p style="font-family: Arial, Helvetica, sans-serif;  font-size: 16px; line-height: 18px; margin: 15px 0 40px 0; color: #000000;" class="ios-gray"> Or call <a href="tel:18446550644" id="call-mobile" class="call-mobile" title="Call Liberty Mutual." style="color: #000000 !important; font-weight: bold; text-decoration: none !important;">1-844-655-0644</a>
+                                        </p>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </center>
+                </div>
+              </td>
+            </tr>
+            <!-- #Bottom CTA -->
+            <!-- Mobile Buttons -->
+            <!--[if !mso]><!-->
+            <tr>
+              <td align="center" bgcolor="#EFEFEF" style="padding: 0px 0px 0px 0px;">
+                <!--[if !mso]><!-->
+                <div class="mobile-only" style="text-indent: -99999em; display: none; height: 0; width: 0; overflow: hidden; max-height: 0;">
+                  <a href="%%=RedirectTo(@mobbotquote)=%%" style="padding: 10px 0px; font-weight: bold;font-size: 16px; font-family: Arial, Helvetica, sans-serif; background-color:#EFEFEF; border-radius: 3px; border: 2px solid #176DB7; color: #176DB7; display:inline-block; line-height:19px; text-align:center; text-decoration:none; width:196px; -webkit-text-size-adjust:none; mso-hide:all; " alt="Get Your Quote" title="Get Your Quote"> Get Your Quote </a>
+                  <p style="font-family: Arial, Helvetica, sans-serif; margin: 0px; font-size: 16px; line-height: 18px; margin: 15px 0 40px 0; color: #000000;" class="ios-gray"> Or call <a href="tel:18446550644" id="call-mobile" class="call-mobile" title="Call Liberty Mutual." style="color: #176DB7 !important; font-weight: bold; text-decoration: underline !important;">1-844-655-0644</a>
+                  </p>
+                </div>
+                <!--<![endif]-->
+              </td>
+            </tr>
+            <!--<![endif]-->
+            <!-- #Mobile Buttons -->
+            <!-- Divider -->
+          
+            <!-- #Divider -->
+            <!-- Footer Logo -->
+            <tr>
+              <td align="center" bgcolor="#FFFFFF" style="font-size: 5px; line-height: 5px; padding-top: 20px; padding-bottom: 0px;">
+                <div class="mobile-only" style="text-indent: -99999em; display: none; height: 0; width: 0; overflow: hidden; max-height: 0;">
+                  <img src="http://image.email-libertymutual.com/lib/fe5b157071650d757212/m/6/163dae42-68c9-414d-92c4-c04f665a0006.png" border="0" style="display: block; width: 169px;" width="169" class="hero-image" id="hero-image-mobile" alt="Liberty Mutual Insurance Logo" title="Liberty Mutual Insurance Logo" />
+                </div>
+                <div class="no-mobile">
+                  <img src="http://image.email-libertymutual.com/lib/fe5b157071650d757212/m/6/5db2f908-9447-430f-96c2-511f9ddc2ae9.png" border="0" style="display: block; width: 169px;" width="169" class="hero-image" id="hero-image-desktop" alt="Liberty Mutual Insurance Logo" title="Liberty Mutual Insurance Logo" />
+                </div>
+              </td>
+            </tr>
+            <!-- #Footer Logo -->
+            <!-- Legal -->
+            <tr>
+              <td bgcolor="#FFFFFF" style="padding: 30px 30px 40px 30px; font-family: Arial, Helvetica, sans-serif; font-size: 10px; line-height: 12px; color: #343741;" class="legal-text">
+                <span style="display: inline-block;"><sup style="font-size:0.75em; line-height:1em; vertical-align:text-top;">1</sup>Savings validated by new customers who switched to Liberty Mutual in 2021 and participated in a countrywide survey. Savings may vary. Comparison does not apply in MA.</span>
+                <br /><br />
+                <span style="display: inline-block;">Coverage provided and underwritten by Liberty Mutual Insurance Company or its subsidiaries or affiliates, which is licensed in all 50 states and the District of Columbia. A consumer report from a consumer reporting agency and/or a motor vehicle report, on all drivers listed on your policy, may be obtained where state laws and regulations allow. Mercedes-Benz Insurance Agency LLC (CA License Number 0F882771), a subsidiary of Mercedes-Benz Financial Services USA LLC (“MBFS”), is the licensed insurance agency supporting the Mercedes Benz Insurance program. MBFS is not an insurance company or agent. Mercedes-Benz Insurance Agency LLC may be compensated for services provided in connection with your policy.</span>
+                <br /><br />
+                <span style="display: inline-block;">This email message contains information regarding products and services offered by Liberty Mutual Insurance Company. If you do not wish to receive email messages from Liberty Mutual that are advertising or promotional in nature, please, <span style="color: #343741 !important;"><a href="%%unsub_center_url%%" style="font-family: Arial, Helvetica, sans-serif; font-size: 10px; line-height: 1.3; color: #176DB7!important; text-decoration: underline;" target="_blank" class="unsubscribe-link">unsubscribe</a></span>&nbsp;now.</span>
+                <br /><br />
+                <span style="display: inline-block;"> Email sent by: Liberty Mutual Insurance Company, with a principal place of business at 175Berkeley Street, Boston, MA 02116 USA. </span>
+                <br><br>
+                <span style="display: inline-block;">©2023 Liberty Mutual Insurance </span>
+                <a class="profile-center-link" href="%%profile_center_url%%" style="font-family: Arial, Helvetica, sans-serif; font-size: 10px; line-height: 1.3; color: #343741; text-decoration: none !important;" target="_blank">
+                </a>
+              </td>
+            </tr>
+            <!-- #Legal -->
+          </table>
+          <p style="display:none; color:#343741; text-indent: -99999em; display: none; height: 0; width: 0; overflow: hidden; max-height: 0;" class="no-mobile legal-coverage">Coverage provided and underwritten by %%Member_Busname%% and its affiliates, %%Member_Addr%%, %%Member_City%%, %%Member_State%% %%Member_PostalCode%% %%Member_Country%%</p>
+        </td>
+      </tr>
+    </table>
+  </main>
+  <custom name="opencounter" type="tracking">
+  </custom>
+  <!-- gmail app iOS fix -->
+  <div style="display:none; white-space:nowrap; font:15px courier; color:#f5f5f5;"> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </div>
+</body>
+
+</html>
