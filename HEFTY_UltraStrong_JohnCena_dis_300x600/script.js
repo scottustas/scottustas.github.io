@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   window.onload = function() {
 
       // add code here
-      initEB();
+    init();
   };
 
 });
