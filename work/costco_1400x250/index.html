@@ -5,95 +5,40 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
   <style>
-    * {
-      margin: 0px;
-      padding: 0px;
+    .banner div {
+      position: absolute;
     }
 
     body {
       font-family: Arial, sans-serif;
       background-color: #333639;
-    }
-
-    a {
-      border: none;
-      cursor: pointer;
-      outline: none;
-      user-select: none;
-    }
-
-    h1,
-    div,
-    img {
-      position: absolute;
-    }
-
-    #container {
-      background-color: #eceae8;
-      /* border: 1px solid #000; */
-      display: block;
-      margin: auto;
-      overflow: hidden;
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      width: 1400px;
-      height: 250px;
-    }
-
-    #content {
-      display: block;
-      position: absolute;
-      left: 0px;
-      top: 0px;
-      width: 100%;
-      height: 100%;
-    }
-
-    #background_exit {
-      background-color: #000000;
-      cursor: pointer !important;
-      opacity: 0;
-      width: 100%;
-      height: 100%;
-      left: 0px;
-      top: 0px;
-    }
-
-    #content div {
-      border: none;
-      display: block;
-      position: absolute;
+      margin: 0px;
     }
   </style>
 </head>
 
 <body>
-  <div id="container">
-    <div id="content">
-      <div id="background"><img src="background.png"></div>
-      <!-- <div id="background"><img src="guide.png"></div> -->
-      <div id="ValProp_4x_icon" style="width: 33px; top: 153px; left: 101px;"><img  src="ValProp_4x_icon.svg"></div>
-      <div id="ValProp_3x_icon" style="width: 31px; top: 163px; left: 373px;"><img src="ValProp_3x_icon.svg"></div>
-      <div id="ValProp_2x_icon" style="width: 42px; top: 180px; left: 639px;"><img src="ValProp_2x_icon.svg"></div>
-      <div id="ValProp_1x_icon" style="width: 43px; top: 179px; left: 933px;"><img src="ValProp_1x_icon.svg"></div>
-
-      <div id="headline" style="top: 14px; left: 26px; font-family: Arial, Helvetica, sans-serif; font-size: 63px; letter-spacing: -.6px; color: #0033a0; font-weight: bold;">DON’T MISS CASH BACK REWARDS</div>
-      <div id="one" style="top: 91px; left: 873px; font-family: Arial, Helvetica, sans-serif; font-size: 132px; letter-spacing: 0px; color: #339645; font-weight: bold;">1</div>
-      <div id="two" style="top: 89px; left: 568px; font-family: Arial, Helvetica, sans-serif; font-size: 132px; letter-spacing: 0px; color: #dd1a32; font-weight: bold;">2</div>
-      <div id="three" style="top: 90px; left: 295px; font-family: Arial, Helvetica, sans-serif; font-size: 132px; letter-spacing: 0px; color: #199bc2; font-weight: bold;">3</div>
-      <div id="four" style="top: 91px; left: 27px; font-family: Arial, Helvetica, sans-serif; font-size: 132px; letter-spacing: 0px; color: #ef6723; font-weight: bold;">4</div>
-      <div id="onePercent" style="top: 106px; left: 940px; font-family: Arial, Helvetica, sans-serif; font-size: 47px; letter-spacing: 0px; color: #339645; font-weight: bold;">%</div>
-      <div id="twoPercent" style="top: 106px; left: 640px; font-family: Arial, Helvetica, sans-serif; font-size: 47px; letter-spacing: 0px; color: #dd1a32; font-weight: bold;">%</div>
-      <div id="threePercent" style="top: 107px; left: 368px; font-family: Arial, Helvetica, sans-serif; font-size: 47px; letter-spacing: 0px; color: #199bc2; font-weight: bold;">%</div>
-      <div id="fourPercent" style="top: 106px; left: 99px; font-family: Arial, Helvetica, sans-serif; font-size: 47px; letter-spacing: 0px; color: #ef6723; font-weight: bold;">%</div>
-      <div id="fourDescription1" style="top: 111px; left: 149px; width: 117px; font-family: Arial, Helvetica, sans-serif; font-size: 17px; letter-spacing: .6px; line-height: 22px; color: #555555; font-weight: normal;">ON ELIGIBLE GAS AND EV CHARGING</div>
-      <div id="fourDescription2" style="top: 176px; left: 150px; width: 132px; font-family: Arial, Helvetica, sans-serif; font-size: 14px; letter-spacing: normal; line-height: 18px; color: #555555; font-weight: normal;">for the first $7,000 per year and then 1% thereafter</div>
-      <div id="threeDescription" style="top: 110px; left: 418px; width: 145px; font-family: Arial, Helvetica, sans-serif; font-size: 17px; letter-spacing: .6px; line-height: 22px; color: #555555; font-weight: normal;">ON RESTAURANTS AND ELIGIBLE TRAVEL</div>
-      <div id="twoDescription" style="top: 111px; left: 691px; width: 185px; font-family: Arial, Helvetica, sans-serif; font-size: 17px; letter-spacing: .6px; line-height: 22px; color: #555555; font-weight: normal;">ON ALL OTHER PURCHASES FROM COSTCO AND COSTCO.COM</div>
-      <div id="oneDescription" style="top: 111px; left: 992px; width: 120px; font-family: Arial, Helvetica, sans-serif; font-size: 17px; letter-spacing: .6px; line-height: 22px; color: #555555; font-weight: normal;">ON ALL OTHER PURCHASES </div>
-      <div id="cardDescription" style="top: 350px; left: 719px; width: 250px; font-family: Arial, Helvetica, sans-serif; font-size: 24px; letter-spacing: 0px; line-height: 23px; color: #555555; font-weight: normal; text-align: right;">The Costco Anywhere Visa<sup style="font-size: 12px;">®</sup> Card by Citi </div>
-    </div>
+  <div class="banner" id="container" style="width: 1400px; height: 250px;  background-color: #ffffff;">
+    <div id="card"><img src="card.png" width="1400"></div>
+    <div id="ValProp_4x_icon" style="width: 33px; top: 153px; left: 101px;"><img src="ValProp_4x_icon.svg"></div>
+    <div id="ValProp_3x_icon" style="width: 31px; top: 163px; left: 373px;"><img src="ValProp_3x_icon.svg"></div>
+    <div id="ValProp_2x_icon" style="width: 42px; top: 180px; left: 639px;"><img src="ValProp_2x_icon.svg"></div>
+    <div id="ValProp_1x_icon" style="width: 43px; top: 179px; left: 933px;"><img src="ValProp_1x_icon.svg"></div>
+    <div id="headline" style="top: 14px; left: 26px; font-family: Arial, sans-serif; font-size: 63px; letter-spacing: -.6px; color: #0033a0; font-weight: bold;">DON’T MISS CASH BACK REWARDS</div>
+    <div id="one" style="top: 91px; left: 873px; font-family: Arial, sans-serif; font-size: 132px; letter-spacing: 0px; color: #339645; font-weight: bold;">1</div>
+    <div id="two" style="top: 89px; left: 568px; font-family: Arial, sans-serif; font-size: 132px; letter-spacing: 0px; color: #dd1a32; font-weight: bold;">2</div>
+    <div id="three" style="top: 90px; left: 295px; font-family: Arial, sans-serif; font-size: 132px; letter-spacing: 0px; color: #199bc2; font-weight: bold;">3</div>
+    <div id="four" style="top: 91px; left: 27px; font-family: Arial, sans-serif; font-size: 132px; letter-spacing: 0px; color: #ef6723; font-weight: bold;">4</div>
+    <div id="onePercent" style="top: 106px; left: 940px; font-family: Arial, sans-serif; font-size: 47px; letter-spacing: 0px; color: #339645; font-weight: bold;">%</div>
+    <div id="twoPercent" style="top: 106px; left: 640px; font-family: Arial, sans-serif; font-size: 47px; letter-spacing: 0px; color: #dd1a32; font-weight: bold;">%</div>
+    <div id="threePercent" style="top: 107px; left: 368px; font-family: Arial, sans-serif; font-size: 47px; letter-spacing: 0px; color: #199bc2; font-weight: bold;">%</div>
+    <div id="fourPercent" style="top: 106px; left: 99px; font-family: Arial, sans-serif; font-size: 47px; letter-spacing: 0px; color: #ef6723; font-weight: bold;">%</div>
+    <div id="fourDescription1" style="top: 111px; left: 149px; width: 117px; font-family: Arial, sans-serif; font-size: 17px; letter-spacing: .6px; line-height: 22px; color: #555555;">ON ELIGIBLE GAS AND EV CHARGING</div>
+    <div id="fourDescription2" style="top: 176px; left: 150px; width: 132px; font-family: Arial, sans-serif; font-size: 14px; letter-spacing: normal; line-height: 18px; color: #555555;">for the first $7,000 per year and then 1% thereafter</div>
+    <div id="threeDescription" style="top: 110px; left: 418px; width: 145px; font-family: Arial, sans-serif; font-size: 17px; letter-spacing: .6px; line-height: 22px; color: #555555;">ON RESTAURANTS AND ELIGIBLE TRAVEL</div>
+    <div id="twoDescription" style="top: 111px; left: 691px; width: 185px; font-family: Arial, sans-serif; font-size: 17px; letter-spacing: .6px; line-height: 22px; color: #555555;">ON ALL OTHER PURCHASES FROM COSTCO AND COSTCO.COM</div>
+    <div id="oneDescription" style="top: 111px; left: 992px; width: 120px; font-family: Arial, sans-serif; font-size: 17px; letter-spacing: .6px; line-height: 22px; color: #555555;">ON ALL OTHER PURCHASES </div>
+    <div id="cardDescription" style="top: 173px; left: 1106px; width: 245px; font-family: Arial, sans-serif; font-size: 20px; letter-spacing: 0px; line-height: 21px; color: #555555; text-align: right;">The Costco Anywhere Visa<sup style="font-size: 12px;">®</sup> Card by Citi </div>
   </div>
 </body>
 
