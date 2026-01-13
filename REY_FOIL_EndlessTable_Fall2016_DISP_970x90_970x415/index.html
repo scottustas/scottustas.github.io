@@ -2,97 +2,86 @@
 <html>
 
 <head>
-
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
   <!--CDN GSAP-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
-
   <title>970x90</title>
   <link rel="stylesheet" href="styles/style.css" />
-  <!--<link href='http://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'> -->
-  <script>EBModulesToLoad = ['EBCMD','Video'];</script>
-  <script src="scripts/EBLoader.js"></script>
-  <!--[if lte IE 9]><script src="scripts/classList.js"></script><![endif]-->
-  <script>EB.initExpansionParams(0, 0, 970, 415);</script>
   <script src="scripts/script.js"></script>
-  <script type="text/javascript" src="scripts/sizmek_fs_video_html5.js"></script>
-
 </head>
 
 <body>
-
-    <div id="container">
-
-      <div id="ad" class="collapsed">
-
-            <div id="banner">
-              <div id="bannerBckg"><img src="images/background.jpg"></div>
-              <div id="ctaText"><img src="images/ctaText.svg"></div>
-              <div id="ctaArrows"><img src="images/ctaArrows.svg"></div>
-              <div id="text1"><img src="images/text1.png"></div>
-              <div id="expandBtn"></div>
-            </div>
-
-            <div id="panel">
-
-              <div id="panelText"><img src="images/panelText.png"> </div>
-              <div id="clickthroughButton"><img src="images/ctaBtn.png"> </div>
-
-              <div id="closeButton"><img src="images/close_button.png"></div>
-              <!-- Begin Sizmek HTML5 Fullscreen HD Video Block -->
-
-                <div id="videoContainer">
-                  <div id="video"></div>
-                  <div id="click"></div>
-               </div>
-
-                <script type="text/javascript">
-
-                    // Establish Array to hold videos. Create unique array for each video - include source and type
-                    var videos = [
-                            [ 'videos/REY_FOIL_COFFEEandPEAR_MAC_FB.mp4', 'video/mp4' ]
-                          ];
-
-                    // Establish Config Object to pass script options
-                    var si_fs_video_Config = {
-                      options: {
-                        div: 'video',           // String - Div Video will be placed into
-                        vid: videos,          // Object - List of Videos established above
-                        controls: 'true',         // Boolean - Show Controls - True or False
-                        auto:'false',          // Boolean - Auto Play - True of False
-                        //poster: 'images/poster.gif'   // String - Location of Poster
-                      }
-                    };
-
-                  var si_fs_video_block = new si_FS_Video_Block (si_fs_video_Config);
-
-                  expandBtn.addEventListener("click", clickBanner);
-                  closeButton.addEventListener("click", collapse);
-
-                  function clickBanner(e) {
-                    expand();
-                  }
-
-                  function collapse() {
-                    TweenLite.set("#clickthrough-button", {alpha:0});
-                    adDiv.classList.remove("expanded");
-                    adDiv.classList.add("collapsed");
-                    EB.collapse();
-                    isExpanded = false;
-                    si_vid.pause();
-                  }                  
-
-                </script>
-
-              <!-- End Sizmek HTML5 Fullscreen HD Video Block -->
-
-            </div>
-
+  <div id="container">
+    <div id="ad" class="collapsed">
+      <div id="banner">
+        <div id="bannerBckg"><img src="images/background.jpg" alt="Banner Background"></div>
+        <div id="ctaText"><img src="images/ctaText.svg" alt="CTA Text"></div>
+        <div id="ctaArrows"><img src="images/ctaArrows.svg" alt="CTA Arrows"></div>
+        <div id="text1"><img src="images/text1.png" alt="Text 1"></div>
+        <div id="expandBtn"></div>
       </div>
-
+      <div id="panel">
+        <div id="panelText"><img src="images/panelText.png" alt="Panel Text"> </div>
+        <div id="clickthroughButton"><img src="images/ctaBtn.png" alt="Clickthrough Button"> </div>
+        <div id="closeButton"><img src="images/close_button.png" alt="Close Button"></div>
+        <!-- Video Container -->
+        <div id="videoContainer">
+          <video id="si_vid" width="100%" height="auto" poster="images/poster.gif" controls>
+            <source src="videos/REY_FOIL_COFFEEandPEAR_MAC_FB.mp4" type="video/mp4"> Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
     </div>
+  </div>
+  <script type="text/javascript">
+    var adDiv = document.getElementById('ad');
+    var isExpanded = false;
+    var si_vid = document.getElementById('si_vid');
+    var expandBtn = document.getElementById('expandBtn');
+    var closeButton = document.getElementById('closeButton');
 
+    // Setup video autoplay and control
+    function setupVideo() {
+      // Auto-play video if required
+      if (false) { // Change to `true` if you want autoplay
+        si_vid.play();
+      }
+    }
+
+    // Expand Banner
+    expandBtn.addEventListener("click", function (e) {
+      expand();
+    });
+
+    // Collapse Banner
+    closeButton.addEventListener("click", function () {
+      collapse();
+    });
+
+    // Expand Ad
+    function expand() {
+      adDiv.classList.remove("collapsed");
+      adDiv.classList.add("expanded");
+      TweenMax.to("#panel", 0.5, { x: 0, ease: Expo.easeOut });
+      setupVideo();
+      isExpanded = true;
+    }
+
+    // Collapse Ad
+    function collapse() {
+      TweenMax.set("#clickthroughButton", { alpha: 0 });
+      adDiv.classList.remove("expanded");
+      adDiv.classList.add("collapsed");
+      si_vid.pause(); // Pause the video when collapsed
+      isExpanded = false;
+    }
+
+    // Wait for window load before starting
+    window.addEventListener("load", function () {
+      setupVideo();
+    });
+  </script>
 </body>
+
 </html>

@@ -1,62 +1,49 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>300x250</title>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-
-    <link rel="stylesheet" href="style.css">
-
-    <!--Google CDN link for TweenMax-->
-    <script src="https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.18.0_499ba64a23378545748ff12d372e59e9_min.js"></script>
-
-    <!--Animation Script-->
-    <script src="script.js" type="text/javascript"></script> 
-
-    <!--Google Click Tag Code  -->
-    <meta name="ad.size" content="width=300,height=250">
-    <script type="text/javascript">
+<head>
+  <title>300x250</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link rel="stylesheet" href="style.css">
+  <!--Google CDN link for TweenMax-->
+  <script src="TweenMax.min.js"></script>
+  <!--Animation Script-->
+  <script src="script.js" type="text/javascript"></script>
+  <!--Google Click Tag Code  -->
+  <meta name="ad.size" content="width=300,height=250">
+  <script type="text/javascript">
     var clickTag = "http://www.google.com";
-    </script>
+  </script>
+</head>
 
-  </head>
-
-  <body>
-
-    <div id="container">
-      <div id="content">
-
-        <div id="background"><img src="background.jpg"></div>
-
-        <div id="logo"><img src="logo.png"></div>
-
-        <div id="text1"><img src="text1.png"></div>
-        <div id="text2"><img src="text2.png"></div>
-        <div id="text3"><img src="text3.png"></div>
-        <div id="text4"><img src="text4.png"></div>
-
-        <div id="alfredoSauce"><img src="alfredoSauce.png"></div>
-        <div id="cheeseSauce"><img src="cheeseSauce.png"></div>
-        <div id="jarLockup"><img src="jarLockup.png"></div>
-
-        <div id="cta">
-          <img src="cta.png">
-          <div id="glare"> <img src="glare.png"> </div>
-        </div>
-
-        <a href="javascript:window.open(window.clickTag)"> <div id="background_exit"></div>  </a> 
-
-        <div id="replayBtn"> <img src="replay.svg"/> </div>
-                
+<body>
+  <div id="container">
+    <div id="content">
+      <div id="background"><img src="background.jpg"></div>
+      <div id="logo"><img src="logo.png"></div>
+      <div id="text1"><img src="text1.png"></div>
+      <div id="text2"><img src="text2.png"></div>
+      <div id="text3"><img src="text3.png"></div>
+      <div id="text4"><img src="text4.png"></div>
+      <div id="alfredoSauce"><img src="alfredoSauce.png"></div>
+      <div id="cheeseSauce"><img src="cheeseSauce.png"></div>
+      <div id="jarLockup"><img src="jarLockup.png"></div>
+      <div id="cta">
+        <img src="cta.png">
+        <div id="glare"> <img src="glare.png"> </div>
       </div>
+      <a href="javascript:window.open(window.clickTag)">
+        <div id="background_exit"></div>
+      </a>
+      <div id="replayBtn"> <img src="replay.svg" /> </div>
     </div>
+  </div>
+  <script>
+    window.onload = function (e) {
+      init();
+    };
+  </script>
+</body>
 
-    <script>
-      window.onload = function(e) {
-        init();
-      };
-    </script>
-
-  </body>
 </html>
